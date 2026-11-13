@@ -1,1 +1,416 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>temas.html</title><link rel="stylesheet" href="css/estilos.css"></head><body><header class="site-header"><div class="brand-row"><div class="brand-mark">L3</div><div class="brand-title">LÍNEA DE ÉNFASIS 3</div><div class="brand-subtitle">Aprendizaje · Tecnología · Innovación</div></div></header><div class="nav-wrap"><nav class="navbar"><a href="index.html">🏠 Inicio</a><a href="temas.html">📚 Temas</a><a href="conceptos.html">💡 Conceptos</a><a href="casos-practicos.html">🧩 Casos prácticos</a><a href="proyecto.html">🎥 Proyecto</a></nav></div><main><section class="hero"><h1>Temas de la asignatura</h1></section><div class="card-grid"><div class="card">Unidad 1</div><div class="card">Unidad 2</div><div class="card">Unidad 3</div></div></main><footer class="site-footer">Portal académico editable</footer></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Temas · Línea de Énfasis 3</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-row">
+    <div class="brand-mark">L3</div>
+    <div class="brand-title">LÍNEA DE ÉNFASIS 3</div>
+    <div class="brand-subtitle">Aprendizaje · Tecnología · Innovación</div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav class="navbar">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="temas.html" aria-current="page">📚 Temas</a>
+    <a href="conceptos.html">💡 Conceptos</a>
+    <a href="casos-practicos.html">🧩 Casos prácticos</a>
+    <a href="proyecto.html">🎥 Proyecto</a>
+  </nav>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="eyebrow">Temas de la asignatura</div>
+    <h1 class="h1-long">TALLER DE INVESTIGACIÓN: <span class="accent">SEGURIDAD DE LA INFORMACIÓN Y SISTEMAS OPERATIVOS</span></h1>
+    <p>Corporación Universitaria Remington. Ingeniería en Sistemas · Linea de Enfasis III<br>
+       Jeni Valentina Ipuz Ortiz · Diana Marcela Arango Marin.<br>
+       Docente: Oscar Fernando Mahecha Camargo · 2026</p>
+  </section>
+
+  <nav class="toc" aria-label="Tabla de Contenidos">
+    <h2>Tabla de Contenidos · Preguntas del taller</h2>
+    <ol>
+      <li><a href="#p1">1. Conceptos fundamentales: seguridad, información y sistema</a></li>
+      <li><a href="#p2">2. La información como activo organizacional</a></li>
+      <li><a href="#p3">3. Principios de protección de la información</a></li>
+      <li><a href="#p4">4. Digitalización, nube y nuevos riesgos</a></li>
+      <li><a href="#p5">5. Amenazas y ciberataques actuales</a></li>
+      <li><a href="#p6">6. Función del sistema operativo y superficie de ataque</a></li>
+      <li><a href="#p7">7. Vulnerabilidades, actualizaciones y configuración segura</a></li>
+      <li><a href="#p8">8. Control de acceso y privilegios</a></li>
+      <li><a href="#p9">9. Respaldo, recuperación y respuesta ante incidentes</a></li>
+      <li><a href="#p10">10. Plan básico de protección de un sistema operativo</a></li>
+      <li><a href="#conclusiones">Conclusiones</a></li>
+      <li><a href="#genially">Actividad complementaria: presentación en Genially</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="content-panel" id="p1">
+    <h2><span class="num">1</span>Conceptos fundamentales: seguridad, información y sistema.</h2>
+    <h3>Conceptos:</h3>
+    <p>La seguridad es el estado en el que una persona u organización se siente protegido frente a riesgos o amenazas, pudiendo contenerlos a un nivel aceptable. Según Concepto la seguridad se asocia a la ausencia de riesgos y a la prevención que pueden afectar a las personas o los bienes (Concepto.de, s. f.-b) , mientras que otros autores como Jaramillo Gomez (2024) piensan que la seguridad no es la ausencia de riesgos sino la certeza de que estos están contenidos a un nivel mínimo pero que siempre estará latente un posible riesgo residual</p>
+    <p>La información por otro lado son los datos organizados que al ser interpretados o leídos dan como resultados hechos sobre algo específico pudiendo permitir a las personas tomar decisiones u obtener averiguaciones sobre un tema. En fuentes como Concepto, la información se define como un conjunto organizado de datos relevantes para alguien que extrae conocimiento de ellos (Concepto.de, s. f.-a).</p>
+    <p>Por último el sistema es un conjunto de elementos coordinados que trabajan para cumplir una meta en común, tal cual lo dice concepto que lo interpreta como un conjunto de elementos que se relacionan entre sí y que actúan de manera coordinada y cumplen una función específica (Concepto.de, s. f.-c).</p>
+
+    <h3>Ejemplo:</h3>
+    <p>Una clínica tiene un sistema de agendamiento y de historias clínicas, este procesa información personal, de salud y financiera de unos 2000 pacientes</p>
+
+    <div class="table-caption"><strong>Tabla 1</strong><em>Elementos del sistema de información de una clínica y riesgos asociados</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Elemento</th><th></th><th>Descripción</th></tr></thead>
+        <tbody>
+          <tr><td>Sistema</td><td></td><td>Computadores, software general, servicio de nube y personal que los opera</td></tr>
+          <tr><td>Información que procesa</td><td></td><td>Datos personales, historias clínicas, agendas, datos de pago, facturas etc</td></tr>
+          <tr><td rowspan="4">Riesgo</td><td>1</td><td>Acceso no autorizado a los datos</td></tr>
+          <tr><td>2</td><td>Pérdida de la información por fallo eléctricos</td></tr>
+          <tr><td>3</td><td>Ataques informáticos como phishing o ransomware</td></tr>
+          <tr><td>4</td><td>Manejo indebido de contraseñas y claves</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Análisis:</h3>
+    <p>El concepto de proteger la información no solo se basa en cuidar un computador, ya que los datos se pueden encontrar en cualquier parte como una carpeta, papeles sueltos, una conversación en el teléfono o en la mente de los propios empleados, aunque en los medios tecnológicos se encuentre alojada gran parte de esta es necesario cuidar todos los frentes para evitar mayores riesgos.</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="content-panel" id="p2">
+    <h2><span class="num">2</span>La información como activo organizacional.</h2>
+    <p>Un activo es todo eso que tiene un valor para la organización, ya que es muy importante y de ella dependen muchas decisiones y procesos. Por eso es primordial protegerlo y garantizar su confidencialidad, integridad y disponibilidad.</p>
+    <p>Garre Gui (s. f.), de la Universitat Oberta de Catalunya transmite esta idea en su política institucional, su objetivo es fijar un marco para proteger los sistemas de información de amenazas internas o externas de tal modo que garantice los principios de confidencialidad,integridad y disponibilidad.</p>
+    <p>El marco de ciberseguridad de NIST refuerza el enfoque, propone una taxonomía de resultados de ciberseguridad de alto nivel que todas las organizaciones pueden usar, sin importar su tamaño y su sector para evaluar , priorizar y comunicar su seguridad (National Institute of Standards and Technology [NIST], 2024) .</p>
+
+    <div class="note"><p><strong>Caso Hipotético:</strong> la Universidad de Oriente (UDO), con 9000 estudiantes, campus virtual, sistema académico y ERP financiero</p></div>
+
+    <div class="table-caption"><strong>Tabla 2</strong><em>Información importante en la Universidad de Oriente, consecuencias y responsables</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Información Importante</th><th>Consecuencias si se comparten o revelan</th><th>Responsables</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Información personal y académica del estudiante</td>
+            <td>No emitir certificados y grados.<br>Vulnerar la privacidad del estudiante.<br>Daños a la reputación.</td>
+            <td>Secretario General.<br>Director de registro académico.<br>Oficial de Protección de la información.</td>
+          </tr>
+          <tr>
+            <td>Información financiera y administrativa</td>
+            <td>Suspensión de pagos y descubrimiento durante la auditoría.<br>Exposición de fraude y peleas laborales en el pago de los salarios.</td>
+            <td>Vice-Rector administrativo y financiero, contabilidad, auditoría interna</td>
+          </tr>
+          <tr>
+            <td>Producción de investigación y propiedad intelectual</td>
+            <td>Pérdida de varios años de trabajo y de financiamiento.<br>Pérdida de la patente.</td>
+            <td>Vicerrector de investigación.<br>Investigadores principales.<br>Asesoría legal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="content-panel" id="p3">
+    <h2><span class="num">3</span>Principios de protección de la información.</h2>
+    <p>los principios de protección de la información consisten en la tríada CIA, la cual incluye la confidencialidad, la integridad y la disponibilidad, que también se encuentra en los resultados del marco de Ciberseguridad del NIST (CSF) 2.0, que ofrece orientación a organizaciones de todos los tamaños para la gestión del riesgo de ciberseguridad (NIST, 2024).</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Confidencialidad</h3>
+        <p>La confidencialidad implica evitar que la información sea expuesta a personas o partes externas que no deben de tener acceso y mantener la política de control de acceso la cual incluye la protección de la privacidad de las personas (NIST, 2024).La violación de este principio ocurre, por ejemplo, cuando un atacante utiliza técnicas como phishing para obtener datos y contraseñas para acceder al sistema ilegalmente. Para protegerla se puede usar controles de acceso por roles, el cifrado de archivos sensibles y la autenticación multifactor (NIST, 2024).</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        <h3>Integridad</h3>
+        <p>La integridad garantiza que la información está protegida contra modificaciones no autorizadas o eliminaciones indebidas, también asegura la autenticidad y el no repudio (Garre Gui, s. f.) . La violación de este requisito ocurre cuando una persona utiliza una contraseña robada para modificar la información de una base de datos. Para evitar este problema es necesario restringir los permisos de escritura y utilizar mecanismos de auditoría para rastrear todos los cambios (NIST, 2024) .</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Disponibilidad</h3>
+        <p>Para concluir, la disponibilidad se encarga del acceso a la información y a los sistemas. Una violación para esta situación sería un ataque de secuestro de datos que deshabilita el sistema de una fábrica o una institución, para garantizar su cumplimiento se necesita verificar periódicamente las copias de seguridad y almacenar varias versiones en diferentes lugares, también tener un plan de recuperación ante desastres.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="content-panel" id="p4">
+    <h2><span class="num">4</span>Digitalización, nube y nuevos riesgos.</h2>
+    <p>La digitalización y los servicios en la nube cambiaron la forma en la que las organizaciones guardan su información, ya no son en servidores propios sino que ya dependen de un tercero. Esto trae ventajas y desventajas por los nuevos riesgos que enfrentan las organizaciones.</p>
+    <p>Garre Gui (s. f.) indica que hay varios modelos funcionales para la gestión de la seguridad tanto interna como externa y siempre debe haber responsables de la seguridad dentro de la organización, es decir aunque la información esté en el servidor de un tercero, la organización sigue siendo la responsable.</p>
+    <p>El marco de ciberseguridad del NIST ubica el riesgo de proveedores y de la cadena de suministro dentro de la gobernanza , Demandando conocer y priorizar a los proveedores según su criticidad e incluir los requisitos de ciberseguridad dentro de los contratos (NIST, 2024).</p>
+
+    <h3>Beneficios y Riesgos</h3>
+    <div class="table-caption"><strong>Tabla 3</strong><em>Beneficios y riesgos de los servicios en la nube</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Beneficios</th><th>Riesgos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Disponibilidad: Permite mantener los servicios activos y contar con copias de seguridad sin asumir altos costos.</td>
+            <td>Dependencia del proveedor: Alguna falla o el fin del contrato no pueden acceder a la información.</td>
+          </tr>
+          <tr>
+            <td>Ahorro y flexibilidad: Se paga según el uso y se puede ampliar la capacidad si es necesario.</td>
+            <td>Accesos mal configurados: Los permisos inadecuados pueden divulgar la información.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Ubicación de los datos: la información puede guardarse en otros países, lo que lo vuelve complicado que se cumplan las normas de protección de datos personales.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Controles que una organización debe verificar antes de contratar un servicio de servidor externo</h3>
+    <ul>
+      <li>Certificaciones vigentes del proveedor (ISO 27001, SOC 2) y auditorías independientes.</li>
+      <li>Una matriz de responsabilidad compartida por escrito.</li>
+      <li>Ubicación de donde quedarán los datos y cláusulas de protección de datos personales.</li>
+      <li>Cifrado de la información en tránsito y en reposo, con control sobre las claves</li>
+      <li>Gestión de identidades: Autenticación multifactor, mínimo privilegio y registro de actividad.</li>
+      <li>Política de copias de seguridad y restauración de ellas.</li>
+      <li>Cláusulas de notificación de incidentes.</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section class="content-panel" id="p5">
+    <h2><span class="num">5</span>Amenazas y ciberataques actuales.</h2>
+    <p>Actualmente en el mundo existen muchos tipos de ciberataques que se aprovechan de los descuidos de las personas y las fallas en los sistemas.</p>
+
+    <div class="table-caption"><strong>Tabla 4</strong><em>Amenazas informáticas, activos afectados y acciones de prevención o respuesta</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Amenaza</th><th>Como opera</th><th>Activo que puede afectar</th><th>Acción preventiva o de respuesta</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Phishing</td>
+            <td>Es un mensaje engañoso que se envía por correo o mensaje de texto, también por llamadas que tratan de imitar a una organización para que el usuario proporcione las credenciales o abra adjuntos.</td>
+            <td>Credenciales, información personal, equipo</td>
+            <td>Comprender los tipos de mensajes sospechosos para poder evitarlos y activar la autenticación multifactor (Cybersecurity and Infrastructure Security Agency [CISA], s. f.).</td>
+          </tr>
+          <tr>
+            <td>Ransomware</td>
+            <td>Un programa malicioso que infecta el sistema utilizando varios métodos para exigir un rescate (CISA, s. f.).</td>
+            <td>Disponibilidad de archivos y servicios</td>
+            <td>Guardar varias copias de seguridad cifradas, fuera de línea y en diferentes lugares. Mantener el software actualizado (CISA, s. f.). Limitar la lista de permisos y aislar los dispositivos infectados</td>
+          </tr>
+          <tr>
+            <td>Robo de credenciales</td>
+            <td>El atacante hurta las credenciales por medio de ataques de phishing o mediante filtraciones que utiliza para atacar otros sistemas que el usuario tiene las mismas credenciales (CISA, s. f.)</td>
+            <td>Cuentas de correo, y diferentes accesos dentro un mismo sistema</td>
+            <td>Cada cuenta debe utilizar su propia contraseña siendo única y larga y activando la autenticación multifactor (CISA, s. f.)</td>
+          </tr>
+          <tr>
+            <td>Explotación de vulnerabilidades</td>
+            <td>Se explotan las vulnerabilidades de la aplicación, como entradas sin validar para hacer inyecciones SQL o sobrecargar el servidor para tumbarlo</td>
+            <td>Bases de datos, páginas web</td>
+            <td>Validar las entradas en el servidor y limitar la cantidad de datos que devuelve una consulta (NIST, 2024).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Según Garre Gui (s. f.) , una amenaza es el actor de las condiciones que hacen que el riesgo se vuelva realidad, una vulnerabilidad es la indefensión ante ellos y el riesgo es la probabilidad de que un peligro se convierta en real.</p>
+    <div class="note"><p>Un ejemplo explicativo de esto es el atacante que realiza el phishing es la amenaza, un sistema con usuarios sin capacitación es la vulnerabilidad y el riesgo es la probabilidad de que ese ataque logre efectuarse.</p></div>
+  </section>
+
+  <!-- 6 -->
+  <section class="content-panel" id="p6">
+    <h2><span class="num">6</span>Función del sistema operativo y superficie de ataque.</h2>
+    <p>El sistema operativo es el que administra el hardware y sirve de intermediario entre éste y las aplicaciones. Sus funciones son gestionar procesos, memoria , almacenamiento y dispositivos y controlar quién puede acceder al equipo por medio de cuentas que tienen usuario y contraseña</p>
+    <p>Es una pieza crítica porque si un atacante obtiene acceso de administrador, puede controlar la mayor parte del equipo y afectar la información, Por eso es fundamental mantener el sistema actualizado, controlar los permisos y desactivar los servicios que no se utilicen.</p>
+
+    <div class="table-caption"><strong>Tabla 5</strong><em>Comparación de mecanismos de seguridad entre Windows y Linux</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Aspecto</th><th>Windows</th><th>Linux</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Gestión de usuarios</td>
+            <td>Cuentas locales y de dominio. Autenticación con windows Hello, claves de acceso, tarjetas inteligentes y llaves FIDO2 (Microsoft, s. f.)</td>
+            <td>Cuentas locales y usuario root. Contraseñas protegidas con shadow y autenticación modular mediante PAM (The Linux Documentation Project, s. f.)</td>
+          </tr>
+          <tr>
+            <td>Permisos y privilegios</td>
+            <td>Control de cuentas de usuario (UAC) para elevar privilegios. App control for business y Smart App. Control para restringir qué software se ejecuta (Microsoft, s. f.)</td>
+            <td>Permisos de archivo por usuario, grupo y otros. Configuración de umask, verificación de integridad y restricción del uso de root (The Linux Documentation Project, s. f.)</td>
+          </tr>
+          <tr>
+            <td>Actualizaciones</td>
+            <td>Windows Update, líneas base de seguridad y Windows Autopatch para automatizar el despliegue de parches (Microsoft, s. f.)</td>
+            <td>Gestores de paquetes de cada distribución. La documentación insiste en aplicar todas las actualizaciones del sistema antes de ponerlo en línea (The Linux Documentation Project, s. f.)</td>
+          </tr>
+          <tr>
+            <td>Herramientas de seguridad</td>
+            <td>Microsoft Defender y SmartScreen, Firewall de Windows, cifrado de BitLocker, arranque confiable, TPM y seguridad basada en virtualización (Microsoft, s. f.)</td>
+            <td>Cortafuegos del Kernel (Netfilter), tcp_wrappers, SH para acceso cifrado (SSH), opciones de seguridad del Kernel y verificación de integridad de archivos (The Linux Documentation Project, s. f.)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ninguno de los dos sistemas puede considerarse completamente seguro, ya que tanto Windows como Linux presentan vulnerabilidades que requieren actualizaciones. La seguridad depende principalmente de cómo se configure y administre el equipo.</p>
+  </section>
+
+  <!-- 7 -->
+  <section class="content-panel" id="p7">
+    <h2><span class="num">7</span>Vulnerabilidades, actualizaciones y configuración segura.</h2>
+    <p>Una vulnerabilidad es una debilidad que un atacante puede aprovechar y un parche de seguridad es la corrección que se le hace a un sistema para cerrar esa brecha, también se puede interpretar la vulnerabilidad como la indefensión frente a un riesgo, mientras más vulnerable sea algo mayor será la posibilidad y la gravedad del daño (Garre Gui, s. f. ).</p>
+
+    <h3>Escenario:</h3>
+    <p>Una organización utiliza computadores con Windows al que no se le han realizado ninguna de las actualizaciones sugeridas en los últimos meses, entre estas actualizaciones se encontraba un parche de seguridad crítico por una falla que permitía la ejecución remota de código.</p>
+    <p>Hasta que un dia un atacante identifica los equipos vulnerables mediante herramientas automatizadas y explota esa falla para acceder a la red corporativa, una vez dentro instala ransomware, cifra los archivos de la organización y exige un pago para recuperarlos, esta situación ocurre porque el sistema permaneció expuesto a una vulnerabilidad ya conocida y corregida pero no fue implementada oportunamente por el usuario, CISA advierte que los atacantes pueden aprovechar vulnerabilidades durante meses o incluso años después de que las actualizaciones estén disponibles (CISA, s. f.).</p>
+
+    <h3>Procedimiento básico:</h3>
+    <ul>
+      <li><strong>Inventariar:</strong> Mantener una lista de los equipos, sistemas operativos, versiones y responsables manteniendo una trazabilidad en las fechas y actualizaciones que se le hacen a cada uno. Esto permite priorizar una lista según la criticidad y la exhibición del equipo, como plantea el NIST (2024) para el manejo de cada uno de los riesgos.</li>
+      <li><strong>Probar:</strong> Instalar en un grupo piloto de equipos las actualizaciones para verificar su compatibilidad con las aplicaciones y servicios corporativos</li>
+      <li><strong>Despliegue controlado:</strong> realizar copias de seguridad a los equipos y organizar el mantenimiento de manera en que se haga en grupos controlados, además de aplicar las actualizaciones siguiendo un mantenimiento planificado</li>
+      <li><strong>Verificar:</strong> Revisar y generar informes por cada grupo o equipo confirmando que las actualizaciones se instalaron correctamente y no generan problemas, además de mantener la trazabilidad con fecha, el estado de los equipos y el responsable para volver al punto de inventariar</li>
+    </ul>
+    <p>Por último si existen equipos antiguos o que se interrumpan si se reinician, se debe hacer un manejo especial, estos se deben documentar como una excepción especial con responsable y fechas límites, se aíslan a una red propia sin salida a internet, dejando solamente los servicios necesarios, se restringen las cuentas y dispositivos externos y se amplía la vigilancia planeando su reemplazo o actualizaciones según lo estipulado</p>
+  </section>
+
+  <!-- 8 -->
+  <section class="content-panel" id="p8">
+    <h2><span class="num">8</span>Control de acceso y privilegios</h2>
+    <p>El control de acceso permite definir quién puede ingresar a un sistema y qué acciones puede realizar. Se utilizan cuatro mecanismos principales:</p>
+    <ul>
+      <li><strong>Cuentas de usuario:</strong> Cada persona debe tener su propia cuenta para controlar sus permisos e identificar las acciones que realiza.</li>
+      <li><strong>Contraseñas seguras:</strong> La CISA recomienda usar contraseñas fuertes junto con un gestor de contraseñas como una de las formas más simples de evitar que alguien acceda a esa cuenta y robe datos (CISA, s. f.). Deben ser largas, únicas y diferentes para cada servicio.</li>
+      <li><strong>Autenticación multifactor (MFA):</strong> es una segunda verificación, como un código o una huella digital, para así aumentar la seguridad ya que no basta con una contraseña cifrada (CISA, s. f.).</li>
+      <li><strong>Mínimo privilegio:</strong> cada usuario debe tener únicamente los permisos necesarios. El marco de NIST recoge esto dentro de la función proteger, en su categoría de gestión de identidades, autenticación y control de acceso, donde los permisos se asignan según el principio de mínimo privilegio y separación de funciones (NIST, 2024).</li>
+    </ul>
+
+    <h3>Política breve para la sala de cómputo universitaria</h3>
+    <p><strong>Alcance:</strong> equipos de la sala de cómputo de la universidad, Cada persona accede con su cuenta institucional.</p>
+
+    <div class="table-caption"><strong>Tabla 6</strong><em>Permisos y responsabilidades por el rol en la sala de cómputo universitaria</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Rol</th><th>Permisos</th><th>Restricciones</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Administrador (Persona de TI)</td>
+            <td>Instalar y desinstalar software, aplicar actualizaciones, crear y eliminar cuentas. Configurar el sistema y consultar registros.</td>
+            <td>Usa su cuenta como administrador solo para tareas administrativas. Para el trabajo cotidiano emplea una cuenta estándar. Acceso con MFA obligatorio.</td>
+          </tr>
+          <tr>
+            <td>Docente</td>
+            <td>Iniciar sesión con cuenta institucional, usar el software instalado, guardar en su carpeta de red y proyectar contenido</td>
+            <td>No instala programas ni modifica la configuración del sistema, solicita el software requerido con antelación a TI</td>
+          </tr>
+          <tr>
+            <td>Estudiante</td>
+            <td>Iniciar sesión con cuenta institucional, usar el software autorizado y guardar en su carpeta personal o en la nube institucional</td>
+            <td>Sin privilegios de administrador, no accede a carpetas de otros usuarios. La sesión se cierra automáticamente por inactividad.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="content-panel" id="p9">
+    <h2><span class="num">9</span>Respaldo, recuperación y respuesta ante incidentes</h2>
+    <p>Si un equipo de una empresa se infecta con un ransomware, lo primero que se debe hacer es impedir que el daño se extienda y la segunda prioridad es recuperar sin pagar ni perder la información. El CSF 2.0 reúne esta tarea en dos funciones, responder y recuperar (NIST, 2024). El plan inicial es:</p>
+    <ol class="steps">
+      <li><strong>Aislar:</strong> Desconectar el equipo de la red ya sea cable y wifi sin apagarlo de inmediato para preservar la información, en caso el ataque avance sin posibilidad de frenarlo, se apaga. Además de que se deshabilitan las cuentas que fueron comprometidas</li>
+      <li><strong>Notificar:</strong> Avisar al área responsable, si hay datos personales comprometidos informar a la autoridad competente.</li>
+      <li><strong>Preservar evidencias:</strong> en caso de que se pida un rescate, tomar fotografías de las notas de amenaza, anotar hora, guardar registros del ataque y obtener la trazabilidad para documentar quién manipuló qué</li>
+      <li><strong>Analizar y contener:</strong> Identificar cómo se realizó el ataque, que otros equipos fueron atacados y qué información se pudo robar, además de cambiar todas las contraseñas y poner mayor énfasis en las cuentas expuestas.</li>
+      <li><strong>Recuperar desde las copias:</strong> Reconstruir el equipo desde los archivos limpios restaurando la copia más reciente no infectada, verificar la integridad de esta y conectar de forma gradual.</li>
+      <li><strong>Evitar repetición:</strong> Aplicar los parches pendientes, activar la autenticación multifactor, reducir los permisos y mandar a todo el personal a capacitación de ciberseguridad (CISA, s. f.).</li>
+    </ol>
+    <p>Todos los respaldos deben probarse y protegerse, ¿por qué? Porque una copia de seguridad es el respaldo que tiene una empresa para mantener su información segura, y dándoles la capacidad de responder ante cibersecuestros, por esta razón cada copia de seguridad debe probarse, para comprobar que no esté incompleta, dañada o sea demasiado lenta de recuperar además de que puede no incluir los datos que verdaderamente importan, estas comprobaciones se deben hacer de forma periódica para conocer exactamente el estado de cada respaldo. También se debe tener presente la regla práctica del 3-2-1, tres copias, en dos medios distintos y fuera de la sede (CISA, s. f.).</p>
+  </section>
+
+  <!-- 10 -->
+  <section class="content-panel" id="p10">
+    <h2><span class="num">10</span>Plan básico de protección de un sistema operativo</h2>
+    <p>Los controles de seguridad deben priorizarse teniendo en cuenta los riesgos más frecuentes y los requerimientos más comunes de cada organización.</p>
+    <p>La CISA aconseja reconocer el phishing, utilizar contraseñas seguras, activar la autenticación multifactor y mantener los sistemas actualizados para evitar vulnerabilidades (CISA, s. f.).</p>
+    <p>El marco de NIST , sugiere evaluar y priorizar los resultados de ciberseguridad dependiendo el contexto y la criticidad de cada organización (NIST, 2024).</p>
+
+    <div class="table-caption"><strong>Tabla 7</strong><em>Priorización de controles de seguridad para un sistema operativo</em></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>#</th><th>Control</th><th>Por que va en esa posición</th><th>Cómo verificar su eficacia</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Actualizaciones automáticas del sistema y las aplicaciones</td><td>Las vulnerabilidades conocidas y sin solucionar son la forma más común de ser explotada</td><td>Revisar el historial de actualizaciones</td></tr>
+          <tr><td>2</td><td>Cuentas separadas y mínimo privilegio</td><td>Si el usuario normal que utiliza el equipo diario no es el administrador, un malware no obtiene privilegios al ejecutarse</td><td>Listar todas las cuentas del equipo y confirmar que la cuenta de uso diario es normal</td></tr>
+          <tr><td>3</td><td>Contraseñas robustas con gestor de contraseñas</td><td>Es la más atacada y la más fácil de proteger</td><td>Auditoría de antigüedad y unicidad.<br>Verificar que la clave no esté escrita en algún archivo</td></tr>
+          <tr><td>4</td><td>Autenticación multifactor en las cuentas críticas</td><td>Previene el robo de contraseñas</td><td>Comprobar en cada servicio que tengan habilitada la autenticación multifactor.</td></tr>
+          <tr><td>5</td><td>Copias de seguridad</td><td>Es la única forma de garantizar la recuperación ante ransomware o fallos de hardware</td><td>Realizar una restauración de prueba cada trimestre</td></tr>
+          <tr><td>6</td><td>Protección contra malware activa y actualizada</td><td>Bloquea amenazas comunes antes de que se ejecute</td><td>Revisar la fecha de las firmas y el registro de detecciones</td></tr>
+          <tr><td>7</td><td>Cifrado del disco y bloqueo automático de pantalla cuando el equipo esté inactivo</td><td>Protege la información si el equipo se pierde o se roba</td><td>Verificar el estado de cifrado</td></tr>
+          <tr><td>8</td><td>Cortafuegos activo y uso seguro de redes</td><td>Disminuye la superficie expuesta y protege el tráfico en redes</td><td>Revisar reglas y puertos abiertos</td></tr>
+          <tr><td>9</td><td>Configuración segura: desinstalar todos los servicios y el software innecesario</td><td>Cada servicio activo es una puerta que nadie vigila</td><td>Listar y revisar los programas instalados y servicios en ejecución</td></tr>
+          <tr><td>10</td><td>Capacitación del usuario en phishing y otros ataques</td><td>El factor humano es el punto de entrada más sobreexplotado</td><td>Simulacros de phishing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Los cuatro primeros controles afectan las causas más comunes de compromiso (software desactualizado, permisos excesivos y credenciales débiles).</p>
+    <p>El quinto cambia de lógica , ya que algún control fallara y asegura la recuperación.</p>
+    <p>Del sexto al noveno se refuerza la configuración del equipo y el último es permanente , porque ningún control técnico ayuda si el usuario entrega sus credenciales.</p>
+  </section>
+
+  <!-- Conclusiones -->
+  <section class="content-panel" id="conclusiones">
+    <h2>Conclusiones</h2>
+    <p>La seguridad de la información y la seguridad del sistema operativo están relacionadas. La primera explica que se debe proteger mediante la confidencialidad, integridad y disponibilidad , mientras que la segunda acepta aplicar esa protección mediante permisos y cuentas de usuarios.</p>
+    <p>Para reforzar la seguridad, se recomienda mantener los sistemas actualizados, aplicar la autenticación multifactor y realizar copias de seguridad. Además es importante capacitar a los usuarios para prevenirlos de ataques cibernéticos.</p>
+    <p>Para concluir, para tener una buena seguridad no basta con tener muy buena tecnología, sino también de una administración responsable de ella y la aplicación constante de buenas prácticas.</p>
+  </section>
+
+  <!-- Genially -->
+  <section class="content-panel" id="genially">
+    <h2>Actividad complementaria: presentación en Genially</h2>
+    <p>Enlace de visualización: <a href="https://view.genially.com/6ad4e7f51409d79f7061e25f" target="_blank" rel="noopener">https://view.genially.com/6ad4e7f51409d79f7061e25f</a></p>
+    <div class="embed-frame">
+      <iframe
+        src="https://view.genially.com/6ad4e7f51409d79f7061e25f"
+        title="Seguridad de la Información y Sistemas Operativos (Genially)"
+        allowfullscreen
+        scrolling="yes"
+        loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Referencias -->
+  <section class="content-panel" id="referencias">
+    <h2>Referencias</h2>
+    <details class="refs" open>
+      <summary>Ver / ocultar referencias</summary>
+      <ul>
+        <li>Concepto.de. (s. f.-a). <em>Información</em>. Recuperado el 21 de octubre de 2026, de <a href="https://concepto.de/informacion/" target="_blank" rel="noopener">https://concepto.de/informacion/</a></li>
+        <li>Concepto.de. (s. f.-b). <em>Seguridad</em>. Recuperado el 21 de octubre de 2026, de <a href="https://concepto.de/seguridad/" target="_blank" rel="noopener">https://concepto.de/seguridad/</a></li>
+        <li>Concepto.de. (s. f.-c). <em>Sistema</em>. Recuperado el 21 de octubre de 2026, de <a href="https://concepto.de/sistema/" target="_blank" rel="noopener">https://concepto.de/sistema/</a></li>
+        <li>Cybersecurity and Infrastructure Security Agency. (s. f.). <em>Secure our world</em>. Recuperado el 21 de octubre de 2026, de <a href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener">https://www.cisa.gov/secure-our-world</a></li>
+        <li>Garre Gui, S. (s. f.). <em>Introducción a la seguridad de la información (PID_00177809)</em> [Material docente]. Universitat Oberta de Catalunya. <a href="https://www.basc-pichincha.org.ec/wp-content/uploads/2025/10/INTRODUCCION_A_LA_SEGURIDAD_DE_LA_INFORMACION.pdf" target="_blank" rel="noopener">https://www.basc-pichincha.org.ec/wp-content/uploads/2025/10/INTRODUCCION_A_LA_SEGURIDAD_DE_LA_INFORMACION.pdf</a></li>
+        <li>Jaramillo Gómez, A. (2024, 3 de mayo). <em>El mito de que la seguridad significa ausencia de riesgo</em> [Publicación]. LinkedIn. <a href="https://es.linkedin.com/pulse/el-mito-de-que-la-seguridad-significa-ausencia-riesgo-alejandro-c5hie" target="_blank" rel="noopener">https://es.linkedin.com/pulse/el-mito-de-que-la-seguridad-significa-ausencia-riesgo-alejandro-c5hie</a></li>
+        <li>The Linux Documentation Project. (s. f.). <em>Linux security HOWTO</em>. Recuperado el 21 de octubre de 2026, de <a href="https://tldp.org/HOWTO/Security-HOWTO/" target="_blank" rel="noopener">https://tldp.org/HOWTO/Security-HOWTO/</a></li>
+        <li>Microsoft. (s. f.). <em>Windows security documentation</em>. Microsoft Learn. Recuperado el 21 de octubre de 2026, de <a href="https://learn.microsoft.com/en-us/windows/security/" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows/security/</a></li>
+        <li>National Institute of Standards and Technology. (2024). <em>The NIST Cybersecurity Framework (CSF) 2.0</em> (NIST CSWP 29). U.S. Department of Commerce. <a href="https://doi.org/10.6028/NIST.CSWP.29" target="_blank" rel="noopener">https://doi.org/10.6028/NIST.CSWP.29</a></li>
+      </ul>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis III · 2026
+</footer>
+
+</body>
+</html>
