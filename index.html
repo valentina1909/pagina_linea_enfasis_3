@@ -1,92 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Inicio · Línea de Énfasis 3</title>
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal principal de Línea de Énfasis 2 y Línea de Énfasis 3.">
+  <title>Portal | Líneas de Énfasis</title>
+  <style>
+    :root {
+      --fondo: #0A1020;
+      --panel: #131C33;
+      --texto: #F1F5FB;
+      --suave: #B4BFD6;
+      --borde: rgba(255, 255, 255, .12);
+      --c2: #2FD9CA;
+      --c3: #A78BFA;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      display: flex; flex-direction: column;
+      background: radial-gradient(circle at 20% 0%, #16264a 0%, var(--fondo) 55%);
+      color: var(--texto);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    header { text-align: center; padding: 56px 16px 24px; }
+    header p { margin: 0 0 8px; color: var(--suave); letter-spacing: .12em; text-transform: uppercase; font-size: .85rem; }
+    h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.15; }
+    header span { color: var(--suave); }
+    main {
+      flex: 1; width: min(1000px, 100% - 32px); margin: 0 auto; padding: 24px 0 48px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;
+    }
+    .opcion {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 32px 28px; text-decoration: none; color: inherit;
+      background: var(--panel); border: 1px solid var(--borde); border-top: 4px solid var(--acento);
+      border-radius: 18px; box-shadow: 0 18px 40px rgba(0, 0, 0, .3);
+      transition: transform .2s, border-color .2s;
+    }
+    .opcion:hover, .opcion:focus-visible { transform: translateY(-5px); border-color: var(--acento); outline: none; }
+    .opcion:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+    .l2 { --acento: var(--c2); }
+    .l3 { --acento: var(--c3); }
+    .num {
+      width: 56px; height: 56px; display: grid; place-items: center;
+      border: 1px solid var(--acento); border-radius: 15px;
+      color: var(--acento); font-size: 1.4rem; font-weight: 800;
+    }
+    .opcion h2 { margin: 0; font-size: 1.4rem; }
+    .opcion p { margin: 0; color: var(--suave); }
+    .opcion ul { margin: 0; padding-left: 20px; color: var(--suave); font-size: .95rem; }
+    .ir { margin-top: auto; padding-top: 8px; color: var(--acento); font-weight: 700; }
+    footer { text-align: center; padding: 20px 16px; color: var(--suave); font-size: .9rem; border-top: 1px solid var(--borde); }
+  </style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="brand-row">
-    <div class="brand-mark">L3</div>
-    <div class="brand-title">LÍNEA DE ÉNFASIS 3</div>
-    <div class="brand-subtitle">Aprendizaje · Tecnología · Innovación</div>
-  </div>
-</header>
-
-<div class="nav-wrap">
-  <nav class="navbar">
-    <a href="index.html" aria-current="page">🏠 Inicio</a>
-    <a href="temas.html">📚 Temas</a>
-    <a href="conceptos.html">💡 Conceptos</a>
-    <a href="casos-practicos.html">🧩 Casos prácticos</a>
-    <a href="proyecto.html">🎥 Proyecto</a>
-  </nav>
-</div>
-
-<main>
-
-  <section class="hero">
-    <div class="eyebrow">Corporación Universitaria Remington · Ingeniería en Sistemas</div>
-    <h1>Explora, comprende y lleva tus ideas a la <span class="accent">práctica</span></h1>
-    <p>Linea de Enfasis III · 2026<br>
-       Jeni Valentina Ipuz Ortiz · Diana Marcela Arango Marin.<br>
-       Docente: Oscar Fernando Mahecha Camargo</p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="temas.html">Explorar temas</a>
-      <a class="button button-secondary" href="proyecto.html">Proyecto final</a>
-    </div>
-  </section>
-
-  <div class="card-grid">
-    <a class="card" href="temas.html">
-      <div class="card-icon">📚</div>
-      <span class="card-tag">Temas</span>
-      <h3>Taller de investigación: Seguridad de la información y sistemas operativos</h3>
-      <p>10 preguntas del taller, conclusiones, actividad complementaria en Genially y referencias.</p>
+  <header>
+    <p>Espacio académico</p>
+    <h1>Líneas de Énfasis</h1>
+    <span>Elige el sitio al que quieres entrar.</span>
+  </header>
+  <main>
+    <a class="opcion l2" href="linea_enfasis_2/index.html">
+      <div class="num" aria-hidden="true">L2</div>
+      <h2>Línea de Énfasis 2</h2>
+      <p>Fundamentos de ciberseguridad del Taller Teórico Práctico I – Conceptos Hacking.</p>
+      <ul>
+        <li>Temas por unidades</li>
+        <li>Conceptos y casos prácticos</li>
+        <li>Proyecto - Video Tutorial</li>
+      </ul>
+      <span class="ir">Entrar →</span>
     </a>
-    <a class="card" href="conceptos.html">
-      <div class="card-icon">💡</div>
-      <span class="card-tag">Conceptos</span>
-      <h3>Taller teórico de investigación — Singularidad tecnológica, inteligencia artificial y ciberseguridad</h3>
-      <p>10 preguntas de investigación y referencias.</p>
+    <a class="opcion l3" href="linea_enfasis_3/index.html">
+      <div class="num" aria-hidden="true">L3</div>
+      <h2>Línea de Énfasis 3</h2>
+      <p>Seguridad de la información, sistemas operativos y singularidad tecnológica.</p>
+      <ul>
+        <li>Taller de investigación y presentación en Genially</li>
+        <li>Conceptos y caso TecnoGestión S.A.S.</li>
+        <li>Proyecto - Video Tutorial</li>
+      </ul>
+      <span class="ir">Entrar →</span>
     </a>
-    <a class="card" href="casos-practicos.html">
-      <div class="card-icon">🧩</div>
-      <span class="card-tag">Casos prácticos</span>
-      <h3>Taller práctico — Seguridad de la información frente a escenarios de singularidad tecnológica</h3>
-      <p>Caso TecnoGestión S.A.S.: 5 puntos, conclusiones y referencias.</p>
-    </a>
-    <a class="card" href="proyecto.html">
-      <div class="card-icon">🎥</div>
-      <span class="card-tag">Proyecto</span>
-      <h3>Proyecto - Video Tutorial</h3>
-      <p>Espacio para proyecto y video.</p>
-    </a>
-  </div>
-
-  <section class="content-panel" id="genially">
-    <h2>Actividad complementaria: presentación en Genially</h2>
-    <p>Enlace de visualización:
-      <a href="https://view.genially.com/6ad4e7f51409d79f7061e25f" target="_blank" rel="noopener">https://view.genially.com/6ad4e7f51409d79f7061e25f</a>
-    </p>
-    <div class="embed-frame">
-      <iframe
-        src="https://view.genially.com/6ad4e7f51409d79f7061e25f"
-        title="Seguridad de la Información y Sistemas Operativos (Genially)"
-        allowfullscreen
-        scrolling="yes"
-        loading="lazy"></iframe>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis III · 2026
-</footer>
-
+  </main>
+  <footer>Líneas de Énfasis · Sitio académico</footer>
 </body>
 </html>

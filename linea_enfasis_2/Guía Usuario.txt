@@ -1,0 +1,30 @@
+LÍNEA DE ÉNFASIS 2 — SITIO WEB
+====================================
+
+CONTENIDO
+- index.html: Inicio
+- temas.html: Temas del taller organizados por unidades
+- conceptos.html: Conceptos (Taller Teórico Práctico I – Conceptos Hacking)
+- casos-practicos.html: Casos prácticos del taller
+- proyecto.html: Proyecto - Video Tutorial
+- ../index.html: portal principal para elegir entre Línea de Énfasis 2 y 3
+- css/estilos.css: estilos compartidos
+- Correcciones del PDF.txt: diferencias entre el texto de la página y el PDF
+
+CÓMO ABRIR
+1. Extrae todo el archivo ZIP en una carpeta.
+2. Abre index.html con Chrome, Edge, Firefox u otro navegador.
+3. Usa el menú horizontal superior para navegar entre las cinco páginas.
+
+IMPORTANTE
+- El sitio usa únicamente HTML y CSS; no necesita JavaScript, servidor ni instalación.
+
+- Conserva la carpeta css junto a los archivos HTML para que los estilos se carguen correctamente.
+
+- Con internet se cargan las fuentes tipográficas de Google Fonts; sin internet, el sitio usa las fuentes del sistema.
+
+- La página Proyecto - Video Tutorial sigue siendo una plantilla editable.
+
+- Para cambiar textos, abre cada archivo HTML con un editor de texto o código.
+
+- El menú o navbar usa enlaces a páginas independientes, por ello encontraras las diferentes fuentes de su diseño en archivos que acompañan el Index.
