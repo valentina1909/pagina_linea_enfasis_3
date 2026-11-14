@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Casos prácticos de ciberseguridad del Taller Teórico Práctico I.">
-  <title>Casos prácticos | Línea de Énfasis 2</title>
+  <title>Casos prácticos | Línea de Énfasis II</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -13,33 +13,484 @@
     <section class="hero">
       <p class="eyebrow">Aprendizaje aplicado</p>
       <h1>Casos prácticos</h1>
-      <p>Situaciones del Taller Teórico Práctico I para analizar problemas, argumentar decisiones y proponer soluciones con base en los contenidos de la asignatura.</p>
+      <p>Situaciones para analizar problemas, argumentar decisiones y proponer soluciones con base en los contenidos de la asignatura.</p>
     </section>
-    <div class="section-heading"><h2>Casos del taller</h2><p>Cada caso enlaza con su desarrollo completo dentro del taller.</p></div>
-    <section class="card-grid">
-      <article class="card"><div class="card-icon">01</div><span class="tag">Tema 1</span><h3>Sin plan de actualizaciones</h3><p>Los computadores no tienen una trazabilidad clara, con fechas y encargados, para mantener los parches de seguridad al día.</p><a href="temas.html#caso-actualizaciones">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">02</div><span class="tag">Tema 1</span><h3>Sin segmentación por roles ni MFA</h3><p>Cualquiera con cualquier rol puede acceder a cualquier documento, y muchas veces también editarlo y compartirlo.</p><a href="temas.html#caso-accesos">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">03</div><span class="tag">Tema 1</span><h3>Sin copias de seguridad</h3><p>Ante un secuestro de datos, la empresa no tiene medidas para contenerlo: los datos se pierden o debe pagar por recuperarlos.</p><a href="temas.html#caso-copias">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">04</div><span class="tag">Tema 2</span><h3>Historias clínicas en el reciclaje</h3><p>Una clínica envía al reciclaje cajas con historias clínicas sin destruir completamente. No hubo malware ni intrusos.</p><a href="temas.html#caso-reciclaje">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">05</div><span class="tag">Tema 3</span><h3>Phishing y la tríada CIA</h3><p>Un atacante obtiene contraseñas con phishing y compromete la confidencialidad, la integridad y la disponibilidad.</p><a href="temas.html#caso-phishing">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">06</div><span class="tag">Tema 4</span><h3>Portal de resultados de laboratorio</h3><p>Una clínica crea un portal web y debe atender a la vez la seguridad informática, la ciberseguridad y la protección de datos.</p><a href="temas.html#caso-portal">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">07</div><span class="tag">Tema 6</span><h3>Servidor sin parches</h3><p>Un servidor de historias clínicas lleva meses sin mantenimiento ni responsable, expuesto a un hacker que busca servidores vulnerables.</p><a href="temas.html#caso-servidor">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">08</div><span class="tag">Tema 6</span><h3>Cuentas que nunca se desactivan</h3><p>Los usuarios retirados conservan credenciales activas que puede usar un exempleado descontento o quien las tenga.</p><a href="temas.html#caso-cuentas">Ver caso completo →</a></article>
-      <article class="card"><div class="card-icon">09</div><span class="tag">Tema 7</span><h3>Ataque de ransomware</h3><p>Una empresa pierde el acceso a sus archivos y bases de datos, con impacto en todas sus dimensiones, sus empleados y sus clientes.</p><a href="temas.html#tema-7">Ver caso completo →</a></article>
-    </section>
-    <div class="section-heading"><h2>Estructura de análisis</h2><p>Utiliza esta guía como punto de partida para cada caso.</p></div>
-    <section class="card-grid">
-      <article class="card"><div class="card-icon">01</div><h3>Contexto y problema</h3><p>Describe el escenario, identifica a los actores involucrados y define el problema central.</p></article>
-      <article class="card"><div class="card-icon">02</div><h3>Análisis de evidencias</h3><p>Separa los hechos de las suposiciones, identifica causas y compara alternativas.</p></article>
-      <article class="card"><div class="card-icon">03</div><h3>Propuesta de solución</h3><p>Formula una solución argumentada, describe sus pasos y establece cómo evaluar resultados.</p></article>
-    </section>
-    <section class="content-panel"><h2>Preguntas orientadoras</h2><ul><li>¿Cuál es el problema principal y qué evidencias permiten identificarlo?</li><li>¿Qué conceptos de la asignatura ayudan a comprender la situación?</li><li>¿Qué alternativas podrían implementarse y cuáles son sus ventajas y limitaciones?</li><li>¿Qué recursos, riesgos y criterios de evaluación deben considerarse?</li></ul></section>
 
+
+    <!-- Taller práctico · Clase 1 -->
+    <details class="grupo-taller" id="taller-clase-1">
+      <summary><span class="grupo-taller-titulo">Taller práctico · Clase 1<small>Caso investigativo de ciberseguridad · Línea de Énfasis II</small></span></summary>
+      <div class="grupo-taller-cuerpo">
+
+    <section class="content-panel tema" id="contexto-emblema">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">▣</span>
+        <div><p class="eyebrow">Caso base</p><h3>Contexto: Comercializadora EMBLEMA S. A. S.</h3></div>
+      </div>
+      <p>La empresa ficticia Comercializadora EMBLEMA S. A. S. se dedica a la venta y distribución de productos electrónicos. Cuenta con <b>25 empleados</b>, una oficina administrativa, una bodega y una tienda virtual mediante la cual recibe pedidos y pagos de sus clientes.</p>
+      <h4>Recursos que utiliza</h4>
+      <ul>
+        <li>Un sistema de facturación e inventario.</li>
+        <li>Una base de datos con información de clientes y proveedores.</li>
+        <li>Correo electrónico corporativo.</li>
+        <li>Computadores para las áreas administrativas y comerciales.</li>
+        <li>Una red Wi-Fi compartida por empleados y visitantes.</li>
+        <li>Servicios de almacenamiento de archivos en la nube.</li>
+        <li>Una plataforma de comercio electrónico conectada con un proveedor de pagos.</li>
+      </ul>
+      <div class="card-grid card-grid-2">
+        <article class="card card-ambar"><h5>Condiciones de seguridad</h5><p>No cuenta con un departamento especializado en ciberseguridad. Algunos empleados comparten contraseñas, no existe un procedimiento formal para reportar incidentes y las copias de seguridad se hacen ocasionalmente, sin verificar que los archivos puedan recuperarse.</p></article>
+        <article class="card card-coral"><h5>Hecho reciente</h5><p>Un empleado recibió un correo que aparentemente provenía de un proveedor y pedía actualizar las credenciales de acceso; ingresó sus datos en el enlace del mensaje. Días después, la empresa detectó accesos inusuales al correo corporativo y dificultades para consultar archivos almacenados en la nube.</p></article>
+      </div>
+      <p class="note">Entregable del taller: portada, desarrollo de las preguntas conceptuales, análisis del caso empresarial, ficha de caracterización y diagnóstico inicial, conclusiones y referencias en APA 7.ª edición o IEEE. Las respuestas deben mostrar comprensión, razonamiento propio y aplicación a situaciones empresariales.</p>
+    </section>
+
+    <section class="content-panel tema" id="emblema">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">II</span>
+        <div><p class="eyebrow">Parte II</p><h3>Análisis del caso empresarial: Comercializadora EMBLEMA S. A. S.</h3></div>
+      </div>
+
+      <h4>1. Identificación de activos críticos</h4>
+      <div class="enunciado"><b>Enunciado</b><p>Identifique al menos cinco activos de información o recursos tecnológicos de la empresa. Explique qué función cumple cada uno y qué consecuencias tendría su pérdida, alteración o divulgación.</p></div>
+      <p>Se identificaron seis activos:</p>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Tabla 1.</b> Activos de información y recursos tecnológicos críticos de Comercializadora EMBLEMA S. A. S.</caption>
+          <thead><tr><th scope="col">Activo</th><th scope="col">Función que cumple</th><th scope="col">Consecuencias de la pérdida, alteración o divulgación</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Sistema de facturación e inventario</th><td>Es responsable de todo el proceso de facturación, los inventarios, los costos y la gestión de cartera.</td><td>Pérdida de capacidad para vender, falta de confianza en los inventarios y estados financieros, y riesgo de exposición de información comercial que daría ventaja a la competencia.</td></tr>
+            <tr><th scope="row">Base de datos de clientes y proveedores</th><td>Concentra toda la información personal de los clientes y proveedores.</td><td>Incapacidad de cumplir los pedidos y preservar la relación comercial. Si se altera, se enviarían pedidos a direcciones incorrectas y los pagos irían a cuentas falsas; si se divulga, se violaría la ley de protección de datos.</td></tr>
+            <tr><th scope="row">Correo electrónico corporativo</th><td>Es el canal de comunicación con clientes y proveedores, y donde se gestionan pedidos y cotizaciones.</td><td>Interrupción de las comunicaciones, suplantación de identidad en los correos y publicación de negociaciones y accesos.</td></tr>
+            <tr><th scope="row">Plataforma de comercio electrónico y conexión con el proveedor de pagos</th><td>Es el método por el cual se reciben pedidos y se realizan pagos.</td><td>Pérdida de ingresos, manipulación de precios, desviación de pagos y exhibición de datos de clientes.</td></tr>
+            <tr><th scope="row">Almacenamiento de archivos en la nube y copias de seguridad</th><td>Guarda contratos, soportes y documentación; también es la última forma de recuperación en caso de fallas.</td><td>La ausencia de documentos impediría la recuperación; además, podrían manipularse o exhibirse los documentos.</td></tr>
+            <tr><th scope="row">Infraestructura de red y equipos de cómputo</th><td>Es la conexión wifi común y los equipos usados por los departamentos de administración y comerciales.</td><td>Falta de disponibilidad en las áreas administrativas y comerciales, equipos comprometidos para acceder a información interna y acceso a servicios internos por wifi.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>2. Análisis del incidente</h4>
+      <div class="enunciado"><b>Enunciado</b><p>Determine la posible amenaza involucrada, la vulnerabilidad aprovechada, el incidente de seguridad que podría estar ocurriendo y los principios de confidencialidad, integridad o disponibilidad que podrían verse afectados. Justifique cada respuesta con elementos concretos del caso.</p></div>
+      <dl class="filas">
+        <div class="fila-coral"><dt>Amenaza</dt><dd>Una persona externa que utiliza ataques de phishing y se hace pasar por proveedores para engañar al empleado y conseguir las credenciales. Según Verizon (2026), todos los ataques reportados por pequeñas y medianas empresas provinieron de personas externas con motivación económica; el elemento humano estuvo presente en el 62% de las brechas y el phishing fue el primer punto de acceso en el 16%.</dd></div>
+        <div class="fila-ambar"><dt>Incidente</dt><dd>Se confirmó el robo de credenciales y el acceso no autorizado a los correos corporativos. La presencia de ransomware aún debe verificarse; según Verizon (2026), estuvo presente en el 48% de las brechas analizadas.</dd></div>
+      </dl>
+      <h5>Vulnerabilidades aprovechadas</h5>
+      <div class="card-grid card-grid-2">
+        <article class="card card-ambar"><h5>Personas u organización</h5><p>No hay un proceso para reportar incidentes, por lo que no se puede hacer seguimiento.</p></article>
+        <article class="card card-ambar"><h5>Gestión de acceso</h5><p>Al compartir contraseñas es difícil saber quién fue el responsable y más personas pueden acceder a la red.</p></article>
+        <article class="card card-ambar"><h5>Autenticación</h5><p>No hay autenticación multifactor, por lo que solo conseguir la contraseña basta para tener acceso.</p></article>
+        <article class="card card-ambar"><h5>Continuidad</h5><p>Las copias de seguridad se hacen solo ocasionalmente, por lo que puede haber pérdida de datos.</p></article>
+        <article class="card card-ambar"><h5>Responsabilidad</h5><p>No hay una persona responsable de la ciberseguridad.</p></article>
+      </div>
+      <h5>Principios afectados</h5>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Confidencialidad</h5><p>Vulnerada por el acceso no autorizado a correos con datos sensibles de clientes y proveedores, protegidos por la Ley 1581 de 2012.</p></article>
+        <article class="card card-ambar"><h5>Integridad</h5><p>Amenazada porque pueden modificarse correos y archivos, sin posibilidad de verificar la integridad de la información.</p></article>
+        <article class="card card-acento"><h5>Disponibilidad</h5><p>Comprometida por los problemas para acceder a los archivos de la nube.</p></article>
+      </div>
+      <div class="ejemplo">
+        <span class="ejemplo-titulo">Encuadre normativo</span>
+        <p>Los hechos se relacionan con la Ley 1273 de 2009: suplantación de sitios web para capturar datos personales (art. 269G), acceso abusivo a un sistema informático (art. 269A) y violación de datos personales (art. 269F). Además, el artículo 4 de la Ley 1581 de 2012 establece los principios de seguridad y confidencialidad que la empresa debe cumplir frente a los datos personales y los accesos no autorizados.</p>
+      </div>
+
+      <h4>3. Evaluación del impacto empresarial</h4>
+      <div class="enunciado"><b>Enunciado</b><p>Analice las consecuencias que podría experimentar la empresa si pierde temporalmente el acceso a su tienda virtual, sus archivos y su sistema de facturación. Identifique al menos cuatro impactos y explique cómo afectarían la operación y los ingresos.</p></div>
+      <p>Se identificaron cinco impactos principales:</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Interrupción de los ingresos</h5><p>Con la caída de la tienda virtual no se reciben nuevas ventas, y la falla del sistema de pagos dificulta confirmar pedidos y recibir pagos.</p></article>
+        <article class="card card-ambar"><h5>Suspensión operativa y logística</h5><p>Sin acceso al inventario se deben llevar registros manuales, lo que aumenta los errores y retrasa las operaciones.</p></article>
+        <article class="card card-acento"><h5>Incumplimiento legal, tributario y contractual</h5><p>Es difícil emitir facturas electrónicas ante la DIAN por el colapso del sistema <span class="cita">(DIAN, 2023)</span>.</p></article>
+        <article class="card card-coral"><h5>Daño reputacional y pérdida de confianza</h5><p>Por las interrupciones y el riesgo de pérdida de información, los clientes pueden preferir a la competencia y se puede deteriorar la relación con los proveedores.</p></article>
+        <article class="card card-ambar"><h5>Costo de respuesta y recuperación</h5><p>La empresa debe asumir horas extras, reconstrucción de información y asesoría especializada.</p></article>
+      </div>
+      <p class="note">Los impactos no son independientes: se encadenan y empeoran con el tiempo.</p>
+
+      <h4>4. Priorización de necesidades</h4>
+      <div class="enunciado"><b>Enunciado</b><p>Seleccione cinco necesidades de ciberseguridad que deberían atenderse prioritariamente. Para cada una, indique el problema identificado, la medida de protección propuesta y la justificación de su prioridad.</p></div>
+      <p>La priorización considera las vulnerabilidades de EMBLEMA, el costo de implementación y la reducción de riesgo que se logra. Esta metodología sigue el Marco de Ciberseguridad (CSF) 2.0 del NIST, según el cual las decisiones deben basarse en los riesgos de la organización <span class="cita">(Pascoe et al., 2024)</span>.</p>
+      <ol class="pasos">
+        <li><span><b>Autenticación robusta y cuentas individuales.</b> Activar la autenticación multifactor, evitar el uso de la misma contraseña y crear cuentas personales.</span></li>
+        <li><span><b>Copias de seguridad recuperables.</b> Automatizar los respaldos, mantener copias en diferentes medios y realizar pruebas de restauración.</span></li>
+        <li><span><b>Gestión de incidentes.</b> Desarrollar un proceso de reporte, nombrar a un responsable y proporcionar un medio para reportar. La detección temprana y el control reducen los costos de un incidente <span class="cita">(Nelson et al., 2025)</span>.</span></li>
+        <li><span><b>Capacitación del personal.</b> Formar para detectar phishing y validar cualquier solicitud de cambio de contraseñas. El elemento humano estuvo en el 62% de las brechas analizadas <span class="cita">(Verizon, 2026)</span>.</span></li>
+        <li><span><b>Protección de la infraestructura y la red.</b> Aislar la red de visitantes de la red de la empresa, mantener los equipos actualizados y aplicar protección contra malware.</span></li>
+      </ol>
+
+      <h4>5. Toma de decisiones gerenciales</h4>
+      <div class="enunciado"><b>Enunciado</b><p>Usted ha sido contratado como asesor de ciberseguridad. La gerencia dispone de un presupuesto limitado. Explique qué acciones implementaría durante los primeros 30 días, cuáles serían sus prioridades y cómo justificaría la inversión ante la gerencia.</p></div>
+      <p>El plan es de bajo costo, pues usa recursos que la empresa ya tiene contratados, y sigue el ciclo de preparación, detección, reacción y recuperación <span class="cita">(Nelson et al., 2025; Pascoe et al., 2024)</span>.</p>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Plan de 30 días</b></caption>
+          <thead><tr><th scope="col">Periodo</th><th scope="col">Fase</th><th scope="col">Acciones</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Días 1 al 5</th><td>Contención</td><td>Cambiar todas las contraseñas, cerrar sesiones activas, revisar todos los accesos, habilitar la autenticación multifactor y verificar que las copias de seguridad se hagan y funcionen.</td></tr>
+            <tr><th scope="row">Días 6 al 15</th><td>Protección del acceso</td><td>Eliminar contraseñas compartidas y crear cuentas individuales, elegir un administrador de contraseñas y aislar la red wifi de visitantes de la red de la empresa.</td></tr>
+            <tr><th scope="row">Días 16 al 25</th><td>Recuperación</td><td>Automatizar los respaldos y probar su restauración; crear un proceso para reportar incidentes y nombrar a la persona encargada.</td></tr>
+            <tr><th scope="row">Días 26 al 30</th><td>Capacitación</td><td>Capacitar a los 25 empleados para detectar y defenderse del phishing y realizar simulacros.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h5>Justificación ante la gerencia</h5>
+      <p>La inversión busca minimizar las pérdidas económicas por interrupciones, proteger la información privada y reducir los riesgos legales derivados de las leyes 1581 de 2012 y 1273 de 2009.</p>
+      <div class="cifras">
+        <div class="cifra"><strong>69%</strong><span>de quienes sufrieron un robo de datos no pagaron el rescate: de ahí la necesidad de copias recuperables (Verizon, 2026)</span></div>
+        <div class="cifra"><strong>55%</strong><span>de los robos de datos en pymes involucraron a terceros (Verizon, 2026)</span></div>
+      </div>
+      <p>Todos los robos de datos analizados en pequeñas y medianas empresas involucraron a personas externas con fines de lucro, por lo que el tamaño de EMBLEMA no la hace inmune.</p>
+      <h5>Cinco métricas para medir el progreso</h5>
+      <ul>
+        <li>Porcentaje de cuentas con autenticación multifactor.</li>
+        <li>Cuentas individuales frente a cuentas compartidas.</li>
+        <li>Fecha de la última restauración exitosa de copias de seguridad.</li>
+        <li>Número de incidentes reportados.</li>
+        <li>Clics en las simulaciones de phishing.</li>
+      </ul>
+    </section>
+
+    <section class="content-panel tema" id="ips">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">III</span>
+        <div><p class="eyebrow">Parte III</p><h3>Actividad aplicada: diagnóstico inicial de IPS Salud del Oriente S. A. S.</h3></div>
+      </div>
+      <div class="enunciado"><b>Objetivo</b><p>Aplicar los conceptos estudiados mediante la caracterización de una organización y la identificación de sus principales necesidades de ciberseguridad. Se eligió una empresa ficticia del sector salud.</p></div>
+
+      <h4>1. Información general</h4>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Tabla 2.</b> Ficha de caracterización de IPS Salud del Oriente S. A. S.</caption>
+          <thead><tr><th scope="col">Aspecto</th><th scope="col">Descripción</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Nombre</th><td>IPS Salud del Oriente S. A. S. (ficticia)</td></tr>
+            <tr><th scope="row">Sector económico</th><td>Salud. Prestación privada de servicios de salud.</td></tr>
+            <tr><th scope="row">Actividad principal</th><td>Institución prestadora de servicios de salud de mediana complejidad. Atiende a población afiliada a la EPS, pacientes particulares y pólizas de medicina prepagada.</td></tr>
+            <tr><th scope="row">Ubicación</th><td>Sede única en el oriente antioqueño, con una torre asistencial y otra administrativa en el mismo territorio.</td></tr>
+            <tr><th scope="row">Número de empleados</th><td>180 personas: 115 asistenciales (médicos, enfermeras, auxiliares, terapeutas y bacteriólogos), 45 administrativos (facturación, cartera, talento humano, calidad y sistemas) y 20 de servicios de apoyo.</td></tr>
+            <tr><th scope="row">Servicios que ofrece</th><td>Consulta externa de medicina general y especialidades básicas, urgencias 24 horas, hospitalización con 48 camas, imágenes diagnósticas, laboratorio clínico, terapia física y respiratoria, y farmacia.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>2. Infraestructura tecnológica</h4>
+      <p>La IPS tiene una estructura tecnológica que permite su funcionamiento diario, pero se ha desarrollado por capas y no incluye un sistema de seguridad integrado.</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-acento"><h5>Servidores y sistemas</h5><p>Dos servidores físicos con ocho servidores virtuales que administran bases de datos, archivos, usuarios e imágenes diagnósticas. Los sistemas de información cubren procesos clínicos, administrativos, de laboratorio, facturación, farmacia y nómina.</p></article>
+        <article class="card card-acento"><h5>Equipos y red</h5><p>140 equipos de trabajo, tablets, impresoras y lectores de códigos de barras. La red tiene conexiones por cable y tres conexiones inalámbricas.</p></article>
+        <article class="card card-acento"><h5>Nube y respaldos</h5><p>Servicios web y plataformas en la nube para citas, consulta de resultados, correo electrónico y almacenamiento de documentos. Las copias se guardan en la sala técnica y una vez por semana se copian a la nube.</p></article>
+        <article class="card card-ambar"><h5>Equipos biomédicos</h5><p>Algunos dispositivos usan sistemas operativos sin soporte del fabricante y con limitaciones para cambiar su configuración.</p></article>
+      </div>
+
+      <h4>3. Información que necesita proteger</h4>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Historias clínicas</h5><p>Son los datos más críticos: datos sensibles según el artículo 5 de la Ley 1581 de 2012. Contienen diagnósticos, tratamientos, resultados de laboratorio y formulaciones, además de datos personales del paciente como cédula, dirección y teléfono.</p></article>
+        <article class="card card-ambar"><h5>Datos financieros y de empleados</h5><p>Cartera y facturación a clientes particulares y otras entidades; información personal, nómina, hojas de vida y datos de seguridad social de los empleados.</p></article>
+        <article class="card card-acento"><h5>Datos institucionales</h5><p>Procesos de calidad, contratos con otras entidades, y trazabilidad e inventario de medicamentos, instrumentos y máquinas.</p></article>
+      </div>
+
+      <h4>4. Identificación de problemas de seguridad</h4>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Riesgos tecnológicos</h5><p><b>Ransomware:</b> si se cifran los servidores con las historias clínicas, el personal pierde acceso inmediato a la información de pacientes hospitalizados y de urgencias, lo que puede poner vidas en riesgo.</p><p><b>Software desactualizado y equipos biomédicos sin parches:</b> sus vulnerabilidades conocidas son fáciles de explotar, y al estar conectados a la red el riesgo se multiplica.</p><p><b>Copias de seguridad insuficientes o sin probar:</b> si el respaldo está en el mismo lugar que los servidores, un incendio, una falla eléctrica o el mismo ransomware destruiría datos y copia.</p></article>
+        <article class="card card-ambar"><h5>Riesgos humanos</h5><p><b>Phishing:</b> facturación y cartera reciben correos que simulan ser de una EPS o entidad oficial; un clic puede comprometer toda la red.</p><p><b>Sesiones y contraseñas compartidas en urgencias:</b> impiden rastrear quién accedió a cada historia clínica en una auditoría o incidente.</p><p><b>Fuga de información por WhatsApp:</b> enviar resultados, fórmulas o historias clínicas por chat personal viola la privacidad del paciente y la normativa colombiana de protección de datos.</p></article>
+        <article class="card card-acento"><h5>Riesgos organizacionales</h5><p><b>Sin políticas formales ni capacitación periódica:</b> el personal no sabe qué está prohibido, qué reportar ni cómo actuar.</p><p><b>Sin control de acceso por roles:</b> cualquier empleado puede ver historias clínicas que no necesita para su trabajo.</p><p><b>Sin plan de continuidad del negocio:</b> sin procedimientos como historia clínica en papel o protocolos de contingencia, la clínica queda paralizada.</p></article>
+      </div>
+
+      <h4>5. Diagnóstico inicial</h4>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Tabla 3.</b> Diagnóstico inicial de necesidades de ciberseguridad de IPS Salud del Oriente S. A. S.</caption>
+          <thead><tr><th scope="col">Necesidad identificada</th><th scope="col">Problema o riesgo</th><th scope="col">Consecuencia posible</th><th scope="col">Medida inicial propuesta</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Identificación del usuario en el sistema de información clínica</th><td>Puestos de enfermería con sesiones compartidas que no dejan rastro de quién consulta o actualiza.</td><td>Imposibilidad de auditar accesos no autorizados, violación de la confidencialidad de la historia clínica y falta de evidencia ante una reclamación.</td><td>Asignar una cuenta nominal a cada persona, activar el cierre automático de sesión y auditar la consulta de historias clínicas.</td></tr>
+            <tr><th scope="row">Segmentación de la red</th><td>No hay separación: el wifi de pacientes, las tablets, los dispositivos biomédicos y los servidores comparten la misma red.</td><td>Un equipo vulnerado en la sala de espera podría llegar a la base de datos e incluso modificar datos de atención de pacientes.</td><td>Aislar redes separando pacientes, personal asistencial, equipo biomédico y servidores, y restringir el tráfico permitido.</td></tr>
+            <tr><th scope="row">Copias de seguridad recuperables y fuera de sitio</th><td>Copias guardadas en la misma sala técnica de los servidores y sin pruebas de restauración.</td><td>Pérdida total de las historias clínicas en caso de incendio, hurto o cifrado malicioso.</td><td>Guardar una copia fuera de sitio y realizar pruebas de restauración completa cada trimestre.</td></tr>
+            <tr><th scope="row">Control de los accesos de terceros</th><td>Conexión remota permanente de proveedores con credenciales genéricas y sin registro de sus actividades.</td><td>Un proveedor comprometido es una ruta de acceso a los sistemas clínicos que la IPS no puede detectar.</td><td>Asignar accesos nominales a cada proveedor, habilitarlos solo durante la atención solicitada y registrar cada sesión.</td></tr>
+            <tr><th scope="row">Gestión de vulnerabilidades en equipos</th><td>Dispositivos médicos y estaciones con sistemas sin soporte, por limitaciones de garantía del fabricante.</td><td>Es el punto de entrada más común para ataques cibernéticos cuando no se corrige.</td><td>Auditar dispositivos y versiones, aislar en red los que no pueden actualizarse y negociar con el fabricante un periodo de actualizaciones sin perder la garantía.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-panel tema" id="conclusiones-taller">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">IV</span>
+        <div><p class="eyebrow">Parte IV</p><h3>Conclusiones y reflexión</h3></div>
+      </div>
+
+      <h4>¿Puede una empresa pequeña ser víctima de un incidente de ciberseguridad?</h4>
+      <p>Sí. Según Verizon (2026) se registraron 7.256 incidentes en pymes, de los cuales 7.152 fueron violaciones de datos confirmadas. Los ciberdelincuentes buscan lucro aprovechando vulnerabilidades, robando credenciales y usando estafas como el phishing.</p>
+      <div class="cifras">
+        <div class="cifra"><strong>26%</strong><span>de los primeros accesos por explotación de vulnerabilidades</span></div>
+        <div class="cifra"><strong>13%</strong><span>por robo de credenciales</span></div>
+        <div class="cifra"><strong>9%</strong><span>por phishing</span></div>
+        <div class="cifra"><strong>55%</strong><span>de los ataques relacionados con terceros</span></div>
+      </div>
+      <p>Los atacantes no necesitan ir directamente contra la empresa: pueden aprovechar sus vulnerabilidades o atacar a un tercero para entrar. La situación es más grave si no hay recursos para recuperarse, respaldar la información o contar con personal de seguridad; a diferencia de las grandes empresas, las pymes no pueden permitirse interrumpir su actividad.</p>
+
+      <h4>¿Por qué la protección de la información es una responsabilidad compartida?</h4>
+      <div class="card-grid card-grid-2">
+        <article class="card card-acento"><h5>Gerencia</h5><p>Asigna recursos, crea políticas y designa un responsable de seguridad, según ISO/IEC 27001:2022 y NIST CSF 2.0 <span class="cita">(ISO/IEC, 2022a; Pascoe et al., 2024)</span>.</p></article>
+        <article class="card card-coral"><h5>Empleados</h5><p>El factor humano estuvo en el 62% de las brechas <span class="cita">(Verizon, 2026)</span>. Deben aprender a detectar ataques y reportarlos; la capacitación y un proceso de reporte reducen este riesgo.</p></article>
+        <article class="card card-ambar"><h5>Personal tecnológico</h5><p>Configura sistemas, implementa controles y analiza registros para detectar accesos no autorizados, pero depende de los recursos de la gerencia y de la colaboración del personal.</p></article>
+      </div>
+
+      <h4>Relación entre el diagnóstico y el plan de negocio de ciberseguridad</h4>
+      <p>El diagnóstico es la base del plan: identifica activos, amenazas y vulnerabilidades, permite establecer prioridades, distribuir recursos según necesidades reales, justificar la inversión y medir el progreso. El NIST CSF 2.0 determina las brechas entre el estado actual y el objetivo y define acciones para cerrarlas <span class="cita">(Pascoe et al., 2024)</span>; la ISO/IEC 27001:2022 exige evaluar y tratar los riesgos antes de seleccionar controles <span class="cita">(ISO/IEC, 2022a)</span>, y la ISO/IEC 27002:2022 describe cómo elegir las medidas <span class="cita">(ISO/IEC, 2022b)</span>. Finalmente, el plan convierte los hallazgos en acciones concretas con responsables, plazos, costos e indicadores.</p>
+
+      <h4>Oportunidad de un servicio especializado</h4>
+      <p>La gestión de vulnerabilidades en equipos biomédicos y el aislamiento de los equipos de la red es una de las necesidades con mayor potencial. Exige conocimiento de ciberseguridad, de tecnología clínica y de la regulación del sector salud, lo que abre espacio a proveedores especializados. Según Verizon (2026), la explotación de vulnerabilidades es el vector de ataque inicial más frecuente en el 20% de las violaciones, frente al 14% del phishing y el 11% del robo de credenciales. A esto se suman la Resolución 1995 de 1999 y la Ley 1581 de 2012, que fijan requisitos para proteger la información clínica y sensible.</p>
+      <p>El servicio puede cubrir inventario de equipos, evaluación de riesgos, aislamiento de equipos que no pueden actualizarse, coordinación con fabricantes para ajustes seguros, evaluaciones periódicas e informes para administración y calidad.</p>
+    </section>
+
+    <section class="content-panel tema" id="referencias-taller">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">✓</span>
+        <div><p class="eyebrow">Fuentes</p><h3>Referencias del taller práctico</h3></div>
+      </div>
+      <ul class="referencias">
+        <li>Congreso de la República de Colombia. (2009, 5 de enero). <i>Ley 1273 de 2009</i>. Diario Oficial No. 47.223. <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34492">https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34492</a></li>
+        <li>Congreso de la República de Colombia. (2012, 17 de octubre). <i>Ley Estatutaria 1581 de 2012</i>. Diario Oficial No. 48.587. <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981</a></li>
+        <li>Dirección de Impuestos y Aduanas Nacionales. (2023, 1 de noviembre). <i>Diario Oficial del 2 de noviembre de 2023</i>.</li>
+        <li>International Organization for Standardization & International Electrotechnical Commission. (2022a). <i>Information security, cybersecurity and privacy protection — Information security management systems — Requirements</i> (ISO/IEC 27001:2022). ISO.</li>
+        <li>International Organization for Standardization & International Electrotechnical Commission. (2022b). <i>Information security, cybersecurity and privacy protection — Information security controls</i> (ISO/IEC 27002:2022). ISO.</li>
+        <li>Ministerio de Salud. (1999, 8 de julio). <i>Resolución 1995 de 1999. Por la cual se establecen normas para el manejo de la Historia Clínica</i>. Diario Oficial No. 43.655.</li>
+        <li>Nelson, A., Rekhi, S., Souppaya, M., & Scarfone, K. (2025). <i>Incident response recommendations and considerations for cybersecurity risk management: A CSF 2.0 community profile</i> (NIST Special Publication 800-61r3). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.SP.800-61r3">https://doi.org/10.6028/NIST.SP.800-61r3</a></li>
+        <li>Pascoe, C., Quinn, S., & Scarfone, K. (2024). <i>The NIST Cybersecurity Framework (CSF) 2.0</i> (NIST Cybersecurity White Paper 29). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.CSWP.29">https://doi.org/10.6028/NIST.CSWP.29</a></li>
+        <li>Verizon. (2026). <i>2026 Data Breach Investigations Report: Executive summary</i>. Verizon Business. <a href="https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf">https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf</a></li>
+      </ul>
+    </section>
+
+      </div>
+    </details>
+
+    <!-- Análisis de caso · Ecopetrol -->
+    <details class="grupo-taller" id="caso-ecopetrol">
+      <summary><span class="grupo-taller-titulo">Análisis de caso · Ecopetrol S. A.<small>Incidente de ciberseguridad de julio de 2026 · Línea de Énfasis II</small></span></summary>
+      <div class="grupo-taller-cuerpo">
+
+    <section class="content-panel tema" id="ecopetrol-contexto">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">▣</span>
+        <div><p class="eyebrow">Caso base</p><h3>Situación problémica</h3></div>
+      </div>
+      <p>El 17 de julio de 2026, Ecopetrol informó que había identificado un acceso no autorizado a determinados recursos digitales de la compañía y sus empresas subsidiarias. Según el comunicado oficial:</p>
+      <ul>
+        <li>El acceso afectó los entornos de almacenamiento de archivos en la nube de aproximadamente 15 compañías del Grupo Ecopetrol.</li>
+        <li>Se produjo la descarga no autorizada de información asociada con aproximadamente 3.300 cuentas de usuario.</li>
+        <li>El atacante intentó ejecutar un ataque de ransomware, pero los controles de ciberseguridad lo bloquearon.</li>
+        <li>El atacante hizo exigencias de extorsión y amenazó con divulgar públicamente la información extraída.</li>
+        <li>La compañía activó sus protocolos de respuesta a incidentes y comenzó una investigación.</li>
+      </ul>
+
+      <h4>Evolución del incidente</h4>
+      <ol class="pasos">
+        <li><span><b>17 de julio.</b> Ecopetrol informa el acceso no autorizado, bloqueado por los controles del grupo empresarial.</span></li>
+        <li><span><b>20 de julio.</b> Informa que no identificó alteraciones en la integridad de la información ni captura de credenciales de acceso, ni afectaciones en sus sistemas transaccionales o interrupciones de sus operaciones <span class="cita">(Ecopetrol S. A., 2026a)</span>.</span></li>
+        <li><span><b>28 de julio.</b> Informa que actores externos publicaron información obtenida ilegalmente de las 15 empresas del grupo. El alcance total, los costos y las consecuencias seguían en evaluación <span class="cita">(Refinería de Cartagena, s. f.)</span>.</span></li>
+      </ol>
+
+      <h4>Rol y escenarios de análisis</h4>
+      <p>Se asume el rol de auditor de seguridad informática contratado después del incidente. La gerencia pide un diagnóstico para determinar qué información pudo quedar expuesta, qué mecanismos deben fortalecerse y qué acciones evitarían que un ataque similar vuelva a comprometer la organización. Se estudian seis escenarios:</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>1. Financiero</h5><p>Posible exposición de documentos corporativos y financieros, información de pagos y documentos de las actividades económicas.</p></article>
+        <article class="card card-ambar"><h5>2. Administrativo</h5><p>Posible exposición de documentos internos, contratos, informes y comunicaciones empresariales.</p></article>
+        <article class="card card-acento"><h5>3. Gestión de usuarios</h5><p>Acceso no autorizado a información asociada con miles de cuentas de usuario.</p></article>
+        <article class="card card-coral"><h5>4. Tecnológico</h5><p>Vulneración de entornos de almacenamiento en la nube y necesidad de fortalecer los controles de acceso.</p></article>
+        <article class="card card-ambar"><h5>5. Proveedores</h5><p>Evaluación de los mecanismos de acceso y confianza entre las compañías del grupo y terceros.</p></article>
+        <article class="card card-acento"><h5>6. Operativo</h5><p>Riesgos que habría representado la ejecución exitosa del ransomware para la continuidad de las actividades.</p></article>
+      </div>
+
+      <h4>Condiciones de desarrollo</h4>
+      <ul>
+        <li>Consultar y citar fuentes oficiales y periodísticas verificables.</li>
+        <li>Desarrollar las respuestas con análisis propio.</li>
+        <li>Diferenciar los hechos comprobados de las hipótesis y riesgos identificados.</li>
+        <li>No limitarse a describir el ataque: explicar sus implicaciones empresariales.</li>
+        <li>Las propuestas deben responder a los problemas identificados en la investigación.</li>
+      </ul>
+      <p class="note">Hechos comprobados (comunicados oficiales): acceso a la nube de 15 compañías, descarga de datos de unas 3.300 cuentas, ransomware bloqueado, extorsión y publicación posterior de información; sin alteración de integridad ni captura de credenciales identificadas por Ecopetrol. Hipótesis y riesgos (análisis propio): el canal exacto de la intrusión, el volumen real de datos (el atacante dice 1 TB), la exposición de credenciales señalada por SOCRadar y las debilidades de seguridad que habrían facilitado el ataque.</p>
+    </section>
+
+    <section class="content-panel tema" id="ecopetrol-p1">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">I</span>
+        <div><p class="eyebrow">Parte I</p><h3>Investigación del caso real</h3></div>
+      </div>
+      <div class="cifras">
+        <div class="cifra"><strong>17 jul 2026</strong><span>Ecopetrol anuncia el ciberataque</span></div>
+        <div class="cifra"><strong>≈ 3.300</strong><span>cuentas de usuario con datos extraídos</span></div>
+        <div class="cifra"><strong>15</strong><span>empresas del grupo afectadas</span></div>
+        <div class="cifra"><strong>1 TB</strong><span>de datos que dice haber robado el grupo atacante</span></div>
+      </div>
+
+      <h4>1. Actividad económica e importancia de su infraestructura tecnológica</h4>
+      <p>Ecopetrol S. A. es la empresa de hidrocarburos más grande de Colombia y la de mayores ingresos del país. Su actividad es integrada: exploración, producción, refinación, transporte y comercialización de petróleo y gas, con numerosas filiales que conforman el grupo empresarial <span class="cita">(Vanguardia, 2026)</span>.</p>
+      <p class="note">Análisis: la tecnología no es solo un apoyo; es el sistema nervioso que mantiene la continuidad de las operaciones industriales (refinerías, oleoductos, producción), administrativas y financieras, las relaciones entre empresas y la protección de datos importantes. Cualquier problema de seguridad impacta a toda la empresa.</p>
+
+      <h4>2. En qué consistió el incidente</h4>
+      <p>El 17 de julio de 2026 Ecopetrol anunció un ciberataque tras detectar el ingreso de una entidad externa que intentó ejecutar ransomware. Los atacantes accedieron a algunos entornos de computación en la nube y extrajeron datos de alrededor de 3.300 cuentas de usuarios de unas 15 empresas del grupo <span class="cita">(Minuto60, 2026)</span>. Las medidas de seguridad evitaron el cifrado de información en los sistemas <span class="cita">(ITSitio, 2026)</span>.</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Recursos comprometidos</h5><p>Sistemas de almacenamiento de archivos en la nube de unas 15 empresas del grupo y la información vinculada a 3.300 cuentas de usuarios.</p></article>
+        <article class="card card-ambar"><h5>Estado de la investigación</h5><p>El canal exacto de la intrusión no está detallado oficialmente. El grupo The Gentlemen se atribuyó el ataque y las investigaciones siguen en curso.</p></article>
+      </div>
+
+      <h4>3. Qué significa descargar información de la nube y qué riesgos implica</h4>
+      <p>Significa que hubo <b>exfiltración de datos</b>: además de ingresar, los atacantes copiaron y sacaron archivos del alcance de la empresa. Impedir el cifrado no evitó el robo. El problema se agravó el 27 de julio de 2026, cuando la empresa supo que fuentes externas publicaron información ilegalmente <span class="cita">(El Colombiano, 2026b)</span>.</p>
+      <p class="note">Riesgos: una vez liberados los datos, la compañía pierde el control y no puede recuperarlos ni eliminarlos de la web oscura. Esto permite extorsión, venta a terceros, robo de identidad, espionaje industrial y ataques dirigidos posteriores, como phishing a empleados y proveedores.</p>
+
+      <h4>4. Qué es un ataque de ransomware y qué habría pasado sin los controles</h4>
+      <p>El ransomware es software malicioso que cifra la información de la víctima y exige un rescate para recuperarla. Grupos como The Gentlemen añaden una extorsión adicional: amenazan con publicar la información si no se paga <span class="cita">(Infobae, 2026)</span>. Aquí los atacantes extrajeron información confidencial antes de que se bloqueara el cifrado.</p>
+      <p class="note">Análisis: sin los controles, Ecopetrol habría sufrido un doble daño: pérdida de disponibilidad por el cifrado de sistemas, con posibles apagones operativos o administrativos, y la pérdida de la información ya robada. La amenaza a la confidencialidad se habría sumado a una interrupción operativa y a un rescate mucho más alto.</p>
+
+      <h4>5. Importancia de la información de las 3.300 cuentas de usuario</h4>
+      <p>Ecopetrol afirmó que la identidad de los usuarios no se vio afectada y que sus credenciales no fueron comprometidas <span class="cita">(La República, 2026)</span>, pero cada cuenta sigue siendo una puerta y un conjunto de datos personales y de negocio.</p>
+      <ol class="pasos">
+        <li><span>Son datos personales protegidos por la ley, lo que crea obligaciones legales.</span></li>
+        <li><span>Pueden usarse para ingeniería social y suplantación de identidad.</span></li>
+        <li><span>Si hay cuentas privilegiadas en la lista, pueden reutilizarse para obtener más acceso.</span></li>
+      </ol>
+      <p>Que no se obtuvieran credenciales no cambia los riesgos futuros de las personas que aparecieron en la filtración.</p>
+
+      <h4>6. Por qué la información administrativa, financiera, contractual y corporativa es un objetivo</h4>
+      <p>Es la información más valiosa y sensible. The Gentlemen afirmó haber robado un terabyte de información, más allá de los 3.300 usuarios identificados por la compañía <span class="cita">(El Colombiano, 2026a)</span>.</p>
+      <p class="note">Análisis: los contratos y la información corporativa revelan secretos comerciales y negocios con terceros; la información financiera puede usarse para chantaje, y la posibilidad de publicarla aumenta la extorsión. Cuanto más sensibles los datos, más valiosos como medio de extorsión.</p>
+
+      <h4>7. Consecuencias económicas, legales, administrativas y reputacionales</h4>
+      <p>El alcance total, los costos y las consecuencias seguían en evaluación al momento de los reportes <span class="cita">(ITSitio, 2026)</span>.</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Económicas</h5><p>Costo de responder y remediar, análisis forense y monitoreo, posible daño al precio de las acciones y posibles demandas.</p></article>
+        <article class="card card-ambar"><h5>Legales</h5><p>Posibles investigaciones y sanciones por violación de datos personales (Ley 1581 de 2012, supervisada por la SIC). La empresa coopera con la Fiscalía General y el MinTIC para eliminar la información divulgada y restringir el acceso a ella <span class="cita">(El Colombiano, 2026b)</span>.</p></article>
+        <article class="card card-acento"><h5>Administrativas</h5><p>Desgaste, revisión de contratos con proveedores de nube y fortalecimiento del control interno.</p></article>
+        <article class="card card-coral"><h5>Reputacionales</h5><p>Pérdida de confianza de inversores, socios del grupo y ciudadanos, al tratarse de una empresa estatal estratégica.</p></article>
+      </div>
+
+      <h4>8. Responsabilidad en la protección de archivos en la nube</h4>
+      <p>La responsabilidad es plena y no delegable. Es un modelo de responsabilidad compartida: el proveedor se encarga de la infraestructura, y la organización de configurar el acceso, cifrar los datos, manejar las credenciales y monitorear el acceso. Que la información esté en la nube no transfiere la responsabilidad: según la ley, Ecopetrol sigue siendo responsable.</p>
+      <p class="note">El punto débil no fue la nube en sí, sino el acceso a esos entornos. La responsabilidad implica prevenir, detectar, responder, notificar y colaborar con las autoridades para contener la exposición.</p>
+
+      <h4>9. Por qué el acceso no autorizado afecta la confidencialidad aunque no haya destrucción</h4>
+      <p>Ecopetrol afirmó que no hubo violación de la integridad de los datos ni afectación de sus operaciones <span class="cita">(La República, 2026)</span>, pero eso no aborda la confidencialidad. Esta se viola cuando una parte no autorizada ve o copia la información, sin necesidad de destruirla. Una información íntegra pero filtrada sigue siendo información violada: lo que importa es quién puede acceder, no si los datos están bien.</p>
+
+      <h4>10. Medidas de Ecopetrol y estrategias adicionales</h4>
+      <div class="card-grid card-grid-2">
+        <article class="card card-acento"><h5>Medidas aplicadas</h5><p>Los controles impidieron la ejecución del ransomware <span class="cita">(ITSitio, 2026)</span>. La empresa activó sus procedimientos ante incidentes, inició la investigación y coopera con la Fiscalía y el MinTIC para eliminar los archivos publicados y reducir su acceso público <span class="cita">(El Colombiano, 2026b)</span>.</p></article>
+        <article class="card card-ambar"><h5>Estrategias adicionales propuestas</h5><p>Autenticación multifactor y gestión de identidad; cifrado y prevención de pérdida de datos (DLP/CASB) en la nube; monitoreo continuo con SOC/SIEM y EDR; enfoque de cero confianza con segmentación entre subsidiarias; y programa permanente contra el phishing con simulaciones.</p></article>
+      </div>
+    </section>
+
+    <section class="content-panel tema" id="ecopetrol-p2">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">II</span>
+        <div><p class="eyebrow">Parte II</p><h3>Identificación de vulnerabilidades</h3></div>
+      </div>
+
+      <h4>1. Relación del incidente con confidencialidad, integridad y disponibilidad</h4>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Confidencialidad: la más afectada</h5><p>Fue vulnerada directamente: un tercero no autorizado descargó información de compañías y luego la expuso al dominio público <span class="cita">(Segovia Marín, 2026; Ecopetrol S. A., 2026b)</span>.</p></article>
+        <article class="card card-ambar"><h5>Integridad: amenazada, no vulnerada</h5><p>Según Ecopetrol, la integridad no se comprometió <span class="cita">(Ecopetrol S. A., 2026a)</span>. El atacante intentó destruir, modificar y cifrar datos y mostró capacidad de escritura sobre el entorno, pero los controles lo impidieron; además, la revisión de información y registros de acceso mostró que no hubo alteraciones silenciosas.</p></article>
+        <article class="card card-acento"><h5>Disponibilidad: sin afectación</h5><p>El ransomware que la habría afectado fue bloqueado y las actividades continuaron con normalidad <span class="cita">(Segovia Marín, 2026)</span>. Si el bloqueo hubiera fallado, habría sido otro de los principios más golpeados.</p></article>
+      </div>
+
+      <h4>2. Cinco debilidades que podrían facilitar un incidente como el ocurrido</h4>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Debilidades de seguridad</b></caption>
+          <thead><tr><th scope="col">Debilidad</th><th scope="col">En qué consiste</th><th scope="col">Recurso que compromete</th><th scope="col">Cómo la aprovecha un atacante</th><th scope="col">Consecuencias</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1. Autenticación débil y credenciales expuestas</th><td>Cuentas protegidas solo con usuario y contraseña, sin MFA obligatorio o con factores fáciles de eludir.</td><td>Cuentas propias, correos, accesos remotos y almacenamiento en la nube.</td><td>Compra o recolecta credenciales válidas y las usa como un empleado legítimo, sin explotar ninguna falla técnica. SOCRadar identificó una exposición significativa de credenciales del dominio de Ecopetrol en registros de <i>info stealers</i> <span class="cita">(SOCRadar, 2026)</span>.</td><td>Accesos silenciosos y difíciles de distinguir del uso diario; robo de información y escalamiento de cuentas. Es la puerta de entrada más económica.</td></tr>
+            <tr><th scope="row">2. Dispositivos de acceso remoto sin parchar</th><td>VPN, firewalls o pasarelas expuestas a internet con vulnerabilidades conocidas sin parche aplicado.</td><td>Perímetro de red, servidores internos y entornos conectados a la nube.</td><td>Explota una falla pública para entrar sin credenciales y desactivar defensas <span class="cita">(Alguero, 2026)</span>.</td><td>Acceso remoto a la red, despliegue de ransomware y robo masivo de datos en minutos.</td></tr>
+            <tr><th scope="row">3. Falta de segmentación entre empresas del grupo</th><td>Identidades, directorios y entornos de nube compartidos o interconectados entre filiales.</td><td>Almacenamiento de archivos, directorios de usuarios y servicios de colaboración compartidos.</td><td>Con una sola identidad o entorno vulnerado se mueve digitalmente de una empresa a otra.</td><td>Una intrusión se multiplica por el número de organizaciones: más datos, más reportes regulatorios y más terceros afectados.</td></tr>
+            <tr><th scope="row">4. Permisos excesivos y sin control de fuga de datos</th><td>Usuarios con más permisos de los necesarios, sin límites ni alertas ante descargas anormales y sin clasificación de la información.</td><td>Repositorios de documentos corporativos, financieros y administrativos en la nube.</td><td>Con una sola cuenta accede a gran cantidad de información y la descarga sin generar alertas.</td><td>Fuga de grandes volúmenes de datos y dificultad para saber con precisión qué se perdió.</td></tr>
+            <tr><th scope="row">5. Gestión insuficiente de terceros, cuentas de servicio y monitoreo</th><td>Proveedores, contratistas, cuentas de servicio, llaves de acceso e integraciones con permisos amplios, sin caducidad ni vigilancia continua, y registros incompletos o sin análisis en tiempo real.</td><td>Integraciones entre aplicaciones y cuentas técnicas o de terceros, que rara vez tienen MFA.</td><td>Usa cuentas poco vigiladas para entrar y permanecer sin ser detectado.</td><td>Intrusiones prolongadas, imposibilidad de reconstruir lo ocurrido y riesgo de propagación hacia socios o proveedores.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-panel tema" id="ecopetrol-p3">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">III</span>
+        <div><p class="eyebrow">Parte III</p><h3>Propuesta de un servicio de ciberseguridad</h3></div>
+      </div>
+
+      <h4>1. Cinco estrategias para fortalecer la seguridad informática</h4>
+      <div class="tabla-scroll">
+        <table class="tabla">
+          <caption><b>Tabla 1.</b> Estrategias de ciberseguridad propuestas para Ecopetrol S. A.</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">Estrategia</th><th scope="col">Problema que busca solucionar</th><th scope="col">Tecnología o herramienta</th><th scope="col">Área responsable</th><th scope="col">Beneficio esperado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1</th><td>IAM (gestión de identidad y acceso) y MFA</td><td>Acceso no autorizado y exposición de las cuentas de usuario.</td><td>Gestión de identidades, autenticación multifactor (MFA) e inicio de sesión único (SSO).</td><td>TI / Ciberseguridad</td><td>Impide el acceso indebido aun cuando se hayan vulnerado las credenciales.</td></tr>
+            <tr><th scope="row">2</th><td>Seguridad de datos basada en la nube</td><td>Robo y filtraciones de archivos desde la nube.</td><td>Cifrado en reposo y en tránsito, DLP y CASB.</td><td>TI / Arquitectura de nube</td><td>Cualquier archivo que caiga en manos equivocadas será inaccesible.</td></tr>
+            <tr><th scope="row">3</th><td>Monitoreo 24/7 (SOC 24/7)</td><td>Intrusión que pasa desapercibida por demasiado tiempo.</td><td>SIEM, EDR/XDR y centro de operaciones de seguridad (SOC).</td><td>Ciberseguridad</td><td>El acceso inusual se detecta en una etapa temprana.</td></tr>
+            <tr><th scope="row">4</th><td>Arquitectura de confianza cero y segmentación</td><td>Demasiada dependencia entre las subsidiarias y terceros.</td><td>Microsegmentación, mínimo privilegio y control de acceso a la red (NAC).</td><td>TI / Seguridad de red</td><td>Limita el movimiento lateral entre las 15 empresas del grupo.</td></tr>
+            <tr><th scope="row">5</th><td>Cultura de seguridad y respuesta a incidentes</td><td>Error humano e improvisación.</td><td>Capacitación antiphishing, simulacros y planes DRP/BCP.</td><td>Talento Humano + Ciberseguridad</td><td>Personal capacitado y acción bien coordinada.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>2. Propuesta comercial: Nexora Security</h4>
+      <p>Propuesta de una empresa especializada en seguridad informática para fortalecer la infraestructura tecnológica de Ecopetrol.</p>
+      <dl class="filas">
+        <div class="fila-coral"><dt>Nombre comercial</dt><dd>Nexora Security</dd></div>
+        <div class="fila-ambar"><dt>Problema que resuelve</dt><dd>El acceso no autorizado y la exfiltración de datos en los sistemas de almacenamiento en la nube de una organización con varias empresas relacionadas, como en el incidente de julio de 2026, en el que se robaron datos de aproximadamente 3.300 cuentas de usuario y 15 empresas del grupo <span class="cita">(Vanguardia, 2026)</span>.</dd></div>
+        <div><dt>Descripción del servicio</dt><dd>Servicio de seguridad administrado (MSSP) que combina monitoreo 24/7 desde un centro de operaciones de seguridad (SOC), detección y prevención de intrusiones, seguridad en la nube con cifrado y DLP, gestión de identidad con MFA y concienciación de los empleados. Incluye evaluaciones periódicas de vulnerabilidades y un plan de respuesta a incidentes con simulacros.</dd></div>
+        <div><dt>Herramientas</dt><dd>SIEM y EDR/XDR, CASB y DLP para el entorno en la nube, IAM con MFA, segmentación de cero confianza y gestión de copias de seguridad cifradas.</dd></div>
+        <div><dt>Áreas beneficiadas</dt><dd>TI, Ciberseguridad, Finanzas, Administración, Gestión del usuario y las subsidiarias del grupo empresarial.</dd></div>
+      </dl>
+    </section>
+
+    <section class="content-panel tema" id="ecopetrol-p4">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">IV</span>
+        <div><p class="eyebrow">Parte IV</p><h3>Conclusiones y reflexión</h3></div>
+      </div>
+
+      <h4>1. ¿Por qué una empresa puede sufrir una filtración sin que sus operaciones dejen de funcionar?</h4>
+      <p>Porque el robo de información y la interrupción del servicio son dos daños distintos que afectan principios diferentes de la tríada. Copiar un archivo no lo borra ni detiene la maquinaria que produce, transporta o factura: la operación depende de la disponibilidad de los sistemas, mientras que la infiltración ataca la confidencialidad. En Ecopetrol las operaciones no se interrumpieron, pero los datos sí fueron publicados. Los grupos de doble extorsión aprovechan esta diferencia: aunque una empresa restaure sus sistemas desde copias de seguridad, no puede recuperar la privacidad ni la reputación ya perdidas.</p>
+
+      <h4>2. ¿Por qué la gestión de usuarios y permisos debe ser una prioridad?</h4>
+      <p>Porque la identidad es el punto por donde entra la mayoría de los atacantes y el factor que define cuánto daño pueden causar una vez dentro. Un atacante con una cuenta válida no necesita romper ninguna defensa técnica: solo que la cuenta tenga permisos amplios, no tenga MFA y nadie vigile su comportamiento. En este caso las pistas apuntan a unas 3.300 cuentas con indicios de credenciales expuestas <span class="cita">(SOCRadar, 2026)</span>. Una buena gestión de usuarios, con mínimo privilegio, revisión periódica de permisos y actividad, y doble factor de autenticación, reduce la probabilidad de entrada y limita el alcance de lo que se pierde.</p>
+
+      <h4>3. ¿Qué consecuencias tendría un ataque similar en una empresa colombiana más pequeña?</h4>
+      <p>El impacto sería proporcionalmente mayor, porque carece de lo que le permitió a Ecopetrol amortiguar el golpe: equipo de respuesta, seguros, asesoría legal, colaboración inmediata con la Fiscalía y la Policía, y controles que bloquearon el cifrado.</p>
+      <div class="card-grid card-grid-2">
+        <article class="card card-coral"><h5>Continuidad</h5><p>Sin copias de seguridad aisladas, el cifrado puede dejar a la empresa sin facturación, inventarios o historial de clientes durante días o semanas.</p></article>
+        <article class="card card-ambar"><h5>Económico</h5><p>Costos de recuperación, pérdida de ventas y presión para pagar un rescate sin garantía de recuperar los datos ni de que no los publiquen.</p></article>
+        <article class="card card-acento"><h5>Legal</h5><p>Honorarios de abogados y respuesta ante la Superintendencia de Industria y Comercio por las leyes de protección de datos personales de clientes y empleados, y por incumplimiento de contratos <span class="cita">(Congreso de la República de Colombia, 2012)</span>.</p></article>
+        <article class="card card-coral"><h5>Cadena de proveedores</h5><p>Si es proveedora de una empresa más grande, la brecha puede convertirse en una puerta de entrada hacia esa compañía.</p></article>
+      </div>
+    </section>
+
+    <section class="content-panel tema" id="ecopetrol-refs">
+      <div class="tema-cabecera">
+        <span class="tema-num" aria-hidden="true">✓</span>
+        <div><p class="eyebrow">Fuentes</p><h3>Referencias del caso Ecopetrol</h3></div>
+      </div>
+      <ul class="referencias">
+        <li>Alguero, M. O. (2026, 21 de julio). ¿Quién es The Gentlemen, la “mafia digital” que hackeó a Ecopetrol y le robó miles de datos? <i>El Colombiano</i>. <a href="https://www.elcolombiano.com/negocios/the-gentlemen-grupo-hackeo-ecopetrol-colombia-robo-datos-CJ39035520">https://www.elcolombiano.com/negocios/the-gentlemen-grupo-hackeo-ecopetrol-colombia-robo-datos-CJ39035520</a></li>
+        <li>Congreso de la República de Colombia. (2012, 17 de octubre). <i>Ley Estatutaria 1581 de 2012</i>. Diario Oficial No. 48.587.</li>
+        <li>Ecopetrol S. A. (2026, 20 de julio). <i>Ecopetrol continues to implement monitoring and protection measures in response to cybersecurity incident</i> [Comunicado de prensa]. U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/Archives/edgar/data/1444406/000129281426003818/ex99-1.htm">https://www.sec.gov/Archives/edgar/data/1444406/000129281426003818/ex99-1.htm</a></li>
+        <li>El Colombiano. (2026a, julio). <i>The Gentlemen, el grupo que hackeó a Ecopetrol y dice haber robado 1 TB de datos</i>. <a href="https://www.elcolombiano.com/negocios/the-gentlemen-grupo-hackeo-ecopetrol-colombia-robo-datos-CJ39035520">https://www.elcolombiano.com/negocios/the-gentlemen-grupo-hackeo-ecopetrol-colombia-robo-datos-CJ39035520</a></li>
+        <li>El Colombiano. (2026b, 28 de julio). <i>Ciberataque a Ecopetrol: publican información de empresas e interviene autoridades</i>. <a href="https://www.elcolombiano.com/inicio/ciberataque-ecopetrol-publican-informacion-empresas-intervencion-autoridades-NJ39309352">https://www.elcolombiano.com/inicio/ciberataque-ecopetrol-publican-informacion-empresas-intervencion-autoridades-NJ39309352</a></li>
+        <li>Infobae. (2026, 22 de julio). <i>Así funciona The Gentlemen, el grupo de ransomware que robó los datos de Ecopetrol</i>. <a href="https://www.infobae.com/colombia/2026/07/22/asi-funciona-the-gentlemen-el-grupo-de-ransomware-que-robo-los-datos-de-ecopetrol/">https://www.infobae.com/colombia/2026/07/22/asi-funciona-the-gentlemen-el-grupo-de-ransomware-que-robo-los-datos-de-ecopetrol/</a></li>
+        <li>Ipuz, J. (2026). <i>Estrategias de seguridad informática</i> [Hoja de cálculo]. Google Sheets. <a href="https://docs.google.com/spreadsheets/d/17xNfAz1TJqYlsJt4h-haQTZCtiHjTcVJzQsO8WA0fmQ/edit">https://docs.google.com/spreadsheets/d/17xNfAz1TJqYlsJt4h-haQTZCtiHjTcVJzQsO8WA0fmQ/edit</a></li>
+        <li>ITSitio. (2026, julio). <i>Ciberataque a Ecopetrol: qué datos quedaron expuestos</i>. <a href="https://www.itsitio.com/co/?p=180469">https://www.itsitio.com/co/?p=180469</a></li>
+        <li>La República. (2026, 18 de julio). <i>Ecopetrol descartó impactos en usuarios y operaciones tras el ciberataque</i>. <a href="https://www.larepublica.co/economia/ecopetrol-descarto-impactos-en-usuarios-y-operaciones-tras-el-ciberataque-4439173">https://www.larepublica.co/economia/ecopetrol-descarto-impactos-en-usuarios-y-operaciones-tras-el-ciberataque-4439173</a></li>
+        <li>Minuto60. (2026, 18 de julio). <i>Ecopetrol confirma intento de ciberataque y secuestro de información</i>. <a href="https://minuto60.com/economia/ecopetrol-confirma-intento-ciberataque-secuestro-informacion/12162">https://minuto60.com/economia/ecopetrol-confirma-intento-ciberataque-secuestro-informacion/12162</a></li>
+        <li>La República. (2026, 22 de julio). <i>Así opera The Gentlemen, el grupo de ransomware que atacó y robó datos a Ecopetrol</i>. <a href="https://www.larepublica.co/economia/asi-opera-the-gentlemen-el-grupo-de-ransomware-que-ataco-y-robo-datos-a-ecopetrol-4441053">https://www.larepublica.co/economia/asi-opera-the-gentlemen-el-grupo-de-ransomware-que-ataco-y-robo-datos-a-ecopetrol-4441053</a></li>
+        <li>Refinería de Cartagena. (s. f.). <i>[Título de la noticia]</i>. Recuperado el 2 de noviembre de 2026, de <a href="https://portalrefineriacartagena.powerappsportals.com/es-ES/Noticias/Detalle-noticia/?id=a81db95c-7d8b-f111-ab0f-6045bd008f49">https://portalrefineriacartagena.powerappsportals.com/es-ES/Noticias/Detalle-noticia/?id=a81db95c-7d8b-f111-ab0f-6045bd008f49</a></li>
+        <li>Segovia Marín, S. (2026, 17 de julio). <i>Ciberataque a Ecopetrol: 15 empresas del grupo afectadas y hackers están extorsionando tras robar datos de 3.300 cuentas</i>.</li>
+        <li>SOCRadar. (2026, 19 de julio). <i>Ecopetrol data breach</i>. <a href="https://socradar.io/blog/data-breach/ecopetrol-the-gentlemen-ransomware-2026/">https://socradar.io/blog/data-breach/ecopetrol-the-gentlemen-ransomware-2026/</a></li>
+        <li>Vanguardia. (2026, 18 de julio). <i>Ciberataque a Ecopetrol: 15 compañías del grupo empresarial están afectadas</i>. <a href="https://www.vanguardia.com/economia/2026/07/18/ciberataque-a-ecopetrol-15-empresas-del-grupo-empresarial-estan-afectadas/">https://www.vanguardia.com/economia/2026/07/18/ciberataque-a-ecopetrol-15-empresas-del-grupo-empresarial-estan-afectadas/</a></li>
+      </ul>
+    </section>
+
+      </div>
+    </details>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>© Línea de Énfasis 2 · Sitio académico</span>
-      <span>Desarrollado con HTML5 y CSS3 · Sin JavaScript</span>
+      <span>© Línea de Énfasis II </span>
     </div>
   </footer>
 </body>

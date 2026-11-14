@@ -1,4 +1,4 @@
-LÍNEA DE ÉNFASIS 2 — SITIO WEB
+LÍNEA DE ÉNFASIS II — SITIO WEB
 ====================================
 
 CONTENIDO
@@ -7,7 +7,7 @@ CONTENIDO
 - conceptos.html: Conceptos (Taller Teórico Práctico I – Conceptos Hacking)
 - casos-practicos.html: Casos prácticos del taller
 - proyecto.html: Proyecto - Video Tutorial
-- ../index.html: portal principal para elegir entre Línea de Énfasis 2 y 3
+- ../index.html: portal principal para elegir entre Línea de Énfasis II y 3
 - css/estilos.css: estilos compartidos
 - Correcciones del PDF.txt: diferencias entre el texto de la página y el PDF
 
@@ -17,7 +17,6 @@ CÓMO ABRIR
 3. Usa el menú horizontal superior para navegar entre las cinco páginas.
 
 IMPORTANTE
-- El sitio usa únicamente HTML y CSS; no necesita JavaScript, servidor ni instalación.
 
 - Conserva la carpeta css junto a los archivos HTML para que los estilos se carguen correctamente.
 
