@@ -1,30 +1,21 @@
-/* ===================================================
-   LINEA DE ENFASIS 3
-   CSS MAESTRO EDITABLE
-   Estilo: fondo pastel (lavanda, azul claro, rosa),
-   paneles de vidrio blanco y texto morado profundo.
-=================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 :root {
 
-    /* Fondo pastel */
     --fondo-lavanda: #A58CF5;
     --fondo-azul:    #A9D4F5;
     --fondo-rosa:    #F0D6F2;
     --fondo-lila:    #D4A8EE;
 
-    /* Superficies (vidrio blanco) */
     --vidrio:        rgba(255,255,255,.62);
     --vidrio-fuerte: rgba(255,255,255,.86);
     --tarjeta:       #FDFCFF;
     --borde-vidrio:  rgba(255,255,255,.75);
 
-    /* Morados */
-    --morado-profundo: #2E1065;   /* títulos y botones */
+    --morado-profundo: #2E1065;
     --morado-oscuro:   #3B1D78;
-    --morado:          #7C6AF0;   /* acento (estrellas de la referencia) */
+    --morado:          #7C6AF0;
     --morado-medio:    #8B5CF6;
     --morado-suave:    #EDE9FE;
     --azul:            #38BDF8;
@@ -33,16 +24,13 @@
     --degradado: linear-gradient(135deg, #7C6AF0 0%, #A78BFA 55%, #60A5FA 100%);
     --degradado-texto: linear-gradient(135deg, #4C1D95 0%, #7C3AED 55%, #3B82F6 100%);
 
-    /* Texto */
     --texto:        #2A1F4D;
     --texto-suave:  #4E4472;
     --texto-tenue:  #6B6290;
 
-    /* Líneas */
     --linea:        #E4DDF7;
     --linea-media:  #CFC4F2;
 
-    /* Sombras */
     --sombra:       0 18px 45px rgba(76,29,149,.14);
     --sombra-suave: 0 8px 24px rgba(76,29,149,.10);
     --sombra-hover: 0 22px 50px rgba(76,29,149,.20);
@@ -50,7 +38,6 @@
     --fuente: "Poppins", "Segoe UI", Arial, sans-serif;
 }
 
-/* RESET */
 
 *{
     margin:0;
@@ -97,9 +84,6 @@ a:hover{
     color:var(--morado-profundo);
 }
 
-/* ==================================
-   HEADER
-================================== */
 
 .site-header{
     padding:26px 24px 22px;
@@ -151,9 +135,6 @@ a:hover{
     opacity:.85;
 }
 
-/* ==================================
-   MENÚ
-================================== */
 
 .nav-wrap{
     position:sticky;
@@ -209,9 +190,6 @@ a:hover{
     display:none;
 }
 
-/* ==================================
-   CONTENIDO
-================================== */
 
 main{
     max-width:1200px;
@@ -219,9 +197,6 @@ main{
     padding:46px 24px 30px;
 }
 
-/* ==================================
-   HERO
-================================== */
 
 .hero{
     position:relative;
@@ -293,9 +268,6 @@ main{
     font-size:1rem;
 }
 
-/* ==================================
-   BOTONES
-================================== */
 
 .hero-actions{
     display:flex;
@@ -342,9 +314,6 @@ main{
     color:var(--morado-profundo);
 }
 
-/* ==================================
-   TARJETAS
-================================== */
 
 .card-grid{
     display:grid;
@@ -423,7 +392,6 @@ a.card{
     background:var(--morado-suave);
 }
 
-/* Las tarjetas dentro de un panel blanco llevan un fondo lila muy suave */
 .content-panel .card{
     background:#FAF8FF;
     border:1px solid var(--linea);
@@ -451,15 +419,11 @@ a.card{
     margin-bottom:0;
 }
 
-/* Enlace "Ver desarrollo" del glosario: siempre al pie de la tarjeta */
 .content-panel .card p:last-child:has(> a){
     margin-top:auto;
     padding-top:6px;
 }
 
-/* ==================================
-   PANEL
-================================== */
 
 .content-panel{
     margin-top:30px;
@@ -539,7 +503,6 @@ a.card{
     font-weight:600;
 }
 
-/* Enunciado de cada pregunta */
 
 .prompt{
     margin:0 0 18px;
@@ -563,9 +526,6 @@ a.card{
     margin-bottom:0;
 }
 
-/* ==================================
-   ÍNDICE (TABLA DE CONTENIDOS)
-================================== */
 
 .toc{
     margin-top:30px;
@@ -613,9 +573,6 @@ a.card{
     color:var(--morado-profundo);
 }
 
-/* ==================================
-   TABLAS
-================================== */
 
 .table-caption{
     margin:24px 0 10px;
@@ -673,9 +630,6 @@ a.card{
     color:#5B21B6;
 }
 
-/* ==================================
-   PASOS
-================================== */
 
 .steps{
     list-style:none;
@@ -709,9 +663,6 @@ a.card{
     background:var(--morado-profundo);
 }
 
-/* ==================================
-   REFERENCIAS
-================================== */
 
 .refs{
     margin-top:10px;
@@ -737,9 +688,6 @@ a.card{
     color:var(--texto-suave);
 }
 
-/* ==================================
-   GENIALLY / VIDEO
-================================== */
 
 .embed-frame{
     position:relative;
@@ -792,9 +740,6 @@ a.card{
     font-size:1.2rem;
 }
 
-/* ==================================
-   FOOTER
-================================== */
 
 .site-footer{
     margin-top:40px;
@@ -813,9 +758,6 @@ a.card{
     font-weight:600;
 }
 
-/* ==================================
-   RESPONSIVE
-================================== */
 
 @media(max-width:768px){
 
@@ -892,11 +834,6 @@ a.card{
     }
 }
 
-/* ==================================
-   TÍTULOS UNIFICADOS
-   Una sola tipografía y Mayúscula Inicial
-   En Cada Palabra para todos los títulos.
-================================== */
 
 .brand-title,
 .hero h1,
@@ -938,18 +875,13 @@ a.card{
     font-size:1.05rem;
 }
 
-/* ==================================
-   TAMAÑO ÚNICO DE TÍTULOS
-================================== */
 
-/* Título principal: igual en todas las páginas */
 .hero h1,
 .hero h1.h1-long{
     font-size:clamp(1.8rem, 3.4vw, 2.6rem);
     line-height:1.2;
 }
 
-/* Todos los demás títulos: un solo tamaño */
 .toc h2,
 .content-panel h2,
 .content-panel h3,
@@ -977,6 +909,118 @@ a.card{
     .table-caption strong,
     .table-caption em,
     .video-placeholder p strong{
+        font-size:1.1rem;
+    }
+}
+
+
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:22px;
+    margin-top:26px;
+}
+
+.stat{
+    text-align:center;
+    padding:22px 24px;
+    border-radius:24px;
+    background:var(--tarjeta);
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:var(--sombra-suave);
+}
+
+.stat strong{
+    display:block;
+    font-size:clamp(1.8rem, 4vw, 2.4rem);
+    font-weight:800;
+    line-height:1.15;
+    color:var(--morado-profundo);
+}
+
+.stat span{
+    color:var(--texto-suave);
+    font-weight:500;
+}
+
+.grupo-taller{
+    margin-top:30px;
+    border-radius:26px;
+    background:var(--vidrio);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border:1px solid var(--borde-vidrio);
+    box-shadow:var(--sombra-suave);
+    scroll-margin-top:110px;
+}
+
+.grupo-taller > summary{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:22px 28px;
+    cursor:pointer;
+    list-style:none;
+}
+
+.grupo-taller > summary::-webkit-details-marker{
+    display:none;
+}
+
+.grupo-taller > summary::after{
+    content:"▾";
+    color:var(--morado);
+    font-size:1.3rem;
+    transition:transform .2s;
+}
+
+.grupo-taller:not([open]) > summary::after{
+    transform:rotate(-90deg);
+}
+
+.grupo-taller-titulo{
+    font-size:1.3rem;
+    font-weight:700;
+    line-height:1.35;
+    color:var(--morado-profundo);
+}
+
+.grupo-taller-titulo small{
+    display:block;
+    margin-top:4px;
+    font-size:.9rem;
+    font-weight:500;
+    color:var(--texto-suave);
+}
+
+.grupo-taller-cuerpo{
+    padding:4px 24px 26px;
+    border-top:1px solid var(--linea-media);
+}
+
+.grupo-taller-interno{
+    margin-top:22px;
+    background:rgba(255,255,255,.5);
+    box-shadow:none;
+}
+
+@media(max-width:768px){
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .grupo-taller > summary{
+        padding:18px 18px;
+    }
+
+    .grupo-taller-cuerpo{
+        padding:4px 12px 18px;
+    }
+
+    .grupo-taller-titulo{
         font-size:1.1rem;
     }
 }

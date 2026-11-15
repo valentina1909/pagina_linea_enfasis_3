@@ -10,9 +10,7 @@
 
 <header class="site-header">
   <div class="brand-row">
-    <div class="brand-mark">L3</div>
     <div class="brand-title">Línea de Énfasis 3</div>
-    <div class="brand-subtitle">Aprendizaje · Tecnología · Innovación</div>
   </div>
 </header>
 
@@ -37,18 +35,19 @@
   </section>
 
   <nav class="toc" aria-label="Tabla de Contenidos">
-    <h2>Tabla de Contenidos · Categorías</h2>
+    <h2>Tabla de Contenidos · Talleres</h2>
     <ol>
-      <li><a href="#fundamentos">1. Fundamentos de seguridad de la información</a></li>
-      <li><a href="#amenazas">2. Amenazas y ataques</a></li>
-      <li><a href="#control">3. Control de acceso y protección</a></li>
-      <li><a href="#ia">4. Inteligencia artificial y singularidad</a></li>
-      <li><a href="#normas">5. Marcos y normas</a></li>
+      <li><a href="#taller-1">Taller 1 · Unidad 1 <span data-conteo-conceptos="taller-1"></span></a></li>
+      <li><a href="#taller-2">Taller 2 · Unidad 2 <span data-conteo-conceptos="taller-2"></span></a></li>
+      <li><a href="#taller-practico-1">Taller práctico · Unidad 2 <span data-conteo-conceptos="taller-practico-1"></span></a></li>
     </ol>
   </nav>
 
-  <!-- 1. Fundamentos -->
-  <section class="content-panel" id="fundamentos">
+  <details class="grupo-taller" id="taller-1">
+    <summary><span class="grupo-taller-titulo">Taller 1 · Unidad 1<small>Taller teórico · Seguridad de la información y sistemas operativos · <span data-conteo-conceptos></span></small></span></summary>
+    <div class="grupo-taller-cuerpo">
+
+  <section class="content-panel" id="t1-fundamentos">
     <h2><span class="num">1</span>Fundamentos de seguridad de la información</h2>
     <div class="card-grid">
       <div class="card">
@@ -114,8 +113,7 @@
     </div>
   </section>
 
-  <!-- 2. Amenazas -->
-  <section class="content-panel" id="amenazas">
+  <section class="content-panel" id="t1-amenazas">
     <h2><span class="num">2</span>Amenazas y ataques</h2>
     <div class="card-grid">
       <div class="card">
@@ -141,19 +139,13 @@
     </div>
   </section>
 
-  <!-- 3. Control de acceso -->
-  <section class="content-panel" id="control">
+  <section class="content-panel" id="t1-control">
     <h2><span class="num">3</span>Control de acceso y protección</h2>
     <div class="card-grid">
       <div class="card">
         <h3>Autenticación multifactor (MFA)</h3>
         <p>Una segunda verificación, como un código o una huella digital, que aumenta la seguridad, ya que no basta con una contraseña cifrada (CISA, s. f.).</p>
         <p><a href="temas.html#p8">Ver desarrollo en Temas · Taller 1, punto 8</a></p>
-      </div>
-      <div class="card">
-        <h3>Confianza cero (Zero Trust)</h3>
-        <p>Enfoque según el cual ningún recurso es confiable solo porque pertenece a una red interna (Rose et al., 2020).</p>
-        <p><a href="temas.html#q6">Ver desarrollo en Temas · Taller 2, pregunta 6</a></p>
       </div>
       <div class="card">
         <h3>Control de acceso</h3>
@@ -180,17 +172,40 @@
         <p>Regla práctica para las copias de seguridad: tres copias, en dos medios distintos y fuera de la sede (CISA, s. f.).</p>
         <p><a href="temas.html#p9">Ver desarrollo en Temas · Taller 1, punto 9</a></p>
       </div>
+    </div>
+  </section>
+
+  <section class="content-panel" id="t1-normas">
+    <h2><span class="num">4</span>Marcos y normas</h2>
+    <div class="card-grid">
       <div class="card">
-        <h3>Separación de funciones</h3>
-        <p>La persona que aprueba una acción crítica no debe ser la misma que la ejecuta.</p>
-        <p><a href="casos-practicos.html#punto2">Ver desarrollo en Caso práctico · punto 2</a></p>
+        <h3>Marco de Ciberseguridad del NIST (CSF 2.0)</h3>
+        <p>Propone una taxonomía de resultados de ciberseguridad de alto nivel que todas las organizaciones, sin importar su tamaño y su sector, pueden usar para evaluar, priorizar y comunicar su seguridad (NIST, 2024).</p>
+        <p><a href="temas.html#p2">Ver desarrollo en Temas · Taller 1, punto 2</a></p>
       </div>
     </div>
   </section>
 
-  <!-- 4. Inteligencia artificial -->
-  <section class="content-panel" id="ia">
-    <h2><span class="num">4</span>Inteligencia artificial y singularidad</h2>
+    </div>
+  </details>
+
+  <details class="grupo-taller" id="taller-2">
+    <summary><span class="grupo-taller-titulo">Taller 2 · Unidad 2<small>Taller teórico · Singularidad tecnológica, inteligencia artificial y ciberseguridad · <span data-conteo-conceptos></span></small></span></summary>
+    <div class="grupo-taller-cuerpo">
+
+  <section class="content-panel" id="t2-control">
+    <h2><span class="num">1</span>Control de acceso y protección</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Confianza cero (Zero Trust)</h3>
+        <p>Enfoque según el cual ningún recurso es confiable solo porque pertenece a una red interna (Rose et al., 2020).</p>
+        <p><a href="temas.html#q6">Ver desarrollo en Temas · Taller 2, pregunta 6</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-panel" id="t2-ia">
+    <h2><span class="num">2</span>Inteligencia artificial y singularidad</h2>
     <div class="card-grid">
       <div class="card">
         <h3>Automejora recursiva</h3>
@@ -235,25 +250,9 @@
     </div>
   </section>
 
-  <!-- 5. Marcos y normas -->
-  <section class="content-panel" id="normas">
-    <h2><span class="num">5</span>Marcos y normas</h2>
+  <section class="content-panel" id="t2-normas">
+    <h2><span class="num">3</span>Marcos y normas</h2>
     <div class="card-grid">
-      <div class="card">
-        <h3>ISO/IEC 27001:2022</h3>
-        <p>Norma internacional que establece los requisitos de los sistemas de gestión de la seguridad de la información; incluye, entre otros, la evaluación de riesgos (6.1.2), la planificación de cambios (6.3), los roles y responsabilidades (5.3) y la mejora continua (10.1).</p>
-        <p><a href="casos-practicos.html#punto1">Ver desarrollo en Caso práctico · punto 1</a></p>
-      </div>
-      <div class="card">
-        <h3>ISO/IEC 27002:2022</h3>
-        <p>Norma internacional que describe los controles de seguridad de la información, como la política de control de acceso (5.15), el registro de actividades (8.15), el monitoreo (8.16) y las copias de seguridad (8.13).</p>
-        <p><a href="casos-practicos.html#punto2">Ver en Caso práctico · punto 2</a> · <a href="casos-practicos.html#punto3">punto 3</a></p>
-      </div>
-      <div class="card">
-        <h3>Marco de Ciberseguridad del NIST (CSF 2.0)</h3>
-        <p>Propone una taxonomía de resultados de ciberseguridad de alto nivel que todas las organizaciones, sin importar su tamaño y su sector, pueden usar para evaluar, priorizar y comunicar su seguridad (NIST, 2024).</p>
-        <p><a href="temas.html#p2">Ver desarrollo en Temas · Taller 1, punto 2</a></p>
-      </div>
       <div class="card">
         <h3>Marco de Gestión de Riesgos de IA del NIST (AI RMF)</h3>
         <p>Marco que organiza la gestión de los riesgos de la inteligencia artificial en las funciones gobernar, mapear, medir y gestionar (Tabassi, 2023).</p>
@@ -267,11 +266,49 @@
     </div>
   </section>
 
+    </div>
+  </details>
+
+  <details class="grupo-taller" id="taller-practico-1">
+    <summary><span class="grupo-taller-titulo">Taller práctico · Unidad 2<small>Seguridad de la información frente a escenarios de singularidad tecnológica · <span data-conteo-conceptos></span></small></span></summary>
+    <div class="grupo-taller-cuerpo">
+
+  <section class="content-panel" id="tp-control">
+    <h2><span class="num">1</span>Control de acceso y protección</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Separación de funciones</h3>
+        <p>La persona que aprueba una acción crítica no debe ser la misma que la ejecuta.</p>
+        <p><a href="casos-practicos.html#punto2">Ver desarrollo en Caso práctico · punto 2</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-panel" id="tp-normas">
+    <h2><span class="num">2</span>Marcos y normas</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>ISO/IEC 27001:2022</h3>
+        <p>Norma internacional que establece los requisitos de los sistemas de gestión de la seguridad de la información; incluye, entre otros, la evaluación de riesgos (6.1.2), la planificación de cambios (6.3), los roles y responsabilidades (5.3) y la mejora continua (10.1).</p>
+        <p><a href="casos-practicos.html#punto1">Ver desarrollo en Caso práctico · punto 1</a></p>
+      </div>
+      <div class="card">
+        <h3>ISO/IEC 27002:2022</h3>
+        <p>Norma internacional que describe los controles de seguridad de la información, como la política de control de acceso (5.15), el registro de actividades (8.15), el monitoreo (8.16) y las copias de seguridad (8.13).</p>
+        <p><a href="casos-practicos.html#punto2">Ver en Caso práctico · punto 2</a> · <a href="casos-practicos.html#punto3">punto 3</a></p>
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </details>
+
 </main>
 
 <footer class="site-footer">
   <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis III · 2026
 </footer>
 
+<script src="js/organizacion.js"></script>
 </body>
 </html>

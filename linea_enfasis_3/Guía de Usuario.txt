@@ -16,7 +16,7 @@ CÓMO ABRIR
 3. Usa el menú horizontal superior para navegar entre las cinco páginas.
 
 IMPORTANTE
-- El sitio usa únicamente HTML y CSS; no necesita JavaScript, servidor ni instalación.
+- El sitio usa HTML, CSS y un pequeño archivo js/organizacion.js (calcula los indicadores de Inicio y abre la unidad o taller de cada enlace); no necesita servidor ni instalación. Conserva la carpeta js junto a los archivos HTML.
 
 - Conserva la carpeta css junto a los archivos HTML para que los estilos se carguen correctamente.
 
