@@ -44,6 +44,8 @@
     var texto = plural(talleres, 'taller', 'talleres');
     if (pendientes) texto += ' (' + plural(pendientes, 'pendiente', 'pendientes') + ')';
     if (presentaciones) texto += ' · ' + plural(presentaciones, 'presentación', 'presentaciones');
+    var videos = unidad.querySelectorAll('[data-tipo="video"]').length;
+    if (videos) texto += ' · ' + plural(videos, 'video presentación', 'videos presentación');
     salida.textContent = texto;
   });
 

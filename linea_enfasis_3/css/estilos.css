@@ -1024,3 +1024,32 @@ a.card{
         font-size:1.1rem;
     }
 }
+
+/* Tabla de contenidos a un lado en los talleres de Temas */
+.taller-lateral{
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr);
+    gap:28px;
+    align-items:start;
+}
+.taller-lateral .toc{
+    position:sticky;
+    top:84px;
+    max-height:calc(100vh - 110px);
+    overflow-y:auto;
+    margin-top:30px;
+    padding:20px 16px;
+    border-radius:22px;
+}
+.taller-lateral .toc ol{ grid-template-columns:1fr; gap:2px; }
+.taller-lateral .toc a{ font-size:.88rem; line-height:1.35; padding:7px 10px; }
+.taller-lateral-contenido{ min-width:0; }
+@media (max-width:900px){
+    .taller-lateral{ grid-template-columns:minmax(0,1fr); }
+    .taller-lateral .toc{ position:static; max-height:none; }
+}
+
+/* Encabezado de sección (igual que Línea de Énfasis II) */
+.section-heading{ margin:44px 0 0; text-align:center; }
+.section-heading h2{ font-size:1.5rem; font-weight:700; color:var(--morado-profundo); }
+.section-heading p{ color:var(--texto-suave); }
