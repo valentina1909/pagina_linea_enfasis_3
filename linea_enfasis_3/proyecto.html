@@ -20,7 +20,6 @@
     <a href="index.html">Inicio</a>
     <a href="temas.html">Temas</a>
     <a href="conceptos.html">Conceptos</a>
-    <a href="aprendizaje.html">Aprendizaje</a>
     <a href="casos-practicos.html">Caso práctico</a>
     <a href="proyecto.html" aria-current="page">Proyecto</a>
   </nav>
@@ -34,7 +33,6 @@
 
   <section class="content-panel" id="video">
     <h2>Video</h2>
-    <p>Espacio para proyecto y video.</p>
 
     <div class="embed-frame">
       <div class="video-placeholder">
@@ -44,11 +42,116 @@
     </div>
   </section>
 
+  <section class="aprendizaje" id="aprendizaje" aria-labelledby="aprendizaje-titulo">
+    <div class="aprendizaje-cabecera">
+      <span class="aprendizaje-icono" aria-hidden="true">?</span>
+      <h2 id="aprendizaje-titulo">Aprendizaje interactivo</h2>
+      <p>Se muestra el nombre de un concepto y debes elegir su significado correcto entre tres opciones. Las preguntas salen de todos los conceptos del glosario de Conceptos.</p>
+    </div>
+    <div class="quiz" aria-live="polite">
+      <div id="quiz"></div>
+      <noscript>Este módulo necesita JavaScript.</noscript>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis III · 2026
 </footer>
 
+  <script src="js/quiz-datos.js"></script>
+  <script>
+  (function () {
+    var TODOS = window.CONCEPTOS || [];
+    var cont = document.getElementById('quiz');
+    var preguntas, i, aciertos, fallos;
+
+    function mezclar(a) {
+      a = a.slice();
+      for (var k = a.length - 1; k > 0; k--) { var j = Math.floor(Math.random() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; }
+      return a;
+    }
+    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML.replace(/"/g, '&quot;'); }
+
+    function inicio() {
+      var grupos = [];
+      TODOS.forEach(function (c) { if (grupos.indexOf(c.g) < 0) grupos.push(c.g); });
+      var opts = '<option value="">Todos los conceptos (' + TODOS.length + ')</option>' + grupos.map(function (g) {
+        var n = TODOS.filter(function (c) { return c.g === g; }).length;
+        return '<option value="' + esc(g) + '">' + esc(g) + ' (' + n + ')</option>';
+      }).join('');
+      cont.innerHTML = '<div class="quiz-inicio"><h2>¿Listo para practicar?</h2>' +
+        '<p>Cada pregunta tiene tres opciones. Al responder verás si acertaste y la explicación correcta.</p>' +
+        '<label>Practicar con: <select id="q-grupo">' + opts + '</select></label>' +
+        '<div class="quiz-acciones"><button class="button button-primary" id="q-ir" type="button">Comenzar</button></div></div>';
+      document.getElementById('q-ir').onclick = function () { empezar(document.getElementById('q-grupo').value); };
+    }
+
+    function empezar(grupo) {
+      var base = grupo ? TODOS.filter(function (c) { return c.g === grupo; }) : TODOS;
+      preguntas = mezclar(base);
+      i = 0; aciertos = 0; fallos = [];
+      mostrar();
+    }
+
+    function mostrar() {
+      var c = preguntas[i];
+      var otros = mezclar(TODOS.filter(function (x) { return x.t !== c.t && x.d !== c.d; })).slice(0, 2);
+      var ops = mezclar([c].concat(otros));
+      var pct = Math.round(i / preguntas.length * 100);
+      cont.innerHTML =
+        '<div class="quiz-barra"><span>Pregunta ' + (i + 1) + ' de ' + preguntas.length + '</span><span>Aciertos: ' + aciertos + '</span></div>' +
+        '<div class="quiz-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+        '<span class="quiz-grupo">' + esc(c.g) + '</span>' +
+        '<h2 class="quiz-concepto">' + esc(c.t) + '</h2>' +
+        '<p class="quiz-pregunta">¿Cuál es el significado de este concepto?</p>' +
+        '<div class="quiz-opciones">' + ops.map(function (o, n) {
+          return '<button type="button" class="quiz-op" data-t="' + esc(o.t) + '"><b>' + 'ABC'.charAt(n) + '</b>' + esc(o.d) + '</button>';
+        }).join('') + '</div><div id="q-fb"></div>';
+      var botones = cont.querySelectorAll('.quiz-op');
+      Array.prototype.forEach.call(botones, function (b) {
+        b.onclick = function () { responder(b, botones, c); };
+      });
+    }
+
+    function responder(b, botones, c) {
+      var ok = b.getAttribute('data-t') === c.t;
+      Array.prototype.forEach.call(botones, function (x) {
+        x.disabled = true;
+        if (x.getAttribute('data-t') === c.t) x.classList.add('ok');
+        else if (x === b) x.classList.add('mal');
+        else x.classList.add('dim');
+      });
+      if (ok) aciertos++; else fallos.push(c);
+      var ultimo = i === preguntas.length - 1;
+      document.getElementById('q-fb').innerHTML =
+        '<div class="quiz-feedback"><strong>' + (ok ? '¡Correcto!' : 'Nop, incorrecta.') + '</strong> ' +
+        '<b>' + esc(c.t) + ':</b> ' + esc(c.d) + '</div>' +
+        '<div class="quiz-acciones"><button class="button button-primary" id="q-sig" type="button">' + (ultimo ? 'Ver resultado' : 'Siguiente →') + '</button>' +
+        '<a href="' + esc(c.h) + '">Ver desarrollo en Temas</a></div>';
+      var sig = document.getElementById('q-sig');
+      sig.focus();
+      sig.onclick = function () { i++; if (i < preguntas.length) mostrar(); else final(); };
+    }
+
+    function final() {
+      var total = preguntas.length, pct = Math.round(aciertos / total * 100);
+      var msg = pct >= 90 ? '¡Excelente dominio!' : pct >= 70 ? 'Muy bien, casi lo dominas.' : pct >= 50 ? 'Vas bien, repasa los conceptos que fallaste.' : 'Repasa los conceptos y vuelve a intentarlo.';
+      var repaso = fallos.length ? '<div class="quiz-repaso"><h3>Para repasar</h3><ul>' + fallos.map(function (c) {
+        return '<li><b>' + esc(c.t) + ':</b> ' + esc(c.d) + '</li>';
+      }).join('') + '</ul></div>' : '<p class="quiz-sin-fallos">No fallaste ninguna.</p>';
+      cont.innerHTML = '<div class="quiz-final"><h2>Resultado</h2><div class="puntaje">' + aciertos + ' / ' + total + '</div><p>' + pct + '% de aciertos. ' + msg + '</p>' +
+        '<div class="quiz-acciones quiz-acciones-centro"><button class="button button-primary" id="q-otra" type="button">Intentar de nuevo</button>' +
+        (fallos.length ? '<button class="button button-secondary" id="q-fallos" type="button">Practicar solo los fallados</button>' : '') +
+        '<a class="button button-secondary" href="conceptos.html">Ir a Conceptos</a></div></div>' + repaso;
+      document.getElementById('q-otra').onclick = inicio;
+      var f = document.getElementById('q-fallos');
+      if (f) f.onclick = function () { preguntas = mezclar(fallos); i = 0; aciertos = 0; fallos = []; mostrar(); };
+    }
+
+    if (TODOS.length < 3) cont.textContent = 'No se encontraron conceptos.'; else inicio();
+  })();
+  </script>
 </body>
 </html>

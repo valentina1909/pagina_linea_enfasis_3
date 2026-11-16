@@ -1231,3 +1231,121 @@ a.card{
 @media (prefers-reduced-motion: reduce){
     .boton-subir, .boton-subir.visible:hover{ transform:none; transition:opacity .2s, visibility .2s; }
 }
+
+.aprendizaje{
+    margin-top:30px;
+    border-radius:28px;
+    overflow:hidden;
+    background:var(--vidrio-fuerte);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border:1px solid var(--borde-vidrio);
+    box-shadow:var(--sombra);
+    scroll-margin-top:110px;
+}
+.aprendizaje-cabecera{
+    position:relative;
+    padding:40px 40px 36px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg, var(--morado-profundo) 0%, var(--morado-oscuro) 45%, var(--morado) 100%);
+}
+.aprendizaje-cabecera::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(360px 160px at 10% 0%, rgba(255,255,255,.18), transparent 70%),
+        radial-gradient(360px 180px at 95% 100%, rgba(255,255,255,.12), transparent 70%);
+    pointer-events:none;
+}
+.aprendizaje-cabecera > *{ position:relative; z-index:1; }
+.aprendizaje-icono{
+    display:inline-grid;
+    place-items:center;
+    width:56px;
+    height:56px;
+    margin-bottom:14px;
+    border-radius:18px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.32);
+    font-size:1.6rem;
+    font-weight:800;
+}
+.aprendizaje-cabecera h2{
+    margin:0 0 10px;
+    font-size:clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight:800;
+    line-height:1.2;
+    color:#fff;
+}
+.aprendizaje-cabecera p{
+    max-width:680px;
+    margin:0 auto;
+    color:rgba(255,255,255,.9);
+}
+.aprendizaje .quiz{ max-width:860px; padding:36px 40px 40px; }
+.aprendizaje .quiz-inicio{ text-align:center; }
+.aprendizaje .quiz-inicio h2,
+.aprendizaje .quiz-final h2{ margin:0 0 8px; font-size:1.35rem; font-weight:700; color:var(--morado-profundo); }
+.aprendizaje .quiz-inicio p{ max-width:560px; margin:0 auto 22px; color:var(--texto-suave); }
+.aprendizaje .quiz-inicio label{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    max-width:440px;
+    margin:0 auto;
+    padding:18px 20px;
+    border-radius:18px;
+    background:var(--tarjeta);
+    border:1px solid var(--linea);
+    box-shadow:var(--sombra-suave);
+    font-weight:600;
+    color:var(--morado-profundo);
+    text-align:left;
+}
+.aprendizaje .quiz-inicio select{
+    width:100%;
+    padding:12px 14px;
+    border-radius:12px;
+    background:#fff;
+    color:var(--texto);
+    font-weight:500;
+    cursor:pointer;
+}
+.aprendizaje .quiz-inicio select:focus-visible{ outline:3px solid var(--morado); outline-offset:2px; }
+.aprendizaje .quiz-inicio .quiz-acciones{ justify-content:center; margin-top:24px; }
+.aprendizaje .quiz-barra{ align-items:center; }
+.aprendizaje .quiz-barra span{ padding:5px 14px; border-radius:999px; background:var(--morado-suave); color:var(--morado-oscuro); font-size:.86rem; }
+.aprendizaje .quiz-concepto{ margin-top:4px; }
+.aprendizaje .quiz-op{ box-shadow:0 2px 10px rgba(0,0,0,.04); }
+.aprendizaje .quiz-feedback{ border-left:4px solid var(--morado); line-height:1.6; }
+.aprendizaje .quiz-acciones a:not(.button){ font-weight:600; }
+.aprendizaje .quiz-final{ padding:6px 0 4px; }
+.aprendizaje .quiz-final .puntaje{
+    margin:6px 0 4px;
+    background:var(--degradado-texto);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+.aprendizaje .quiz-final > p{ color:var(--texto-suave); }
+.aprendizaje .quiz-repaso{
+    margin-top:26px;
+    padding:20px 24px;
+    border-radius:18px;
+    background:var(--tarjeta);
+    border:1px solid var(--linea);
+    box-shadow:var(--sombra-suave);
+}
+.aprendizaje .quiz-repaso h3{ margin:0 0 8px; font-size:1.05rem; font-weight:700; color:var(--morado-profundo); }
+.aprendizaje .quiz-repaso ul{ margin-left:18px; color:var(--texto-suave); }
+.aprendizaje .quiz-sin-fallos{ margin-top:18px; color:var(--texto-suave); }
+@media(max-width:768px){
+    .aprendizaje{ border-radius:22px; }
+    .aprendizaje-cabecera{ padding:30px 20px 26px; }
+    .aprendizaje-icono{ width:48px; height:48px; border-radius:15px; font-size:1.35rem; }
+    .aprendizaje .quiz{ padding:26px 18px 30px; }
+    .aprendizaje .quiz-repaso{ padding:16px 18px; }
+}
