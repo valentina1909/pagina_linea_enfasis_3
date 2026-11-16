@@ -3,37 +3,37 @@
 
 :root {
 
-    --fondo-lavanda: #A58CF5;
-    --fondo-azul:    #A9D4F5;
-    --fondo-rosa:    #F0D6F2;
-    --fondo-lila:    #D4A8EE;
+    --fondo-lavanda: #8EC5F7;
+    --fondo-azul:    #BCE6F8;
+    --fondo-rosa:    #D9ECFB;
+    --fondo-lila:    #A9D4F5;
 
     --vidrio:        rgba(255,255,255,.62);
     --vidrio-fuerte: rgba(255,255,255,.86);
-    --tarjeta:       #FDFCFF;
+    --tarjeta:       #FBFDFF;
     --borde-vidrio:  rgba(255,255,255,.75);
 
-    --morado-profundo: #2E1065;
-    --morado-oscuro:   #3B1D78;
-    --morado:          #7C6AF0;
-    --morado-medio:    #8B5CF6;
-    --morado-suave:    #EDE9FE;
-    --azul:            #38BDF8;
-    --azul-suave:      #E0F2FE;
+    --morado-profundo: #0C2D5C;
+    --morado-oscuro:   #12407E;
+    --morado:          #2563EB;
+    --morado-medio:    #3B82F6;
+    --morado-suave:    #DBEAFE;
+    --azul:            #06B6D4;
+    --azul-suave:      #CFFAFE;
 
-    --degradado: linear-gradient(135deg, #7C6AF0 0%, #A78BFA 55%, #60A5FA 100%);
-    --degradado-texto: linear-gradient(135deg, #4C1D95 0%, #7C3AED 55%, #3B82F6 100%);
+    --degradado: linear-gradient(135deg, #2563EB 0%, #60A5FA 55%, #22D3EE 100%);
+    --degradado-texto: linear-gradient(135deg, #1E3A8A 0%, #2563EB 55%, #0891B2 100%);
 
-    --texto:        #2A1F4D;
-    --texto-suave:  #4E4472;
-    --texto-tenue:  #6B6290;
+    --texto:        #10264A;
+    --texto-suave:  #3F5578;
+    --texto-tenue:  #5F7799;
 
-    --linea:        #E4DDF7;
-    --linea-media:  #CFC4F2;
+    --linea:        #D6E4F7;
+    --linea-media:  #BCD3F2;
 
-    --sombra:       0 18px 45px rgba(76,29,149,.14);
-    --sombra-suave: 0 8px 24px rgba(76,29,149,.10);
-    --sombra-hover: 0 22px 50px rgba(76,29,149,.20);
+    --sombra:       0 18px 45px rgba(30,58,138,.14);
+    --sombra-suave: 0 8px 24px rgba(30,58,138,.10);
+    --sombra-hover: 0 22px 50px rgba(30,58,138,.20);
 
     --fuente: "Poppins", "Segoe UI", Arial, sans-serif;
 }
@@ -53,10 +53,10 @@ body{
     font-family:var(--fuente);
 
     background:
-        radial-gradient(900px 600px at 0% 20%, rgba(155,125,245,.85), transparent 60%),
-        radial-gradient(800px 500px at 45% 0%, rgba(150,210,245,.85), transparent 60%),
-        radial-gradient(800px 600px at 85% 30%, rgba(240,190,240,.80), transparent 60%),
-        radial-gradient(900px 600px at 50% 100%, rgba(200,170,240,.85), transparent 60%),
+        radial-gradient(900px 600px at 0% 20%, rgba(110,170,245,.85), transparent 60%),
+        radial-gradient(800px 500px at 45% 0%, rgba(150,225,245,.85), transparent 60%),
+        radial-gradient(800px 600px at 85% 30%, rgba(200,225,250,.80), transparent 60%),
+        radial-gradient(900px 600px at 50% 100%, rgba(150,190,240,.85), transparent 60%),
         linear-gradient(120deg, var(--fondo-lavanda) 0%, var(--fondo-azul) 40%, var(--fondo-rosa) 65%, var(--fondo-lila) 100%);
     background-color:var(--fondo-lavanda);
     background-attachment:fixed;
@@ -76,7 +76,7 @@ body > main{
 }
 
 a{
-    color:#5B3FD6;
+    color:#1D4ED8;
     text-underline-offset:3px;
 }
 
@@ -116,7 +116,7 @@ a:hover{
     font-weight:800;
     color:#fff;
     background:var(--morado-profundo);
-    box-shadow:0 10px 26px rgba(46,16,101,.30);
+    box-shadow:0 10px 26px rgba(12,45,92,.30);
 }
 
 .brand-title{
@@ -145,7 +145,7 @@ a:hover{
     background:rgba(255,255,255,.45);
     border-top:1px solid var(--borde-vidrio);
     border-bottom:1px solid var(--borde-vidrio);
-    box-shadow:0 6px 24px rgba(76,29,149,.10);
+    box-shadow:0 6px 24px rgba(30,58,138,.10);
 }
 
 .navbar{
@@ -183,7 +183,7 @@ a:hover{
     background:var(--morado-profundo);
     color:#fff;
     font-weight:600;
-    box-shadow:0 8px 20px rgba(46,16,101,.28);
+    box-shadow:0 8px 20px rgba(12,45,92,.28);
 }
 
 .nav-icon{
@@ -217,7 +217,7 @@ main{
     inset:0;
     background:
         radial-gradient(420px 200px at 12% 0%, rgba(255,255,255,.55), transparent 70%),
-        radial-gradient(420px 220px at 92% 100%, rgba(240,190,240,.35), transparent 70%);
+        radial-gradient(420px 220px at 92% 100%, rgba(200,225,250,.35), transparent 70%);
     pointer-events:none;
 }
 
@@ -295,7 +295,7 @@ main{
     background:var(--morado-profundo);
     color:#fff;
     border:2px solid var(--morado-profundo);
-    box-shadow:0 10px 24px rgba(46,16,101,.28);
+    box-shadow:0 10px 24px rgba(12,45,92,.28);
 }
 
 .button-primary:hover{
@@ -388,14 +388,14 @@ a.card{
     padding:5px 12px;
     border-radius:999px;
     margin-bottom:14px;
-    color:#5B21B6;
+    color:#1D4ED8;
     background:var(--morado-suave);
 }
 
 .content-panel .card{
-    background:#FAF8FF;
+    background:#F8FBFF;
     border:1px solid var(--linea);
-    box-shadow:0 4px 14px rgba(76,29,149,.06);
+    box-shadow:0 4px 14px rgba(30,58,138,.06);
 }
 
 .content-panel .card:hover{
@@ -471,7 +471,7 @@ a.card{
 }
 
 .content-panel h3{
-    color:#5B21B6;
+    color:#1D4ED8;
     font-weight:600;
     margin:24px 0 8px;
     font-size:1.1rem;
@@ -510,7 +510,7 @@ a.card{
     border-radius:14px;
     font-style:italic;
     color:var(--texto-suave) !important;
-    background:#F5F3FF;
+    background:#F2F7FF;
     border-left:4px solid var(--morado);
 }
 
@@ -546,7 +546,7 @@ a.card{
     color:var(--morado-profundo);
     margin-bottom:14px;
     padding-bottom:12px;
-    border-bottom:1px solid rgba(46,16,101,.15);
+    border-bottom:1px solid rgba(12,45,92,.15);
 }
 
 .toc ol{
@@ -595,7 +595,7 @@ a.card{
     border-radius:16px;
     border:1px solid var(--linea);
     background:#fff;
-    box-shadow:0 4px 14px rgba(76,29,149,.06);
+    box-shadow:0 4px 14px rgba(30,58,138,.06);
     margin-bottom:20px;
 }
 
@@ -622,12 +622,12 @@ a.card{
 }
 
 .data-table tbody tr:nth-child(even) td{
-    background:#FAF8FF;
+    background:#F8FBFF;
 }
 
 .data-table td:first-child{
     font-weight:600;
-    color:#5B21B6;
+    color:#1D4ED8;
 }
 
 
@@ -643,7 +643,7 @@ a.card{
     padding:16px 18px 16px 66px;
     margin-bottom:12px;
     border-radius:16px;
-    background:#FAF8FF;
+    background:#F8FBFF;
     border:1px solid var(--linea);
 }
 
@@ -697,7 +697,7 @@ a.card{
     border-radius:20px;
     overflow:hidden;
     border:1px solid var(--linea);
-    background:#F5F3FF;
+    background:#F2F7FF;
     box-shadow:var(--sombra-suave);
 }
 
@@ -721,9 +721,9 @@ a.card{
     text-align:center;
     padding:20px;
     background:
-        radial-gradient(400px 200px at 30% 20%, rgba(169,212,245,.55), transparent 70%),
-        radial-gradient(400px 220px at 70% 80%, rgba(212,168,238,.55), transparent 70%),
-        #F5F3FF;
+        radial-gradient(400px 200px at 30% 20%, rgba(160,215,245,.55), transparent 70%),
+        radial-gradient(400px 220px at 70% 80%, rgba(170,200,240,.55), transparent 70%),
+        #F2F7FF;
 }
 
 .play-icon{
