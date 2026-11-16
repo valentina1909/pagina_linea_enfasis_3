@@ -17,6 +17,24 @@
   });
   abrirDestino(location.hash);
 
+  var ultimoClic = null;
+  document.addEventListener('click', function (e) {
+    var resumen = e.target.closest && e.target.closest('summary');
+    ultimoClic = resumen ? resumen.parentElement : null;
+  });
+  function mostrarEncabezado(det) {
+    var resumen = det.querySelector('summary');
+    if (!resumen) return;
+    requestAnimationFrame(function () {
+      var nav = document.querySelector('.nav-wrap');
+      var margen = (nav ? nav.offsetHeight : 0) + 12;
+      var arriba = resumen.getBoundingClientRect().top;
+      if (arriba >= margen && arriba <= window.innerHeight * 0.4) return;
+      var reducir = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: window.scrollY + arriba - margen, behavior: reducir ? 'auto' : 'smooth' });
+    });
+  }
+
   document.addEventListener('toggle', function (e) {
     var abierto = e.target;
     if (abierto.tagName !== 'DETAILS' || !abierto.open) return;
@@ -25,6 +43,7 @@
       var padre = otro.parentElement.closest('details');
       if (!padre || padre.contains(abierto)) otro.open = false;
     });
+    if (abierto === ultimoClic) { ultimoClic = null; mostrarEncabezado(abierto); }
   }, true);
 
   function conteosLocales(doc) {
