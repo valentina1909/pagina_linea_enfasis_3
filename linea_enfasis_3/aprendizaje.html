@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Módulo interactivo: adivina el significado de cada concepto de la asignatura.">
+  <title>Aprendizaje interactivo | Línea de Énfasis III</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  
+  <style>
+    .quiz{ max-width:820px; margin:0 auto; }
+    .quiz-barra{ display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-weight:600; color:var(--texto-suave); margin-bottom:10px; }
+    .quiz-progreso{ height:10px; border-radius:999px; background:var(--linea); overflow:hidden; margin-bottom:22px; }
+    .quiz-progreso > span{ display:block; height:100%; width:0; background:var(--degradado); transition:width .3s; }
+    .quiz-grupo{ display:inline-block; padding:4px 12px; border-radius:999px; background:var(--morado-suave); color:var(--morado-oscuro); font-size:.82rem; font-weight:600; margin-bottom:12px; }
+    .quiz-concepto{ font-size:clamp(1.6rem,4vw,2.3rem); font-weight:700; color:var(--morado-profundo); line-height:1.2; margin:0 0 6px; }
+    .quiz-pregunta{ color:var(--texto-suave); margin:0 0 18px; }
+    .quiz-opciones{ display:grid; gap:12px; }
+    .quiz-op{
+      text-align:left; font:inherit; color:var(--texto); line-height:1.5; cursor:pointer;
+      padding:16px 18px; border-radius:16px; border:2px solid var(--linea-media); background:var(--tarjeta);
+      transition:transform .15s, border-color .15s, background .15s;
+    }
+    .quiz-op:hover:not(:disabled){ transform:translateY(-2px); border-color:var(--morado); }
+    .quiz-op:focus-visible{ outline:3px solid var(--morado); outline-offset:2px; }
+    .quiz-op b{ display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; background:var(--morado-suave); color:var(--morado-oscuro); margin-right:10px; font-size:.85rem; }
+    .quiz-op:disabled{ cursor:default; }
+    .quiz-op.ok{ border-color:#16A34A; background:#DCFCE7; }
+    .quiz-op.mal{ border-color:#DC2626; background:#FEE2E2; }
+    .quiz-op.dim{ opacity:.6; }
+    .quiz-feedback{ margin-top:18px; padding:14px 18px; border-radius:14px; background:var(--morado-suave); color:var(--texto); }
+    .quiz-feedback strong{ color:var(--morado-profundo); }
+    .quiz-acciones{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .quiz-final{ text-align:center; }
+    .quiz-final .puntaje{ font-size:3rem; font-weight:800; color:var(--morado-profundo); }
+    .quiz-repaso{ text-align:left; margin-top:18px; }
+    .quiz-repaso li{ margin:6px 0; }
+    .quiz-inicio label{ display:block; margin:10px 0; }
+    .quiz-inicio select{ font:inherit; padding:8px 12px; border-radius:10px; border:1px solid var(--linea-media); max-width:100%; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <div class="brand-row">
+    <div class="brand-title">Línea de Énfasis III</div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav class="navbar">
+    <a href="../index.html">Portal LDE</a>
+    <a href="index.html">Inicio</a>
+    <a href="temas.html">Temas</a>
+    <a href="conceptos.html">Conceptos</a>
+    <a href="aprendizaje.html" aria-current="page">Aprendizaje</a>
+    <a href="casos-practicos.html">Caso práctico</a>
+    <a href="proyecto.html">Proyecto</a>
+  </nav>
+</div>
+
+  <main>
+    <section class="hero">
+      <h1>Aprendizaje interactivo</h1>
+      <p>Se muestra el nombre de un concepto y debes elegir su significado correcto entre tres opciones. Las preguntas salen de todos los conceptos del glosario de Conceptos.</p>
+    </section>
+    <br>
+    <section class="content-panel quiz" aria-live="polite">
+      <div id="quiz"></div>
+      <noscript>Este módulo necesita JavaScript.</noscript>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis III · 2026</footer>
+
+  <script src="js/quiz-datos.js"></script>
+  <script>
+  (function () {
+    var TODOS = window.CONCEPTOS || [];
+    var cont = document.getElementById('quiz');
+    var preguntas, i, aciertos, fallos;
+
+    function mezclar(a) {
+      a = a.slice();
+      for (var k = a.length - 1; k > 0; k--) { var j = Math.floor(Math.random() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; }
+      return a;
+    }
+    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML.replace(/"/g, '&quot;'); }
+
+    function inicio() {
+      var grupos = [];
+      TODOS.forEach(function (c) { if (grupos.indexOf(c.g) < 0) grupos.push(c.g); });
+      var opts = '<option value="">Todos los conceptos (' + TODOS.length + ')</option>' + grupos.map(function (g) {
+        var n = TODOS.filter(function (c) { return c.g === g; }).length;
+        return '<option value="' + esc(g) + '">' + esc(g) + ' (' + n + ')</option>';
+      }).join('');
+      cont.innerHTML = '<div class="quiz-inicio"><h2>¿Listo para practicar?</h2>' +
+        '<p>Cada pregunta tiene tres opciones. Al responder verás si acertaste y la explicación correcta.</p>' +
+        '<label>Practicar con: <select id="q-grupo">' + opts + '</select></label>' +
+        '<div class="quiz-acciones"><button class="button button-primary" id="q-ir" type="button">Comenzar</button></div></div>';
+      document.getElementById('q-ir').onclick = function () { empezar(document.getElementById('q-grupo').value); };
+    }
+
+    function empezar(grupo) {
+      var base = grupo ? TODOS.filter(function (c) { return c.g === grupo; }) : TODOS;
+      preguntas = mezclar(base);
+      i = 0; aciertos = 0; fallos = [];
+      mostrar();
+    }
+
+    function mostrar() {
+      var c = preguntas[i];
+      var otros = mezclar(TODOS.filter(function (x) { return x.t !== c.t && x.d !== c.d; })).slice(0, 2);
+      var ops = mezclar([c].concat(otros));
+      var pct = Math.round(i / preguntas.length * 100);
+      cont.innerHTML =
+        '<div class="quiz-barra"><span>Pregunta ' + (i + 1) + ' de ' + preguntas.length + '</span><span>Aciertos: ' + aciertos + '</span></div>' +
+        '<div class="quiz-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+        '<span class="quiz-grupo">' + esc(c.g) + '</span>' +
+        '<h2 class="quiz-concepto">' + esc(c.t) + '</h2>' +
+        '<p class="quiz-pregunta">¿Cuál es el significado de este concepto?</p>' +
+        '<div class="quiz-opciones">' + ops.map(function (o, n) {
+          return '<button type="button" class="quiz-op" data-t="' + esc(o.t) + '"><b>' + 'ABC'.charAt(n) + '</b>' + esc(o.d) + '</button>';
+        }).join('') + '</div><div id="q-fb"></div>';
+      var botones = cont.querySelectorAll('.quiz-op');
+      Array.prototype.forEach.call(botones, function (b) {
+        b.onclick = function () { responder(b, botones, c); };
+      });
+    }
+
+    function responder(b, botones, c) {
+      var ok = b.getAttribute('data-t') === c.t;
+      Array.prototype.forEach.call(botones, function (x) {
+        x.disabled = true;
+        if (x.getAttribute('data-t') === c.t) x.classList.add('ok');
+        else if (x === b) x.classList.add('mal');
+        else x.classList.add('dim');
+      });
+      if (ok) aciertos++; else fallos.push(c);
+      var ultimo = i === preguntas.length - 1;
+      document.getElementById('q-fb').innerHTML =
+        '<div class="quiz-feedback"><strong>' + (ok ? '¡Correcto!' : 'Nop, incorrecta.') + '</strong> ' +
+        '<b>' + esc(c.t) + ':</b> ' + esc(c.d) + '</div>' +
+        '<div class="quiz-acciones"><button class="button button-primary" id="q-sig" type="button">' + (ultimo ? 'Ver resultado' : 'Siguiente →') + '</button>' +
+        '<a href="' + esc(c.h) + '">Ver desarrollo en Temas</a></div>';
+      var sig = document.getElementById('q-sig');
+      sig.focus();
+      sig.onclick = function () { i++; if (i < preguntas.length) mostrar(); else final(); };
+    }
+
+    function final() {
+      var total = preguntas.length, pct = Math.round(aciertos / total * 100);
+      var msg = pct >= 90 ? '¡Excelente dominio!' : pct >= 70 ? 'Muy bien, casi lo dominas.' : pct >= 50 ? 'Vas bien, repasa los conceptos que fallaste.' : 'Repasa los conceptos y vuelve a intentarlo.';
+      var repaso = fallos.length ? '<div class="quiz-repaso"><h3>Para repasar</h3><ul>' + fallos.map(function (c) {
+        return '<li><b>' + esc(c.t) + ':</b> ' + esc(c.d) + '</li>';
+      }).join('') + '</ul></div>' : '<p style="text-align:center">No fallaste ninguna.</p>';
+      cont.innerHTML = '<div class="quiz-final"><h2>Resultado</h2><div class="puntaje">' + aciertos + ' / ' + total + '</div><p>' + pct + '% de aciertos. ' + msg + '</p>' +
+        '<div class="quiz-acciones" style="justify-content:center"><button class="button button-primary" id="q-otra" type="button">Intentar de nuevo</button>' +
+        (fallos.length ? '<button class="button button-secondary" id="q-fallos" type="button">Practicar solo los fallados</button>' : '') +
+        '<a class="button button-secondary" href="conceptos.html">Ir a Conceptos</a></div></div>' + repaso;
+      document.getElementById('q-otra').onclick = inicio;
+      var f = document.getElementById('q-fallos');
+      if (f) f.onclick = function () { preguntas = mezclar(fallos); i = 0; aciertos = 0; fallos = []; mostrar(); };
+    }
+
+    if (TODOS.length < 3) cont.textContent = 'No se encontraron conceptos.'; else inicio();
+  })();
+  </script>
+</body>
+</html>

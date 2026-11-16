@@ -7,6 +7,7 @@
     ['index.html', 'Inicio'],
     ['temas.html', 'Temas'],
     ['conceptos.html', 'Conceptos'],
+    ['aprendizaje.html', 'Aprendizaje'],
     ['casos-practicos.html', 'Casos prácticos'],
     ['proyecto.html', 'Proyecto']
   ];
