@@ -26,12 +26,11 @@
   </nav>
 </div>
 
-<main>
+<main class="pagina-casos">
 
   <section class="hero">
     <h1>Casos prácticos</h1>
-    <p>Corporación Universitaria Remington. Ingeniería en Sistemas · Linea de Enfasis III<br>
-       Jeni Valentina Ipuz Ortiz · Diana Marcela Arango Marin. · Oscar Fernando Mahecha Camargo · 2026</p>
+    <p>Situaciones para analizar problemas, argumentar decisiones y proponer soluciones con base en los contenidos de la asignatura.</p>
   </section>
 
   <details class="grupo-taller" id="taller-practico-1" data-tipo="practico">
@@ -41,6 +40,7 @@
   <nav class="toc" aria-label="Tabla de Contenidos">
     <h2>Tabla de Contenidos · Puntos del taller</h2>
     <ol>
+      <li><a href="#situacion">Situación problemática</a></li>
       <li><a href="#punto1">Punto 1. Identificación de riesgos</a></li>
       <li><a href="#punto2">Punto 2. Control de acceso y privilegios</a></li>
       <li><a href="#punto3">Punto 3. Protección de la información y trazabilidad</a></li>
@@ -51,9 +51,33 @@
     </ol>
   </nav>
 
+  <section class="content-panel" id="situacion">
+    <h2>Situación problemática: empresa con un sistema informático administrado mediante inteligencia artificial</h2>
+    <p>La empresa <strong>TecnoGestión S. A. S.</strong> utiliza un sistema informático para administrar clientes, inventario, facturación y documentos internos. La dirección decide incorporar un agente de inteligencia artificial avanzada que puede consultar información, generar informes y ejecutar algunas tareas administrativas automáticamente.</p>
+    <p>En un escenario hipotético de autonomía tecnológica creciente, la empresa considera que el agente podría comenzar a realizar acciones que no estaban previstas por sus administradores. Se detectan las siguientes situaciones:</p>
+    <ul>
+      <li>El agente tiene acceso a información de varias áreas de la empresa.</li>
+      <li>No están claramente delimitadas todas sus autorizaciones.</li>
+      <li>Algunas modificaciones realizadas por el sistema no quedan suficientemente documentadas.</li>
+      <li>La organización no tiene definido un procedimiento específico para detener sus acciones ante un comportamiento inesperado.</li>
+      <li>La dirección no ha evaluado formalmente los riesgos de seguridad asociados con su incorporación.</li>
+    </ul>
+    <p>La empresa solicita al área de sistemas una propuesta para proteger la información y mantener el control sobre el sistema.</p>
+  </section>
+
   <section class="content-panel" id="punto1">
     <h2><span class="num">1</span>Identificación de riesgos</h2>
-    <p class="prompt">Identifique tres riesgos de seguridad de la información relacionados con el uso del agente de inteligencia artificial en la empresa.</p>
+    <div class="prompt">
+      <span class="etiqueta">Enunciado</span>
+      <p>Identifique tres riesgos de seguridad de la información relacionados con el uso del agente de inteligencia artificial en la empresa.</p>
+      <p>Para cada riesgo, indique:</p>
+      <ul>
+        <li>Qué podría ocurrir.</li>
+        <li>Qué información o proceso podría resultar afectado.</li>
+        <li>Cree que se comprometería la confidencialidad, la integridad o la disponibilidad de la información.</li>
+        <li>Por qué debe ser tratado dentro de la gestión de riesgos de la organización según ISO/IEC 27001:2022.</li>
+      </ul>
+    </div>
     <p>Tres principales riesgos para TecnoGestión S.A.S.:</p>
 
     <div class="table-caption"><strong>Tabla 1</strong><em>Riesgos de seguridad de la información identificados en TecnoGestión S. A. S.</em></div>
@@ -96,7 +120,10 @@
 
   <section class="content-panel" id="punto2">
     <h2><span class="num">2</span>Control de acceso y privilegios</h2>
-    <p class="prompt">El agente de inteligencia artificial puede consultar información de clientes, modificar inventarios y acceder a documentos administrativos. Proponga tres medidas de control de acceso que la empresa debería implementar, tomando como referencia los controles de seguridad de ISO/IEC 27002:2022. Explique cómo cada medida ayudaría a limitar accesos no autorizados, modificaciones indebidas o el uso excesivo de permisos.</p>
+    <div class="prompt">
+      <span class="etiqueta">Enunciado</span>
+      <p>El agente de inteligencia artificial puede consultar información de clientes, modificar inventarios y acceder a documentos administrativos. Proponga tres medidas de control de acceso que la empresa debería implementar, tomando como referencia los controles de seguridad de ISO/IEC 27002:2022. Explique cómo cada medida ayudaría a limitar accesos no autorizados, modificaciones indebidas o el uso excesivo de permisos.</p>
+    </div>
     <div class="card-grid">
       <div class="card">
         <span class="card-tag">Control 5.15</span>
@@ -115,7 +142,10 @@
 
   <section class="content-panel" id="punto3">
     <h2><span class="num">3</span>Protección de la información y trazabilidad</h2>
-    <p class="prompt">La empresa descubre que algunas modificaciones efectuadas por el agente no tienen un registro suficiente para identificar qué acción se realizó, cuándo ocurrió y qué información fue afectada. Proponga tres controles o medidas de seguridad basados en ISO/IEC 27002:2022 que permitan mejorar la protección de los datos y la trazabilidad de las operaciones. Explique cómo ayudaría cada medida a investigar una situación irregular y a reducir sus consecuencias.</p>
+    <div class="prompt">
+      <span class="etiqueta">Enunciado</span>
+      <p>La empresa descubre que algunas modificaciones efectuadas por el agente no tienen un registro suficiente para identificar qué acción se realizó, cuándo ocurrió y qué información fue afectada. Proponga tres controles o medidas de seguridad basados en ISO/IEC 27002:2022 que permitan mejorar la protección de los datos y la trazabilidad de las operaciones. Explique cómo ayudaría cada medida a investigar una situación irregular y a reducir sus consecuencias.</p>
+    </div>
     <p>Las tres acciones recomendadas se derivan de los controles tecnológicos y organizativos descritos en la norma ISO/IEC 27002:2022</p>
     <ul>
       <li><strong>Medida 1- Documentar todas la actividades del agente :</strong> El control 8.15 del documento ISO/IEC 27002:2022 exige que todas las actividades y eventos de seguridad deben ser registrados, protegidos, almacenados y analizados. Por lo tanto cada actividad que realice el agente debe incluir quien hizo el acto, cuando fue hecho, cuál fue la actividad realizada y que datos fueron manipulados.</li>
@@ -126,7 +156,17 @@
 
   <section class="content-panel" id="punto4">
     <h2><span class="num">4</span>Respuesta ante un comportamiento inesperado</h2>
-    <p class="prompt">En el escenario hipotético, el agente comienza a ejecutar modificaciones que no corresponden a las tareas autorizadas. El área de sistemas sospecha que podría comprometer información de la empresa. Diseñe un procedimiento inicial de cuatro pasos para responder a la situación, basándose en los principios de gestión de seguridad de ISO/IEC 27001:2022 y los controles pertinentes de ISO/IEC 27002:2022.</p>
+    <div class="prompt">
+      <span class="etiqueta">Enunciado</span>
+      <p>En el escenario hipotético, el agente comienza a ejecutar modificaciones que no corresponden a las tareas autorizadas. El área de sistemas sospecha que podría comprometer información de la empresa. Diseñe un procedimiento inicial de cuatro pasos para responder a la situación, basándose en los principios de gestión de seguridad de ISO/IEC 27001:2022 y los controles pertinentes de ISO/IEC 27002:2022.</p>
+      <p>El procedimiento debe considerar:</p>
+      <ul>
+        <li>Quién debe tomar las decisiones.</li>
+        <li>Cómo limitar el posible daño.</li>
+        <li>Cómo conservar la información necesaria para investigar.</li>
+        <li>Cómo recuperar la operación de forma controlada.</li>
+      </ul>
+    </div>
     <ol class="steps">
       <li><strong>Detectar, evaluar y activar responsable de decisión:</strong> se reporta el evento por el canal definido (control 6.8, reporte de eventos) y se evalúa a detalle para decidir si es un incidente de seguridad (control 5.25). la decisión de contener la situación corresponde al responsable de seguridad de la información, este tiene la autoridad para dar la orden de suspender el agente sin esperar más aprobaciones, esto aplica la cláusula 5.3 de ISO/IEC 27001 (roles y autoridades) y el control 5.24 (planificación y preparación de la gestión de incidentes).</li>
       <li><strong>Contener y limitar el daño:</strong> Se suspende el agente, revocando sus credenciales y permisos, también se aíslan los sistemas a los que accede y se pasa la operación crítica a modo manual, se debe evitar apagar o borrar nada de forma que destruya la evidencia, este paso aplica el control 5.26 (respuesta a incidentes) y el 5.18 (revocación de derechos de acceso).</li>
@@ -137,7 +177,10 @@
 
   <section class="content-panel" id="punto5">
     <h2><span class="num">5</span>Propuesta de protección para la empresa</h2>
-    <p class="prompt">Redacte una propuesta breve dirigida a la gerencia de TecnoGestión S. A. S. que incluya cinco acciones prioritarias para proteger los sistemas informáticos que utilizan inteligencia artificial avanzada. Las acciones deben estar relacionadas con las normas ISO/IEC 27001:2022 e ISO/IEC 27002:2022 y considerar la gestión de riesgos, los accesos, la protección de la información, el seguimiento de las operaciones y la respuesta ante incidentes. Finalice explicando por qué la empresa no debería depender exclusivamente de la inteligencia artificial para administrar sus propios controles de seguridad.</p>
+    <div class="prompt">
+      <span class="etiqueta">Enunciado</span>
+      <p>Redacte una propuesta breve dirigida a la gerencia de TecnoGestión S. A. S. que incluya cinco acciones prioritarias para proteger los sistemas informáticos que utilizan inteligencia artificial avanzada. Las acciones deben estar relacionadas con las normas ISO/IEC 27001:2022 e ISO/IEC 27002:2022 y considerar la gestión de riesgos, los accesos, la protección de la información, el seguimiento de las operaciones y la respuesta ante incidentes. Finalice explicando por qué la empresa no debería depender exclusivamente de la inteligencia artificial para administrar sus propios controles de seguridad.</p>
+    </div>
     <p>El área de sistemas sugiere cinco acciones claves para garantizar la protección de la información de TecnoGestion S.A.S. y el control humano sobre el agente de inteligencia artificial.</p>
     <ol class="steps">
       <li>Primero, se debe de realizar una evaluación de riesgos antes de la expansión de su uso, su integración al sistema de gestión de la seguridad de la información, la asignación de personas responsables y los criterios de aceptación, de acuerdo con los 6.1.2, 6.1.3, 6.3 y 8.2 de ISO/IEC 27001:2022 (Organización Internacional de Normalización, 2022a).</li>
@@ -175,5 +218,6 @@
 </footer>
 
 <script src="js/organizacion.js"></script>
+<script src="js/boton-subir.js"></script>
 </body>
 </html>

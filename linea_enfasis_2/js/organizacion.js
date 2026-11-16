@@ -1,4 +1,3 @@
-/* Muestra en cada unidad de Temas un resumen de su contenido (mismo comportamiento que Línea de Énfasis III). */
 (function () {
   function plural(n, uno, varios) { return n + ' ' + (n === 1 ? uno : varios); }
 
@@ -15,4 +14,12 @@
     if (videos) partes.push(plural(videos, 'video presentación', 'videos presentación'));
     salida.textContent = partes.join(' · ');
   });
+
+  document.addEventListener('toggle', function (e) {
+    var abierto = e.target;
+    if (abierto.tagName !== 'DETAILS' || !abierto.open) return;
+    Array.prototype.forEach.call(abierto.parentElement.children, function (otro) {
+      if (otro !== abierto && otro.tagName === 'DETAILS') otro.open = false;
+    });
+  }, true);
 })();

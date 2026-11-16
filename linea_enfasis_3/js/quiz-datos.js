@@ -1,4 +1,3 @@
-/* Conceptos de conceptos.html (generado). */
 window.CONCEPTOS = [
  {
   "t": "Activo",

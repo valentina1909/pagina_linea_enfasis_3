@@ -26,20 +26,48 @@
   </nav>
 </div>
 
-<main>
+<main class="pagina-conceptos">
 
   <section class="hero">
-    <h1>Glosario de conceptos</h1>
-    <p>Corporación Universitaria Remington. Ingeniería en Sistemas · Linea de Enfasis III<br>
-       Jeni Valentina Ipuz Ortiz · Diana Marcela Arango Marin. · Oscar Fernando Mahecha Camargo · 2026</p>
+    <h1>Conceptos</h1>
+    <p>Los conceptos principales y generales de la asignatura, agrupados por taller. Cada concepto enlaza con su explicación completa en Temas.</p>
   </section>
 
   <nav class="toc" aria-label="Tabla de Contenidos">
     <h2>Tabla de Contenidos · Talleres</h2>
     <ol>
-      <li><a href="#taller-1">Taller 1 · Unidad 1 <span data-conteo-conceptos="taller-1"></span></a></li>
-      <li><a href="#taller-2">Taller 2 · Unidad 2 <span data-conteo-conceptos="taller-2"></span></a></li>
-      <li><a href="#taller-practico-1">Taller práctico · Unidad 2 <span data-conteo-conceptos="taller-practico-1"></span></a></li>
+      <li>
+        <a href="#taller-1">Taller 1 · Unidad 1 <span data-conteo-conceptos="taller-1"></span></a>
+        <ol>
+          <li><a href="#t1-fundamentos">1 · Fundamentos de seguridad de la información</a></li>
+          <li><a href="#t1-amenazas">2 · Amenazas y ataques</a></li>
+          <li><a href="#t1-control">3 · Control de acceso y protección</a></li>
+          <li><a href="#t1-normas">4 · Marcos y normas</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#taller-2">Taller 2 · Unidad 2 <span data-conteo-conceptos="taller-2"></span></a>
+        <ol>
+          <li><a href="#t2-control">1 · Control de acceso y protección</a></li>
+          <li><a href="#t2-ia">2 · Inteligencia artificial y singularidad</a></li>
+          <li><a href="#t2-normas">3 · Marcos y normas</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#taller-practico-1">Taller práctico · Unidad 2 <span data-conteo-conceptos="taller-practico-1"></span></a>
+        <ol>
+          <li><a href="#tp-control">1 · Control de acceso y protección</a></li>
+          <li><a href="#tp-normas">2 · Marcos y normas</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#taller-3">Taller 3 · Unidad 3 <span data-conteo-conceptos="taller-3"></span></a>
+        <ol>
+          <li><a href="#t3-ciberataques">1 · Tipos de ciberataques</a></li>
+          <li><a href="#t3-ingenieria-social">2 · Ingeniería social y sus tipos de uso</a></li>
+          <li><a href="#t3-etica">3 · Ética profesional en ciberseguridad</a></li>
+        </ol>
+      </li>
     </ol>
   </nav>
 
@@ -124,12 +152,12 @@
       <div class="card">
         <h3>Phishing</h3>
         <p>Mensaje engañoso enviado por correo, mensaje de texto o llamada, que trata de imitar a una organización para que el usuario proporcione sus credenciales o abra adjuntos.</p>
-        <p><a href="temas.html#p5">Ver desarrollo en Temas · Taller 1, punto 5</a></p>
+        <p><a href="temas.html#p5">Ver en Temas · Taller 1, punto 5</a> · <a href="temas.html#t3q2">Taller 3, pregunta 2</a> · <a href="temas.html#t3q7">pregunta 7</a></p>
       </div>
       <div class="card">
         <h3>Ransomware</h3>
         <p>Programa malicioso que infecta el sistema utilizando varios métodos para exigir un rescate (CISA, s. f.).</p>
-        <p><a href="temas.html#p5">Ver desarrollo en Temas · Taller 1, punto 5</a></p>
+        <p><a href="temas.html#p5">Ver en Temas · Taller 1, punto 5</a> · <a href="temas.html#t3q2">Taller 3, pregunta 2</a></p>
       </div>
       <div class="card">
         <h3>Robo de credenciales</h3>
@@ -303,6 +331,111 @@
     </div>
   </details>
 
+  <details class="grupo-taller" id="taller-3">
+    <summary><span class="grupo-taller-titulo">Taller 3 · Unidad 3<small>Taller teórico · Ciberamenazas, ingeniería social y ética profesional · <span data-conteo-conceptos></span></small></span></summary>
+    <div class="grupo-taller-cuerpo">
+
+  <section class="content-panel" id="t3-ciberataques">
+    <h2><span class="num">1</span>Tipos de ciberataques</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Ataque de fuerza bruta</h3>
+        <p>Ataque en el que un sistema es sometido a cientos y miles de intentos al mismo tiempo, con el objetivo de dar con las credenciales o la clave del sistema para poder acceder a él. Las contraseñas débiles facilitan este proceso porque en menos tiempo se logra acceder al sistema.</p>
+        <p><a href="temas.html#t3q4">Ver desarrollo en Temas · Taller 3, pregunta 4</a></p>
+      </div>
+      <div class="card">
+        <h3>Ciberataque</h3>
+        <p>Infiltración o ataque a un sistema informático de una empresa o persona para obtener un fin específico que busca el atacante, como robar la información de la compañía y venderla a sus competidores, robar dinero en cuentas de bancos o afectar estructuras gubernamentales para desestabilizar gobiernos.</p>
+        <p><a href="temas.html#t3q1">Ver desarrollo en Temas · Taller 3, pregunta 1</a></p>
+      </div>
+      <div class="card">
+        <h3>Denegación de servicio (DoS y DDoS)</h3>
+        <p>Ataque en el cual un sistema empieza a recibir de golpe miles de solicitudes hasta saturar el servidor, impidiendo que el usuario ingrese normalmente. En el DoS las solicitudes salen de un solo equipo; en el DDoS, de muchos equipos desde diferentes lugares, lo que dificulta identificar su origen.</p>
+        <p><a href="temas.html#t3q5">Ver desarrollo en Temas · Taller 3, pregunta 5</a></p>
+      </div>
+      <div class="card">
+        <h3>Gusano</h3>
+        <p>Programa malicioso que trabaja automáticamente sin necesidad de que el usuario lo ejecute y puede infectar toda una red empresarial pasando de equipo en equipo.</p>
+        <p><a href="temas.html#t3q3">Ver desarrollo en Temas · Taller 3, pregunta 3</a></p>
+      </div>
+      <div class="card">
+        <h3>Malware</h3>
+        <p>Software malicioso: programa diseñado para afectar cualquier dispositivo, PC, celular, sistema e incluso USB, para así infiltrarse, robar o sabotear el sistema.</p>
+        <p><a href="temas.html#t3q3">Ver desarrollo en Temas · Taller 3, pregunta 3</a></p>
+      </div>
+      <div class="card">
+        <h3>Troyano</h3>
+        <p>Programa que se hace pasar por uno confiable y engaña al usuario para que lo instale y ejecute; una vez ejecutado puede acceder a permisos de administrador, desestabilizar el equipo y robar su información.</p>
+        <p><a href="temas.html#t3q3">Ver desarrollo en Temas · Taller 3, pregunta 3</a></p>
+      </div>
+      <div class="card">
+        <h3>Virus informático</h3>
+        <p>Se adjunta a programas legítimos y, una vez que el usuario los ejecuta, también se activa y puede afectar otros programas e infectar todo el funcionamiento del PC.</p>
+        <p><a href="temas.html#t3q3">Ver desarrollo en Temas · Taller 3, pregunta 3</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-panel" id="t3-ingenieria-social">
+    <h2><span class="num">2</span>Ingeniería social y sus tipos de uso</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Baiting</h3>
+        <p>Consiste en tentar a la víctima para que interactúe con una página o cualquier recurso digital, normalmente llamando su atención por curiosidad o codicia; por ejemplo, dejar una USB marcada como «nómina 2026» en la cafetería de la empresa.</p>
+        <p><a href="temas.html#t3q9">Ver desarrollo en Temas · Taller 3, pregunta 9</a></p>
+      </div>
+      <div class="card">
+        <h3>Ingeniería social</h3>
+        <p>Manipulación psicológica para que las personas entreguen información confidencial, otorguen permisos y hagan cambios que comprometan la seguridad; se basa en crear una narrativa que explota rasgos como la confianza, la curiosidad, el miedo o el deseo de ayudar.</p>
+        <p><a href="temas.html#t3q6">Ver desarrollo en Temas · Taller 3, pregunta 6</a></p>
+      </div>
+      <div class="card">
+        <h3>Pretexting</h3>
+        <p>El atacante construye un escenario o historia para ganarse la confianza de la víctima, que termina compartiendo información confidencial o concediendo accesos.</p>
+        <p><a href="temas.html#t3q9">Ver desarrollo en Temas · Taller 3, pregunta 9</a></p>
+      </div>
+      <div class="card">
+        <h3>Spear phishing</h3>
+        <p>Variante del phishing que investiga a un grupo específico y le envía un correo de tal forma que resulta más creíble para ese grupo de personas. Es más difícil de detectar porque implica recolectar datos de redes sociales, páginas web corporativas u otras fuentes públicas.</p>
+        <p><a href="temas.html#t3q8">Ver desarrollo en Temas · Taller 3, pregunta 8</a></p>
+      </div>
+      <div class="card">
+        <h3>Tailgating</h3>
+        <p>Una persona no autorizada sigue de cerca a una persona autorizada para acceder a un lugar físico, comportándose como si perteneciera a ese lugar; una vez dentro puede acceder a los servidores o a cualquier recurso tecnológico.</p>
+        <p><a href="temas.html#t3q10">Ver desarrollo en Temas · Taller 3, pregunta 10</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-panel" id="t3-etica">
+    <h2><span class="num">3</span>Ética profesional en ciberseguridad</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Actuar éticamente con información confidencial</h3>
+        <p>Cumplir con lineamientos éticos para ser una persona de confianza para la organización: tener acceso a los datos no significa poder disponer de ellos a voluntad ni utilizarlos para fines personales o por curiosidad, sino cuidarlos siguiendo los lineamientos de seguridad de la empresa.</p>
+        <p><a href="temas.html#t3q11">Ver en Temas · Taller 3, pregunta 11</a> · <a href="temas.html#t3q12">pregunta 12</a></p>
+      </div>
+      <div class="card">
+        <h3>Acceso a sistemas ajenos sin autorización</h3>
+        <p>No es correcto aunque se afirme que se hace para demostrar vulnerabilidades: es ilegal sin importar la intención, deja entradas para personas malintencionadas y puede afectar la reputación de las empresas.</p>
+        <p><a href="temas.html#t3q14">Ver desarrollo en Temas · Taller 3, pregunta 14</a></p>
+      </div>
+      <div class="card">
+        <h3>Reporte de uso indebido de información</h3>
+        <p>Si un compañero utiliza información confidencial para beneficio personal, el deber es reportarlo ante el jefe encargado con la información que respalde la denuncia, salvaguardando la integridad de los datos, la lealtad a la organización y la honestidad en las operaciones.</p>
+        <p><a href="temas.html#t3q15">Ver desarrollo en Temas · Taller 3, pregunta 15</a></p>
+      </div>
+      <div class="card">
+        <h3>Responsabilidad ante una vulnerabilidad</h3>
+        <p>Quien descubre una vulnerabilidad debe seguir el plan de respuesta ante incidentes, dar aviso a la organización o a su jefe inmediato, manejarla con discreción, no aprovecharse de ella y documentar todo para una auditoría posterior.</p>
+        <p><a href="temas.html#t3q13">Ver desarrollo en Temas · Taller 3, pregunta 13</a></p>
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </details>
+
 </main>
 
 <footer class="site-footer">
@@ -310,5 +443,6 @@
 </footer>
 
 <script src="js/organizacion.js"></script>
+<script src="js/boton-subir.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-/* Encabezado y menú compartidos por todas las páginas (mismo diseño que Línea de Énfasis III).
-   Se escribe en el lugar donde se incluye: <script src="js/encabezado.js"></script> */
 (function () {
   var actual = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   var enlaces = [

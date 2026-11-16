@@ -1,12 +1,8 @@
-/* LÍNEA DE ÉNFASIS II · mismo diseño que Línea de Énfasis III · paleta morada + azul */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 :root {
 
     --fondo-lavanda: #A58CF5;
-/*     --fondo-azul:    #A9D4F5;
-    --fondo-rosa:    #F0D6F2; */
     --fondo-lila:    #D4A8EE;
 
     --vidrio:        rgba(255,255,255,.62);
@@ -1026,10 +1022,6 @@ a.card{
     }
 }
 
-/* ===================================================
-   COMPONENTES PROPIOS DE LÍNEA DE ÉNFASIS II
-   (mismo estilo de vidrio y tarjetas claras)
-=================================================== */
 :root{
     --verde:#7C6AF0;
     --rojo:#0EA5E9;
@@ -1163,4 +1155,79 @@ a.card{
     .destacado{ grid-template-columns:minmax(0,1fr); padding:24px 18px; }
     .filas > div{ grid-template-columns:minmax(0,1fr); }
     .lista-temas{ columns:1; }
+}
+
+.quiz{ max-width:820px; margin:0 auto; }
+.quiz-barra{ display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-weight:600; color:var(--texto-suave); margin-bottom:10px; }
+.quiz-progreso{ height:10px; border-radius:999px; background:var(--linea); overflow:hidden; margin-bottom:22px; }
+.quiz-progreso > span{ display:block; height:100%; width:0; background:var(--degradado); transition:width .3s; }
+.quiz-grupo{ display:inline-block; padding:4px 12px; border-radius:999px; background:var(--morado-suave); color:var(--morado-oscuro); font-size:.82rem; font-weight:600; margin-bottom:12px; }
+.quiz-concepto{ font-size:clamp(1.6rem,4vw,2.3rem); font-weight:700; color:var(--morado-profundo); line-height:1.2; margin:0 0 6px; }
+.quiz-pregunta{ color:var(--texto-suave); margin:0 0 18px; }
+.quiz-opciones{ display:grid; gap:12px; }
+.quiz-op{
+  text-align:left; font:inherit; color:var(--texto); line-height:1.5; cursor:pointer;
+  padding:16px 18px; border-radius:16px; border:2px solid var(--linea-media); background:var(--tarjeta);
+  transition:transform .15s, border-color .15s, background .15s;
+}
+.quiz-op:hover:not(:disabled){ transform:translateY(-2px); border-color:var(--morado); }
+.quiz-op:focus-visible{ outline:3px solid var(--morado); outline-offset:2px; }
+.quiz-op b{ display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; background:var(--morado-suave); color:var(--morado-oscuro); margin-right:10px; font-size:.85rem; }
+.quiz-op:disabled{ cursor:default; }
+.quiz-op.ok{ border-color:#16A34A; background:#DCFCE7; }
+.quiz-op.mal{ border-color:#DC2626; background:#FEE2E2; }
+.quiz-op.dim{ opacity:.6; }
+.quiz-feedback{ margin-top:18px; padding:14px 18px; border-radius:14px; background:var(--morado-suave); color:var(--texto); }
+.quiz-feedback strong{ color:var(--morado-profundo); }
+.quiz-acciones{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.quiz-acciones-centro{ justify-content:center; }
+.quiz-final{ text-align:center; }
+.quiz-final .puntaje{ font-size:3rem; font-weight:800; color:var(--morado-profundo); }
+.quiz-repaso{ text-align:left; margin-top:18px; }
+.quiz-repaso li{ margin:6px 0; }
+.quiz-sin-fallos{ text-align:center; }
+.quiz-inicio label{ display:block; margin:10px 0; }
+.quiz-inicio select{ font:inherit; padding:8px 12px; border-radius:10px; border:1px solid var(--linea-media); max-width:100%; }
+
+.pagina-conceptos .toc > ol > li > a{ font-weight:600; color:var(--morado-profundo); }
+.pagina-conceptos .toc ol ol{ display:block; margin:0 0 8px 14px; }
+.pagina-conceptos .toc ol ol a{ padding:5px 14px; font-size:.9rem; color:var(--texto-suave); }
+.pagina-conceptos .content-panel .card-acento{ border-top:4px solid var(--verde); }
+.pagina-conceptos .content-panel .card-ambar{ border-top:4px solid var(--lima); }
+.pagina-conceptos .content-panel .card-coral{ border-top:4px solid var(--rojo); }
+.pagina-conceptos .content-panel .card h4{ font-size:1.05rem; margin:0 0 14px; padding-bottom:14px; border-bottom:1px solid var(--linea-media); }
+
+.boton-subir{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:1000;
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    padding:0;
+    border-radius:16px;
+    border:1px solid var(--borde-vidrio);
+    background:var(--morado-profundo);
+    color:#fff;
+    font:inherit;
+    font-size:1.35rem;
+    font-weight:700;
+    line-height:1;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(76,29,149,.28);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(14px) scale(.9);
+    transition:opacity .3s ease, transform .3s ease, visibility .3s, background .2s ease, box-shadow .2s ease;
+}
+.boton-subir.visible{ opacity:1; visibility:visible; transform:none; }
+.boton-subir.visible:hover{ background:var(--morado-medio); transform:translateY(-3px); box-shadow:0 14px 30px rgba(76,29,149,.34); }
+.boton-subir:focus-visible{ outline:3px solid var(--morado); outline-offset:3px; }
+@media(max-width:768px){
+    .boton-subir{ right:16px; bottom:16px; width:44px; height:44px; border-radius:14px; font-size:1.2rem; }
+}
+@media (prefers-reduced-motion: reduce){
+    .boton-subir, .boton-subir.visible:hover{ transform:none; transition:opacity .2s, visibility .2s; }
 }

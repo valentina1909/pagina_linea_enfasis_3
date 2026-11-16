@@ -9,77 +9,212 @@
 </head>
 <body>
   <script src="js/encabezado.js"></script>
-  <main id="contenido">
+  <main id="contenido" class="pagina-conceptos">
     <section class="hero">
       <h1>Conceptos</h1>
       <p>Los conceptos principales y generales de la asignatura, agrupados por taller. Cada concepto enlaza con su explicación completa en Temas.</p>
     </section>
 
+    <nav class="toc" aria-label="Tabla de contenidos">
+      <h2>Tabla de contenidos · Talleres</h2>
+      <ol>
+        <li>
+          <a href="#taller-1">Taller I <span data-conteo-conceptos="taller-1"></span></a>
+          <ol>
+            <li><a href="#t1-fundamentos">1 · Fundamentos de seguridad de la información</a></li>
+            <li><a href="#t1-amenazas">2 · Amenazas y vulnerabilidades</a></li>
+            <li><a href="#t1-estrategia">3 · Ciberseguridad como estrategia empresarial</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#conceptos-taller-clase-1">Taller práctico · Clase 1 <span data-conteo-conceptos="conceptos-taller-clase-1"></span></a>
+          <ol>
+            <li><a href="#tp-emblema">1 · Análisis del caso empresarial: Comercializadora EMBLEMA S. A. S.</a></li>
+            <li><a href="#tp-ips">2 · Actividad aplicada: diagnóstico inicial de IPS Salud del Oriente S. A. S.</a></li>
+            <li><a href="#tp-conclusiones">3 · Conclusiones y reflexión</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#conceptos-caso-ecopetrol">Análisis de caso · Ecopetrol S. A. <span data-conteo-conceptos="conceptos-caso-ecopetrol"></span></a>
+          <ol>
+            <li><a href="#ce-situacion">1 · Situación problémica</a></li>
+            <li><a href="#ce-investigacion">2 · Investigación del caso real</a></li>
+            <li><a href="#ce-vulnerabilidades">3 · Identificación de vulnerabilidades</a></li>
+            <li><a href="#ce-propuesta">4 · Propuesta de un servicio de ciberseguridad</a></li>
+            <li><a href="#ce-conclusiones">5 · Conclusiones y reflexión</a></li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+
     <details class="grupo-taller" id="taller-1">
-      <summary><span class="grupo-taller-titulo">Taller I<small>Taller Teórico Práctico I – Conceptos Hacking</small></span></summary>
+      <summary><span class="grupo-taller-titulo">Taller I<small>Taller Teórico Práctico I – Conceptos Hacking · <span data-conteo-conceptos></span></small></span></summary>
       <div class="grupo-taller-cuerpo">
-        <div class="card-grid">
-          <article class="card card-acento"><h4>Ciberseguridad</h4><p>Conjunto de frentes —personas, procesos y tecnología— que protegen los sistemas informáticos y los datos de una organización contra ataques y daños digitales, preservando la tríada CIA.</p><a href="temas.html#tema-1">Ver explicación completa →</a></article>
-          <article class="card card-acento"><h4>Seguridad de la información</h4><p>Conservación de la confidencialidad, la integridad y la disponibilidad de la información, sin importar el medio en que se encuentre (digital, físico o en procesos).</p><a href="temas.html#tema-2">Ver explicación completa →</a></article>
-          <article class="card card-acento"><h4>Tríada CIA</h4><p>Los tres principios básicos de la seguridad: confidencialidad (solo acceden quienes deben), integridad (sin modificaciones no autorizadas) y disponibilidad (acceso continuo).</p><a href="temas.html#tema-3">Ver explicación completa →</a></article>
-          <article class="card card-ambar"><h4>Seguridad informática</h4><p>Protección de lo estrictamente tecnológico: hardware, sistema operativo, red, bases de datos y aplicaciones.</p><a href="temas.html#tema-4">Ver explicación completa →</a></article>
-          <article class="card card-ambar"><h4>Protección de datos personales</h4><p>Dimensión legal que protege los derechos de las personas sobre el tratamiento de sus datos (Ley 1581 de 2012 en Colombia).</p><a href="temas.html#tema-4">Ver explicación completa →</a></article>
-          <article class="card card-ambar"><h4>Activo de información</h4><p>Todo lo que tiene valor para la organización y cuya pérdida, alteración o falta de acceso le causaría perjuicios.</p><a href="temas.html#tema-5">Ver explicación completa →</a></article>
-          <article class="card card-coral"><h4>Amenaza</h4><p>Situación externa negativa para los recursos o el personal de una organización; se puede prevenir pero no eliminar.</p><a href="temas.html#tema-6">Ver explicación completa →</a></article>
-          <article class="card card-coral"><h4>Vulnerabilidad</h4><p>Debilidad en el sistema, el proceso o el control interno que una amenaza puede aprovechar; se puede corregir.</p><a href="temas.html#tema-6">Ver explicación completa →</a></article>
-          <article class="card card-coral"><h4>Riesgo</h4><p>Nivel de exposición ante una amenaza, medido por su impacto y su probabilidad. Es una predicción, no un hecho.</p><a href="temas.html#tema-6">Ver explicación completa →</a></article>
-          <article class="card card-coral"><h4>Incidente de seguridad</h4><p>Evento que compromete efectivamente la confidencialidad, la integridad o la disponibilidad de la información: el riesgo ya realizado.</p><a href="temas.html#tema-6">Ver explicación completa →</a></article>
-          <article class="card card-coral"><h4>Ransomware</h4><p>Secuestro de datos que impide el acceso a archivos y bases de datos, con impacto operativo, financiero, legal, reputacional y comercial.</p><a href="temas.html#tema-7">Ver explicación completa →</a></article>
-          <article class="card card-acento"><h4>Plan de negocio de ciberseguridad</h4><p>Documento que convierte la necesidad de proteger una organización en una propuesta de negocio viable.</p><a href="temas.html#tema-10">Ver explicación completa →</a></article>
-        </div>
+
+        <section class="content-panel" id="t1-fundamentos">
+          <h2><span class="num">1</span>Fundamentos de seguridad de la información</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Ciberseguridad</h4><p>Conjunto de frentes —personas, procesos y tecnología— que protegen los sistemas informáticos y los datos de una organización contra ataques y daños digitales, preservando la tríada CIA.</p><p><a href="temas.html#tema-1">Ver desarrollo en Temas · Taller I, pregunta 1</a></p></article>
+              <article class="card card-acento"><h4>Seguridad de la información</h4><p>Conservación de la confidencialidad, la integridad y la disponibilidad de la información, sin importar el medio en que se encuentre (digital, físico o en procesos).</p><p><a href="temas.html#tema-2">Ver desarrollo en Temas · Taller I, pregunta 2</a></p></article>
+              <article class="card card-acento"><h4>Tríada CIA</h4><p>Los tres principios básicos de la seguridad: confidencialidad (solo acceden quienes deben), integridad (sin modificaciones no autorizadas) y disponibilidad (acceso continuo).</p><p><a href="temas.html#tema-3">Ver desarrollo en Temas · Taller I, pregunta 3</a></p></article>
+              <article class="card card-ambar"><h4>Seguridad informática</h4><p>Protección de lo estrictamente tecnológico: hardware, sistema operativo, red, bases de datos y aplicaciones.</p><p><a href="temas.html#tema-4">Ver desarrollo en Temas · Taller I, pregunta 4</a></p></article>
+              <article class="card card-ambar"><h4>Protección de datos personales</h4><p>Dimensión legal que protege los derechos de las personas sobre el tratamiento de sus datos (Ley 1581 de 2012 en Colombia).</p><p><a href="temas.html#tema-4">Ver desarrollo en Temas · Taller I, pregunta 4</a></p></article>
+              <article class="card card-ambar"><h4>Activo de información</h4><p>Todo lo que tiene valor para la organización y cuya pérdida, alteración o falta de acceso le causaría perjuicios.</p><p><a href="temas.html#tema-5">Ver desarrollo en Temas · Taller I, pregunta 5</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="t1-amenazas">
+          <h2><span class="num">2</span>Amenazas y vulnerabilidades</h2>
+          <div class="card-grid">
+              <article class="card card-coral"><h4>Amenaza</h4><p>Situación externa negativa para los recursos o el personal de una organización; se puede prevenir pero no eliminar.</p><p><a href="temas.html#tema-6">Ver desarrollo en Temas · Taller I, pregunta 6</a></p></article>
+              <article class="card card-coral"><h4>Vulnerabilidad</h4><p>Debilidad en el sistema, el proceso o el control interno que una amenaza puede aprovechar; se puede corregir.</p><p><a href="temas.html#tema-6">Ver desarrollo en Temas · Taller I, pregunta 6</a></p></article>
+              <article class="card card-coral"><h4>Riesgo</h4><p>Nivel de exposición ante una amenaza, medido por su impacto y su probabilidad. Es una predicción, no un hecho.</p><p><a href="temas.html#tema-6">Ver desarrollo en Temas · Taller I, pregunta 6</a></p></article>
+              <article class="card card-coral"><h4>Incidente de seguridad</h4><p>Evento que compromete efectivamente la confidencialidad, la integridad o la disponibilidad de la información: el riesgo ya realizado.</p><p><a href="temas.html#tema-6">Ver desarrollo en Temas · Taller I, pregunta 6</a></p></article>
+              <article class="card card-coral"><h4>Ransomware</h4><p>Secuestro de datos que impide el acceso a archivos y bases de datos, con impacto operativo, financiero, legal, reputacional y comercial.</p><p><a href="temas.html#tema-7">Ver desarrollo en Temas · Taller I, pregunta 7</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="t1-estrategia">
+          <h2><span class="num">3</span>Ciberseguridad como estrategia empresarial</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Plan de negocio de ciberseguridad</h4><p>Documento que convierte la necesidad de proteger una organización en una propuesta de negocio viable.</p><p><a href="temas.html#tema-10">Ver desarrollo en Temas · Taller I, pregunta 10</a></p></article>
+            </div>
+        </section>
+
       </div>
     </details>
 
     <details class="grupo-taller" id="conceptos-taller-clase-1">
-      <summary><span class="grupo-taller-titulo">Taller práctico · Clase 1<small>Caso EMBLEMA S. A. S. y diagnóstico de IPS Salud del Oriente</small></span></summary>
+      <summary><span class="grupo-taller-titulo">Taller práctico · Clase 1<small>Caso EMBLEMA S. A. S. y diagnóstico de IPS Salud del Oriente · <span data-conteo-conceptos></span></small></span></summary>
       <div class="grupo-taller-cuerpo">
-        <div class="card-grid">
-          <article class="card card-acento"><h4>Activo crítico</h4><p>Activo de información o recurso tecnológico cuya pérdida, alteración o divulgación afectaría gravemente la operación. En EMBLEMA: facturación e inventario, base de datos de clientes, correo, tienda virtual, nube y red.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Phishing y suplantación de proveedor</h4><p>Engaño por correo que imita a un proveedor para que el empleado entregue sus credenciales; fue el origen del incidente en EMBLEMA y la amenaza externa con motivación económica.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Vulnerabilidades organizacionales</h4><p>Contraseñas compartidas, sin autenticación multifactor, sin proceso de reporte de incidentes, copias de seguridad ocasionales y sin responsable de ciberseguridad.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Principios afectados (CIA)</h4><p>Confidencialidad vulnerada por el acceso a correos; integridad amenazada por la posible modificación de archivos; disponibilidad comprometida por el acceso a la nube.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Encuadre normativo</h4><p>Ley 1273 de 2009 (acceso abusivo, suplantación de sitios web, violación de datos personales) y Ley 1581 de 2012 (principios de seguridad y confidencialidad de los datos).</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Impacto empresarial</h4><p>Consecuencias encadenadas de perder el acceso a los sistemas: interrupción de ingresos, suspensión operativa, incumplimiento legal y tributario, daño reputacional y costos de recuperación.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Priorización de necesidades</h4><p>Ordenar las medidas según vulnerabilidades, costo y reducción de riesgo (NIST CSF 2.0): autenticación multifactor, copias recuperables, gestión de incidentes, capacitación y protección de la red.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Plan de 30 días</h4><p>Plan de bajo costo en cuatro fases: contención, protección del acceso, recuperación y capacitación, con cinco métricas para medir el progreso.</p><a href="casos-practicos.html#emblema">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Ficha de caracterización</h4><p>Descripción de una organización (sector, actividad, tamaño, servicios, infraestructura) como punto de partida del diagnóstico; aplicada a IPS Salud del Oriente S. A. S.</p><a href="casos-practicos.html#ips">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Datos sensibles e historia clínica</h4><p>Datos cuyo uso indebido puede afectar la intimidad del titular (art. 5 de la Ley 1581 de 2012); la historia clínica es la información más crítica de una IPS.</p><a href="casos-practicos.html#ips">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Segmentación de red y equipos biomédicos</h4><p>Separar pacientes, personal, equipos biomédicos y servidores; aislar los dispositivos sin soporte que no pueden actualizarse.</p><a href="casos-practicos.html#ips">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Diagnóstico inicial y plan de negocio</h4><p>Tabla de necesidades, riesgos, consecuencias y medidas iniciales que sirve de base para priorizar, justificar la inversión y medir el progreso en un plan de ciberseguridad.</p><a href="casos-practicos.html#conclusiones-taller">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Responsabilidad compartida</h4><p>La protección de la información involucra a la gerencia (recursos y políticas), a los empleados (el factor humano estuvo en el 62% de las brechas) y al personal tecnológico.</p><a href="casos-practicos.html#conclusiones-taller">Ver en el caso →</a></article>
-        </div>
+
+        <section class="content-panel" id="tp-emblema">
+          <h2><span class="num">1</span>Análisis del caso empresarial: Comercializadora EMBLEMA S. A. S.</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Activo crítico</h4><p>Activo de información o recurso tecnológico cuya pérdida, alteración o divulgación afectaría gravemente la operación. En EMBLEMA: facturación e inventario, base de datos de clientes, correo, tienda virtual, nube y red.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-coral"><h4>Phishing y suplantación de proveedor</h4><p>Engaño por correo que imita a un proveedor para que el empleado entregue sus credenciales; fue el origen del incidente en EMBLEMA y la amenaza externa con motivación económica.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-ambar"><h4>Vulnerabilidades organizacionales</h4><p>Contraseñas compartidas, sin autenticación multifactor, sin proceso de reporte de incidentes, copias de seguridad ocasionales y sin responsable de ciberseguridad.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-acento"><h4>Principios afectados (CIA)</h4><p>Confidencialidad vulnerada por el acceso a correos; integridad amenazada por la posible modificación de archivos; disponibilidad comprometida por el acceso a la nube.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-coral"><h4>Encuadre normativo</h4><p>Ley 1273 de 2009 (acceso abusivo, suplantación de sitios web, violación de datos personales) y Ley 1581 de 2012 (principios de seguridad y confidencialidad de los datos).</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-ambar"><h4>Impacto empresarial</h4><p>Consecuencias encadenadas de perder el acceso a los sistemas: interrupción de ingresos, suspensión operativa, incumplimiento legal y tributario, daño reputacional y costos de recuperación.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-acento"><h4>Priorización de necesidades</h4><p>Ordenar las medidas según vulnerabilidades, costo y reducción de riesgo (NIST CSF 2.0): autenticación multifactor, copias recuperables, gestión de incidentes, capacitación y protección de la red.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+              <article class="card card-ambar"><h4>Plan de 30 días</h4><p>Plan de bajo costo en cuatro fases: contención, protección del acceso, recuperación y capacitación, con cinco métricas para medir el progreso.</p><p><a href="casos-practicos.html#emblema">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte II</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="tp-ips">
+          <h2><span class="num">2</span>Actividad aplicada: diagnóstico inicial de IPS Salud del Oriente S. A. S.</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Ficha de caracterización</h4><p>Descripción de una organización (sector, actividad, tamaño, servicios, infraestructura) como punto de partida del diagnóstico; aplicada a IPS Salud del Oriente S. A. S.</p><p><a href="casos-practicos.html#ips">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte III</a></p></article>
+              <article class="card card-coral"><h4>Datos sensibles e historia clínica</h4><p>Datos cuyo uso indebido puede afectar la intimidad del titular (art. 5 de la Ley 1581 de 2012); la historia clínica es la información más crítica de una IPS.</p><p><a href="casos-practicos.html#ips">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte III</a></p></article>
+              <article class="card card-ambar"><h4>Segmentación de red y equipos biomédicos</h4><p>Separar pacientes, personal, equipos biomédicos y servidores; aislar los dispositivos sin soporte que no pueden actualizarse.</p><p><a href="casos-practicos.html#ips">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte III</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="tp-conclusiones">
+          <h2><span class="num">3</span>Conclusiones y reflexión</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Diagnóstico inicial y plan de negocio</h4><p>Tabla de necesidades, riesgos, consecuencias y medidas iniciales que sirve de base para priorizar, justificar la inversión y medir el progreso en un plan de ciberseguridad.</p><p><a href="casos-practicos.html#conclusiones-taller">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte IV</a></p></article>
+              <article class="card card-coral"><h4>Responsabilidad compartida</h4><p>La protección de la información involucra a la gerencia (recursos y políticas), a los empleados (el factor humano estuvo en el 62% de las brechas) y al personal tecnológico.</p><p><a href="casos-practicos.html#conclusiones-taller">Ver desarrollo en Casos prácticos · Taller práctico Clase 1, parte IV</a></p></article>
+            </div>
+        </section>
+
       </div>
     </details>
 
     <details class="grupo-taller" id="conceptos-caso-ecopetrol">
-      <summary><span class="grupo-taller-titulo">Análisis de caso · Ecopetrol S. A.<small>Incidente de ciberseguridad de julio de 2026</small></span></summary>
+      <summary><span class="grupo-taller-titulo">Análisis de caso · Ecopetrol S. A.<small>Incidente de ciberseguridad de julio de 2026 · <span data-conteo-conceptos></span></small></span></summary>
       <div class="grupo-taller-cuerpo">
-        <div class="card-grid">
-          <article class="card card-coral"><h4>Exfiltración de datos</h4><p>Copia y extracción de archivos fuera del alcance de la empresa; en Ecopetrol hubo descarga de datos de unas 3.300 cuentas aunque el cifrado fue bloqueado.</p><a href="casos-practicos.html#ecopetrol-p1">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Ransomware y doble extorsión</h4><p>Software que cifra la información y exige rescate; grupos como The Gentlemen amenazan además con publicar los datos robados si no se paga.</p><a href="casos-practicos.html#ecopetrol-p1">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Hechos comprobados vs. hipótesis</h4><p>Distinguir lo confirmado en comunicados oficiales de las suposiciones y riesgos del análisis propio (canal de intrusión, volumen real de datos).</p><a href="casos-practicos.html#ecopetrol-contexto">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Responsabilidad compartida en la nube</h4><p>El proveedor protege la infraestructura; la organización configura accesos, cifra datos, administra credenciales y monitorea. La responsabilidad legal no se delega.</p><a href="casos-practicos.html#ecopetrol-p1">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Confidencialidad sin destrucción</h4><p>Un acceso no autorizado viola la confidencialidad aunque los datos no se alteren ni se pierdan: lo que importa es quién puede ver o copiar la información.</p><a href="casos-practicos.html#ecopetrol-p1">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>Integridad y disponibilidad en el caso</h4><p>Integridad amenazada pero no vulnerada, y disponibilidad sin afectación porque el ransomware fue bloqueado; la confidencialidad fue la más afectada.</p><a href="casos-practicos.html#ecopetrol-p2">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Credenciales expuestas e info stealers</h4><p>Programas que roban credenciales y las ponen a la venta; permiten acceder como un empleado legítimo sin explotar ninguna falla técnica.</p><a href="casos-practicos.html#ecopetrol-p2">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Permisos excesivos y falta de segmentación</h4><p>Usuarios con más permisos de los necesarios y entornos compartidos entre filiales permiten descargas masivas y movimiento lateral entre empresas.</p><a href="casos-practicos.html#ecopetrol-p2">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>IAM y MFA</h4><p>Gestión de identidad y acceso con autenticación multifactor e inicio de sesión único: impide el acceso indebido aunque las credenciales estén comprometidas.</p><a href="casos-practicos.html#ecopetrol-p3">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>DLP, CASB y cifrado</h4><p>Herramientas de seguridad en la nube que evitan fugas de datos y hacen inaccesible cualquier archivo que caiga en manos equivocadas.</p><a href="casos-practicos.html#ecopetrol-p3">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>SOC, SIEM y EDR/XDR</h4><p>Monitoreo 24/7 que detecta accesos inusuales en etapas tempranas y permite responder a la intrusión.</p><a href="casos-practicos.html#ecopetrol-p3">Ver en el caso →</a></article>
-          <article class="card card-coral"><h4>Cero confianza y mínimo privilegio</h4><p>Ningún acceso es confiable por defecto: microsegmentación, mínimo privilegio y control de acceso a la red para limitar el movimiento lateral.</p><a href="casos-practicos.html#ecopetrol-p3">Ver en el caso →</a></article>
-          <article class="card card-acento"><h4>MSSP (servicio de seguridad administrado)</h4><p>Modelo de servicio con monitoreo, seguridad en la nube, gestión de identidad y respuesta a incidentes, como la propuesta Nexora Security.</p><a href="casos-practicos.html#ecopetrol-p3">Ver en el caso →</a></article>
-          <article class="card card-ambar"><h4>Filtración sin interrupción operativa</h4><p>El robo de información y la interrupción del servicio son daños distintos: afectan principios diferentes de la tríada CIA.</p><a href="casos-practicos.html#ecopetrol-p4">Ver en el caso →</a></article>
-        </div>
+
+        <section class="content-panel" id="ce-situacion">
+          <h2><span class="num">1</span>Situación problémica</h2>
+          <div class="card-grid">
+              <article class="card card-ambar"><h4>Hechos comprobados vs. hipótesis</h4><p>Distinguir lo confirmado en comunicados oficiales de las suposiciones y riesgos del análisis propio (canal de intrusión, volumen real de datos).</p><p><a href="casos-practicos.html#ecopetrol-contexto">Ver desarrollo en Casos prácticos · Caso Ecopetrol, situación problémica</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="ce-investigacion">
+          <h2><span class="num">2</span>Investigación del caso real</h2>
+          <div class="card-grid">
+              <article class="card card-coral"><h4>Exfiltración de datos</h4><p>Copia y extracción de archivos fuera del alcance de la empresa; en Ecopetrol hubo descarga de datos de unas 3.300 cuentas aunque el cifrado fue bloqueado.</p><p><a href="casos-practicos.html#ecopetrol-p1">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte I</a></p></article>
+              <article class="card card-coral"><h4>Ransomware y doble extorsión</h4><p>Software que cifra la información y exige rescate; grupos como The Gentlemen amenazan además con publicar los datos robados si no se paga.</p><p><a href="casos-practicos.html#ecopetrol-p1">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte I</a></p></article>
+              <article class="card card-acento"><h4>Responsabilidad compartida en la nube</h4><p>El proveedor protege la infraestructura; la organización configura accesos, cifra datos, administra credenciales y monitorea. La responsabilidad legal no se delega.</p><p><a href="casos-practicos.html#ecopetrol-p1">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte I</a></p></article>
+              <article class="card card-ambar"><h4>Confidencialidad sin destrucción</h4><p>Un acceso no autorizado viola la confidencialidad aunque los datos no se alteren ni se pierdan: lo que importa es quién puede ver o copiar la información.</p><p><a href="casos-practicos.html#ecopetrol-p1">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte I</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="ce-vulnerabilidades">
+          <h2><span class="num">3</span>Identificación de vulnerabilidades</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>Integridad y disponibilidad en el caso</h4><p>Integridad amenazada pero no vulnerada, y disponibilidad sin afectación porque el ransomware fue bloqueado; la confidencialidad fue la más afectada.</p><p><a href="casos-practicos.html#ecopetrol-p2">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte II</a></p></article>
+              <article class="card card-coral"><h4>Credenciales expuestas e info stealers</h4><p>Programas que roban credenciales y las ponen a la venta; permiten acceder como un empleado legítimo sin explotar ninguna falla técnica.</p><p><a href="casos-practicos.html#ecopetrol-p2">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte II</a></p></article>
+              <article class="card card-ambar"><h4>Permisos excesivos y falta de segmentación</h4><p>Usuarios con más permisos de los necesarios y entornos compartidos entre filiales permiten descargas masivas y movimiento lateral entre empresas.</p><p><a href="casos-practicos.html#ecopetrol-p2">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte II</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="ce-propuesta">
+          <h2><span class="num">4</span>Propuesta de un servicio de ciberseguridad</h2>
+          <div class="card-grid">
+              <article class="card card-acento"><h4>IAM y MFA</h4><p>Gestión de identidad y acceso con autenticación multifactor e inicio de sesión único: impide el acceso indebido aunque las credenciales estén comprometidas.</p><p><a href="casos-practicos.html#ecopetrol-p3">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte III</a></p></article>
+              <article class="card card-ambar"><h4>DLP, CASB y cifrado</h4><p>Herramientas de seguridad en la nube que evitan fugas de datos y hacen inaccesible cualquier archivo que caiga en manos equivocadas.</p><p><a href="casos-practicos.html#ecopetrol-p3">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte III</a></p></article>
+              <article class="card card-acento"><h4>SOC, SIEM y EDR/XDR</h4><p>Monitoreo 24/7 que detecta accesos inusuales en etapas tempranas y permite responder a la intrusión.</p><p><a href="casos-practicos.html#ecopetrol-p3">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte III</a></p></article>
+              <article class="card card-coral"><h4>Cero confianza y mínimo privilegio</h4><p>Ningún acceso es confiable por defecto: microsegmentación, mínimo privilegio y control de acceso a la red para limitar el movimiento lateral.</p><p><a href="casos-practicos.html#ecopetrol-p3">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte III</a></p></article>
+              <article class="card card-acento"><h4>MSSP (servicio de seguridad administrado)</h4><p>Modelo de servicio con monitoreo, seguridad en la nube, gestión de identidad y respuesta a incidentes, como la propuesta Nexora Security.</p><p><a href="casos-practicos.html#ecopetrol-p3">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte III</a></p></article>
+            </div>
+        </section>
+
+        <section class="content-panel" id="ce-conclusiones">
+          <h2><span class="num">5</span>Conclusiones y reflexión</h2>
+          <div class="card-grid">
+              <article class="card card-ambar"><h4>Filtración sin interrupción operativa</h4><p>El robo de información y la interrupción del servicio son daños distintos: afectan principios diferentes de la tríada CIA.</p><p><a href="casos-practicos.html#ecopetrol-p4">Ver desarrollo en Casos prácticos · Caso Ecopetrol, parte IV</a></p></article>
+            </div>
+        </section>
+
       </div>
     </details>
 
   </main>
   <footer class="site-footer">
     <strong>Corporación Universitaria Remington</strong> · Ingeniería en Sistemas · Linea de Enfasis II · 2026</footer>
+
+  <script>
+    (function () {
+      function plural(n, uno, varios) { return n + ' ' + (n === 1 ? uno : varios); }
+
+      function abrirDestino(hash) {
+        if (!hash || hash.length < 2) return;
+        var destino = document.getElementById(decodeURIComponent(hash.slice(1)));
+        if (!destino) return;
+        for (var el = destino; el; el = el.parentElement) {
+          if (el.tagName === 'DETAILS') el.open = true;
+        }
+        destino.scrollIntoView();
+      }
+      window.addEventListener('hashchange', function () { abrirDestino(location.hash); });
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="#"]');
+        if (a && a.getAttribute('href') === location.hash) abrirDestino(location.hash);
+      });
+
+      document.addEventListener('toggle', function (e) {
+        var abierto = e.target;
+        if (abierto.tagName !== 'DETAILS' || !abierto.open) return;
+        Array.prototype.forEach.call(abierto.parentElement.children, function (otro) {
+          if (otro !== abierto && otro.tagName === 'DETAILS') otro.open = false;
+        });
+      }, true);
+
+      Array.prototype.forEach.call(document.querySelectorAll('[data-conteo-conceptos]'), function (salida) {
+        var id = salida.getAttribute('data-conteo-conceptos');
+        var grupo = id ? document.getElementById(id) : salida.closest('details');
+        if (!grupo) return;
+        var n = grupo.querySelectorAll('.card').length;
+        salida.textContent = id ? '(' + plural(n, 'concepto', 'conceptos') + ')' : plural(n, 'concepto', 'conceptos');
+      });
+
+      abrirDestino(location.hash);
+    })();
+  </script>
+  <script src="js/boton-subir.js"></script>
 </body>
 </html>
